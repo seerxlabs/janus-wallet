@@ -1,0 +1,21 @@
+.menu-bar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  border-top: rgba(110, 117, 133, 0.05) 1px solid;
+  background: #ffffff;
+}
+.menu-bar a{
+  width: 20%;
+}
+.menu-bar a img{
+  width: 1.5rem;
+  height: 1.5rem;
+  display: block;
+  margin: auto;
+}

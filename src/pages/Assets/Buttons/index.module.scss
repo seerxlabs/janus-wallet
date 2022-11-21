@@ -1,0 +1,25 @@
+.btn-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.88rem;
+  padding: 1.25rem 0;
+}
+.btn-box a{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.63rem;
+}
+.btn-box a img{
+  display: block;
+  width: 3.13rem;
+  height: 3.13rem;
+}
+.btn-box a p{
+  font-family: MontserratLight;
+  color: #6E7585FF;
+  font-size: 0.81rem;
+  line-height: 0.81rem;
+  margin: 0;
+}

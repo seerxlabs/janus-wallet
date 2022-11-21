@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>蒙版备份 3</title>
+    <defs>
+        <circle id="path-1" cx="30" cy="30" r="30"></circle>
+    </defs>
+    <g id="扩展程序" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="交易详情" transform="translate(-158.000000, -104.000000)">
+            <g id="编组" transform="translate(158.000000, 104.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="蒙版" fill="#3BC164" opacity="0.200000003" xlink:href="#path-1"></use>
+                <path d="M33,36 L34,36 L34,39 L17,39 C16.4477153,39 16,38.5522847 16,38 L16,35 C16,34.4477153 16.4477153,34 17,34 L30.9960999,34.0007898 C31.0030039,35.0263566 31.806126,36 33,36 Z M38.5,28 L44,34 L41,34 L41,39 L36,39 L36,34 L33,34 L38.5,28 Z M35,27 C35.4807181,27 35.8822117,27.3392008 35.978193,27.7913145 L32.119,32 L17,32 C16.4477153,32 16,31.5522847 16,31 L16,28 C16,27.4477153 16.4477153,27 17,27 L35,27 Z M40,20 C40.5522847,20 41,20.4477153 41,21 L41,24 C41,24.5522847 40.5522847,25 40,25 L20,25 C19.4477153,25 19,24.5522847 19,24 L19,21 C19,20.4477153 19.4477153,20 20,20 L40,20 Z" id="形状结合" fill="#3BC164" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

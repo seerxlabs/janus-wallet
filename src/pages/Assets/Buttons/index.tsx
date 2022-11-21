@@ -3,13 +3,10 @@ import styles from './index.module.scss';
 
 function Buttons() {
   return (
-    <div>
-        <div>
-            <Link to="send"><button>发送</button></Link>
-            <Link to="receive"><button>接收</button></Link>
-            <Link to="exchange"><button>兑换</button></Link>
-        </div>
-        <Link to="backup"><button>备份助记词</button></Link>
+    <div className={styles['btn-box']}>
+        <Link to="/send"><img src="/src/assets/icons/receive.svg" alt=""/><p>Receive</p></Link>
+        <Link to="/receive"><img src="/src/assets/icons/send.svg" alt=""/><p>Send</p></Link>
+        <Link to="/swap"><img src="/src/assets/icons/swap.svg" alt=""/><p>Swap</p></Link>
     </div>
   );
 }

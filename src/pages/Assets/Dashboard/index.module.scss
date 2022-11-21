@@ -1,0 +1,81 @@
+.main{
+
+}
+.backup{
+  display: flex;
+  align-items: center;
+  padding: 1rem 1rem;
+  background: rgba(240, 68, 56, 0.1);
+  gap: 0.75rem;
+}
+.backup i{
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: url("../../../assets/icons/backup.svg") no-repeat center center / 100% 100%;
+}
+.backup p{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: normal;
+  justify-content: flex-start;
+  gap: 0.38rem;
+  flex-direction: column;
+  text-align: left;
+}
+.backup p b{
+  font-size: 0.94rem;
+  line-height: 0.94rem;
+  font-family: "MontserratRegular";
+  color: #F04438FF;
+}
+.backup p span{
+  font-size: 0.81rem;
+  line-height: 0.81rem;
+  font-family: "MontserratLight";
+  color: #F0443880;
+}
+.backup a{
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: auto;
+  background: url("../../../assets/icons/close-btn-red.svg") no-repeat center center / 100% 100%;
+}
+.total-assets{
+  margin: 1.88rem 0 0.63rem;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-family: MontserratMedium;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.total-assets b{
+  color: #6E7585FF;
+}
+.total-assets span{
+  color: #141C1DFF;
+}
+.address{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.31rem;
+  margin: 0;
+}
+.address span{
+  font-size: 0.81rem;
+  line-height: 0.81rem;
+  font-family: MontserratLight;
+  color: #6E7585FF;
+}
+.address i{
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: url("../../../assets/icons/copy.svg") no-repeat center center / 100% 100%;
+}
+

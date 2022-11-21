@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>蒙版</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#297AFF" offset="0%"></stop>
+            <stop stop-color="#53B2FF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <circle id="path-2" cx="50" cy="50" r="50"></circle>
+        <radialGradient cx="8.00036176%" cy="9.14799972%" fx="8.00036176%" fy="9.14799972%" r="92.2376054%" gradientTransform="translate(0.080004,0.091480),scale(1.000000,0.998230),rotate(4.116571),translate(-0.080004,-0.091480)" id="radialGradient-4">
+            <stop stop-color="#3C7DD4" offset="0%"></stop>
+            <stop stop-color="#7DB1FF" offset="100%"></stop>
+        </radialGradient>
+        <linearGradient x1="4.44855263%" y1="7.96411813%" x2="66.7152371%" y2="55.5309357%" id="linearGradient-5">
+            <stop stop-color="#FFFFFF" stop-opacity="0.295350402" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <radialGradient cx="8.00036176%" cy="9.14799972%" fx="8.00036176%" fy="9.14799972%" r="257.630299%" gradientTransform="translate(0.080004,0.091480),scale(0.357217,1.000000),rotate(1.470115),translate(-0.080004,-0.091480)" id="radialGradient-6">
+            <stop stop-color="#3C7DD4" offset="0%"></stop>
+            <stop stop-color="#7DB1FF" offset="100%"></stop>
+        </radialGradient>
+        <linearGradient x1="4.28687947%" y1="44.636053%" x2="66.7745636%" y2="50.7057696%" id="linearGradient-7">
+            <stop stop-color="#FFFFFF" stop-opacity="0.295350402" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <radialGradient cx="50%" cy="39.8691045%" fx="50%" fy="39.8691045%" r="105.723211%" gradientTransform="translate(0.500000,0.398691),scale(0.480851,1.000000),rotate(99.865114),translate(-0.500000,-0.398691)" id="radialGradient-8">
+            <stop stop-color="#3C7DD4" offset="0%"></stop>
+            <stop stop-color="#7DB1FF" offset="100%"></stop>
+        </radialGradient>
+        <linearGradient x1="4.28687947%" y1="40.2805582%" x2="66.7745636%" y2="51.2788505%" id="linearGradient-9">
+            <stop stop-color="#FFFFFF" stop-opacity="0.295350402" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-10">
+            <stop stop-color="#D5E7FD" stop-opacity="0.161818284" offset="0%"></stop>
+            <stop stop-color="#AACBFB" offset="100%"></stop>
+        </linearGradient>
+        <radialGradient cx="7.44159113%" cy="6.81581274%" fx="7.44159113%" fy="6.81581274%" r="97.9986433%" gradientTransform="translate(0.074416,0.068158),scale(1.000000,0.969155),rotate(66.406286),translate(-0.074416,-0.068158)" id="radialGradient-11">
+            <stop stop-color="#FFFFFF" stop-opacity="0.80159306" offset="0%"></stop>
+            <stop stop-color="#5B72F6" stop-opacity="0.249069534" offset="100%"></stop>
+        </radialGradient>
+        <radialGradient cx="9.64585919%" cy="9.70003214%" fx="9.64585919%" fy="9.70003214%" r="59.2567176%" gradientTransform="translate(0.096459,0.097000),scale(1.000000,0.969155),rotate(70.857376),scale(1.000000,1.512724),translate(-0.096459,-0.097000)" id="radialGradient-12">
+            <stop stop-color="#FFFFFF" stop-opacity="0.973410866" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="扩展程序" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="缺省-无网络" transform="translate(-138.000000, -200.000000)">
+            <g id="编组-10" transform="translate(138.000000, 200.000000)">
+                <mask id="mask-3" fill="white">
+                    <use xlink:href="#path-2"></use>
+                </mask>
+                <use id="蒙版" fill="url(#linearGradient-1)" opacity="0.100000001" xlink:href="#path-2"></use>
+                <g id="编组-12" opacity="0.5" mask="url(#mask-3)" stroke="#6BA2F3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                    <g transform="translate(43.000000, 5.000000)" id="路径">
+                        <path d="M20,0 C8.954305,0 0,8.954305 0,20"></path>
+                        <path d="M20,10 C14.4771525,10 10,14.4771525 10,20"></path>
+                    </g>
+                </g>
+                <g mask="url(#mask-3)">
+                    <g transform="translate(57.000000, 80.500000) rotate(10.000000) translate(-57.000000, -80.500000) translate(17.000000, 24.000000)">
+                        <ellipse id="椭圆形" stroke="url(#linearGradient-5)" stroke-width="0.5" fill="url(#radialGradient-4)" cx="40" cy="4.80851064" rx="4.55" ry="4.55851064"></ellipse>
+                        <path d="M40,6.66134752 C45.1349569,6.66134752 49.8893162,8.29383163 53.7740432,11.0690906 C57.6303264,13.8240291 60.6298056,17.7048903 62.2927583,22.2322252 C55.9163466,20.1814078 48.2488564,18.9840426 40,18.9840426 C31.7509779,18.9840426 24.0833449,20.1814562 17.7066464,22.2324758 C19.3707471,17.7048054 22.3699283,13.8241399 26.2258355,11.0692984 C30.1105446,8.29387945 34.8649679,6.66134752 40,6.66134752 Z" id="椭圆形-2" stroke="url(#linearGradient-7)" stroke-width="0.5" fill="url(#radialGradient-6)"></path>
+                        <ellipse id="椭圆形" stroke="url(#linearGradient-9)" stroke-width="0.5" fill="url(#radialGradient-8)" cx="40" cy="38.4680851" rx="39.75" ry="18.9840426"></ellipse>
+                        <ellipse id="椭圆形备份" stroke="none" fill="url(#linearGradient-10)" cx="40" cy="40.8723404" rx="24" ry="10.4184397"></ellipse>
+                        <path d="M40,30.7039007 C46.509904,30.7039007 52.4116275,31.8331528 56.7166522,33.6683137 C58.8908901,34.5951554 60.6559044,35.7007175 61.8782397,36.9338238 C63.0310937,38.0968364 63.6987572,39.3714675 63.7471699,40.7151335 L63.7471699,40.7151335 L79.6886259,112.75 L0.311534372,112.75 L16.2489601,40.9044239 C16.2983168,39.5204321 16.9608075,38.2153696 18.1062003,37.0294466 C19.3206269,35.7720472 21.07495,34.6503165 23.236812,33.7118486 C27.5460277,31.841211 33.4667434,30.7039007 40,30.7039007 Z" id="矩形-2" stroke="url(#radialGradient-12)" stroke-width="0.5" fill="url(#radialGradient-11)" opacity="0.600000024"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
