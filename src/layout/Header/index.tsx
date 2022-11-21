@@ -1,4 +1,5 @@
 import styles from './index.module.scss';
+import iconEth from "../../assets/icons/net-eth.svg"
 
 function Header() {
   return (
@@ -9,7 +10,7 @@ function Header() {
             <a/>
         </div>
         <div className={styles['net-name']}>
-            <img src="/src/assets/icons/net-eth.svg" alt=""/>
+            <img src={iconEth} alt=""/>
             <span>EVM #1</span>
         </div>
     </div>

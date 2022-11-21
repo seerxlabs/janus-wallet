@@ -1,10 +1,12 @@
 import styles from './index.module.scss';
+import iconEth from "../../../assets/icons/net-eth.svg"
+import iconTron from "../../../assets/icons/net-tron.svg"
 
 const TokenList = () => {
   return (
     <div className={styles['token-list']}>
         <div className={styles['item']}>
-            <img src="/src/assets/icons/net-eth.svg" alt=""/>
+            <img src={iconEth} alt=""/>
             <div className={styles['net-name']}>
                 <b>Ethereum</b>
                 <p>
@@ -18,7 +20,7 @@ const TokenList = () => {
             </div>
         </div>
         <div className={styles['item']}>
-            <img src="/src/assets/icons/net-tron.svg" alt=""/>
+            <img src={iconTron} alt=""/>
             <div className={styles['net-name']}>
                 <b>Ethereum</b>
                 <p>
