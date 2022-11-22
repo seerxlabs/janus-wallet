@@ -1,13 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>形状结合备份 2</title>
-    <g id="扩展程序" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.5">
-        <g id="删除钱包" transform="translate(-40.000000, -361.000000)" fill="#6E7585" fill-rule="nonzero">
-            <g id="编组" transform="translate(20.000000, 91.000000)">
-                <g id="形状结合备份-2" transform="translate(20.000000, 270.000000)">
-                    <path d="M15,4 C17.7614237,4 20,6.23857625 20,9 L20,15 C20,17.7614237 17.7614237,20 15,20 L9,20 C6.23857625,20 4,17.7614237 4,15 L4,9 C4,6.23857625 6.23857625,4 9,4 L15,4 Z M15,6 L9,6 C7.34314575,6 6,7.34314575 6,9 L6,9 L6,15 C6,16.6568542 7.34314575,18 9,18 L9,18 L15,18 C16.6568542,18 18,16.6568542 18,15 L18,15 L18,9 C18,7.34314575 16.6568542,6 15,6 L15,6 Z" id="形状结合"></path>
-                </g>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path d="M15 4a5 5 0 0 1 5 5v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V9a5 5 0 0 1 5-5h6zm0 2H9a3 3 0 0 0-3 3v6a3 3 0 0 0 3 3h6a3 3 0 0 0 3-3V9a3 3 0 0 0-3-3z" fill="#6E7585" fill-rule="nonzero" opacity=".5"/></svg>

@@ -1,14 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="40px" height="24px" viewBox="0 0 40 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>矩形</title>
-    <g id="扩展程序" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="管理代币" transform="translate(-285.000000, -238.000000)">
-            <g id="编组-2备份" transform="translate(30.000000, 218.000000)">
-                <g id="编组" transform="translate(255.000000, 20.000000)">
-                    <rect id="矩形" fill="#297AFF" x="0" y="0" width="40" height="24" rx="12"></rect>
-                    <circle id="椭圆形" fill="#FFFFFF" cx="28" cy="12" r="10"></circle>
-                </g>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg width="40" height="24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><rect fill="#297aff" width="40" height="24" rx="12"/><circle fill="#fff" cx="28" cy="12" r="10"/></g></svg>
