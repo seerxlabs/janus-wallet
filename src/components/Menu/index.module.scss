@@ -3,10 +3,11 @@
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem 0;
-  position: absolute;
+  position: fixed;
   width: 100%;
   bottom: 0;
   left: 0;
+  z-index: 5;
   border-top: rgba(110, 117, 133, 0.05) 1px solid;
   background: #ffffff;
 }

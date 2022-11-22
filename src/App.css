@@ -10,7 +10,7 @@
     max-width: 1280px;
     margin: 0 auto;
     padding:0;
-    text-align: center;
+    text-align: left;
 }
 h1,h2,h3,h4,h5,h5,p{padding: 0;margin: 0;line-height: 1}
 ul{list-style: none;padding: 0;margin: 0}

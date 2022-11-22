@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>帮助中心图标备份 37</title>
+    <g id="扩展程序" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="设置" transform="translate(-40.000000, -299.000000)">
+            <g id="编组-6备份-7" transform="translate(20.000000, 171.000000)">
+                <g id="编组-4备份-27" transform="translate(20.000000, 112.000000)">
+                    <g id="我的-语言切换" transform="translate(0.000000, 16.000000)">
+                        <g id="编组-2" transform="translate(1.000000, 1.000000)">
+                            <path d="M11,0 C17.0751322,0 22,4.92486775 22,11 C22,17.0751322 17.0751322,22 11,22 C4.92486775,22 0,17.0751322 0,11 C0,4.92486775 4.92486775,0 11,0 Z M19.9449943,12.0006955 L2.05500569,12.0006955 C2.55276616,16.5003111 6.36768501,20 11,20 C15.632315,20 19.4472338,16.5003111 19.9449943,12.0006955 Z M11,2 C6.3673423,2 2.5522017,5.50020676 2.05489527,10.0003032 L19.9451047,10.0003032 C19.4477983,5.50020676 15.6326577,2 11,2 Z" id="形状结合" fill="#6E7585"></path>
+                            <ellipse id="椭圆形" stroke="#6E7585" stroke-width="2" cx="11" cy="11" rx="4" ry="10"></ellipse>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

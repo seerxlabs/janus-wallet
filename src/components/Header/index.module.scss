@@ -1,10 +1,18 @@
 .header-bar {
-  padding: 1rem;
+  border-bottom: rgba(110, 117, 133, 0.05) 1px solid;
+  background: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+}
+
+.bar-main{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: rgba(110, 117, 133, 0.05) 1px solid;
-  background: #ffffff;
+  padding: 1rem;
 }
 
 .wallet-name {
