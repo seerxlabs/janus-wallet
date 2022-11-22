@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import styles from './index.module.scss';
-import Header from '../../layout/Header';
-import Menu from '../../layout/Menu';
+import Header from '../../components/Header';
+import Menu from '../../components/Menu';
 
 function SettingsPage() {
     return (

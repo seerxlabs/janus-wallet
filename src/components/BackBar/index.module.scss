@@ -1,0 +1,13 @@
+.back-bar {
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+}
+.back-bar a{
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: url("../../assets/icons/back.svg") no-repeat center center / 100% 100%;
+}

@@ -1,12 +1,14 @@
 import classnames from 'classnames';
 import styles from './index.module.scss';
-import Header from '../../layout/Header';
-import Menu from '../../layout/Menu';
+import Header from '../../components/Header';
+import Menu from '../../components/Menu';
+import PageTitle from '../../components/PageTitle';
 
 function DappPage() {
     return (
         <div className={classnames(styles['main-page'])}>
             <Header />
+            <PageTitle ext={false} sub={false} name={'Browse Apps'}/>
             <Menu />
         </div>
     );

@@ -5,6 +5,7 @@ import SendPage from "./pages/Send";
 import ReceivePage from "./pages/Receive";
 import SwapPage from "./pages/Swap";
 import NFTPage from "./pages/NFT";
+import NFTDetailPage from "./pages/NFT/Detail";
 import DappPage from "./pages/Dapp";
 import SettingsPage from "./pages/Settings";
 import "./App.css";
@@ -21,6 +22,7 @@ function App() {
         <Route path='receive' element={<ReceivePage />} />
         <Route path='swap' element={<SwapPage />} />
         <Route path='nft' element={<NFTPage />} />
+        <Route path='nft/detail' element={<NFTDetailPage />} />
         <Route path='dapp' element={<DappPage />} />
         <Route path='settings' element={<SettingsPage />} />
       </Routes>

@@ -1,10 +1,10 @@
 import classnames from 'classnames';
 import styles from './index.module.scss';
-import Header from '../../layout/Header';
+import Header from '../../components/Header';
 import Dashboard from './Dashboard';
 import Buttons from './Buttons';
 import TokenList from './TokenList';
-import Menu from '../../layout/Menu';
+import Menu from '../../components/Menu';
 
 function AssetsPage() {
   return (
