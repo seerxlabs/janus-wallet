@@ -1,0 +1,24 @@
+.list-main {
+  padding: 0.63rem 1.88rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.list-item{
+  width: 48%;
+  padding: 0.63rem 0;
+}
+.list-item img{
+  display: block;
+  width: 100%;
+  border-radius: 1.2rem;
+}
+.list-item p{
+  font-family: MontserratRegular;
+  color: #141C1DFF;
+  font-size: 0.94rem;
+  line-height: 0.94rem;
+  padding: 0.63rem 0.63rem 0;
+  text-align: left;
+}
