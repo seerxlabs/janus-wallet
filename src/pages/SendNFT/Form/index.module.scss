@@ -13,31 +13,41 @@
   padding: 1.25rem 0;
   display: block;
 }
-.form-item .textarea-box{
-  background: #FAFAFA;
-  border-radius: 0.94rem;
-  border: 0.06rem solid rgba(20,28,29,0.2);
-  padding: 1.13rem 1.25rem;
+.form-item .info-box{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap:1.13rem
 }
-.form-item .textarea-box textarea{
-  border: none;
-  width: 100%;
+.form-item .info-box img{
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 0.63rem;
+}
+
+.form-item .info-box p{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: normal;
+  gap:0.38rem;
+  text-align: left;
+}
+.form-item .info-box p b{
   font-size: 0.94rem;
   font-family: MontserratRegular;
   font-weight: 400;
   color: #141C1D;
-  line-height: 1.2rem;
-  background: none;
-  border:transparent;
-  resize: none;
-}
-.form-item .textarea-box textarea::placeholder{
-  font-size: 0.94rem;
-  font-family: MontserratRegular;
-  font-weight: 400;
-  color: rgba(110,117,133,0.5);
   line-height: 0.94rem;
 }
+.form-item .info-box p span{
+  font-size: 0.81rem;
+  font-family: MontserratLight;
+  font-weight: 300;
+  color: #6E7585;
+  line-height: 0.81rem;
+}
+
 .form-item .input-box{
   display: flex;
   align-items: center;
@@ -54,10 +64,9 @@
   font-weight: 400;
   color: #141C1D;
   line-height: 0.94rem;
-  border: none;
   background: none;
-  width: 50%;
-  flex: 1;
+  width: 100%;
+  border: none;
 }
 .form-item .input-box input::placeholder{
   font-size: 0.94rem;
@@ -66,24 +75,27 @@
   color: rgba(110,117,133,0.5);
   line-height: 0.94rem;
 }
-.form-item .input-box .input-ext{
+.form-item .fee-box{
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  justify-content: space-between;
+  background: rgba(110, 117, 133, 0.05);
+  border-radius: 0.94rem;
+  padding: 1.38rem 1.25rem;
+  margin-top: 1.25rem;
 }
-.form-item .input-box .input-ext span{
-  width: 1.81rem;
-  height: 0.94rem;
+.form-item .fee-box b{
   font-size: 0.94rem;
   font-family: MontserratRegular;
   font-weight: 400;
-  color: rgba(110,117,133,0.5);
+  color: #141C1D;
   line-height: 0.94rem;
 }
-.form-item .input-box .input-ext b{
+.form-item .fee-box span{
   font-size: 0.94rem;
-  font-family: MontserratRegular;
-  color: #141C1D;
+  font-family: MontserratLight;
+  font-weight: 300;
+  color: #6E7585;
   line-height: 0.94rem;
 }
 .submit-btn{
@@ -105,16 +117,12 @@
   line-height: 0.94rem;
   padding: 1.13rem 0;
   text-align: center;
-  width: 50%;
+  width: 100%;
 }
-.submit-btn button.cancel{
+.submit-btn button.send{
   margin-left: 1.88rem;
-  color: #141C1D;
-  background: #FFFFFF;
-  border: 0.06rem solid rgba(20,28,29,0.2);
-}
-.submit-btn button.next{
   margin-right: 1.88rem;
-  color: rgba(110, 117, 133, 0.50);
-  background: rgba(110, 117, 133, 0.2);
+  color: #FFFFFF;
+  background: #297AFF;;
+  border: none
 }
