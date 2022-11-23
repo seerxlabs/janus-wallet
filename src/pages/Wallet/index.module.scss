@@ -1,3 +1,35 @@
 .main-page {
   padding: 4rem 0 4.5rem;
 }
+.make-btn{
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.94rem;
+  padding: 1.25rem 0;
+}
+.make-btn button{
+  border-radius: 0.94rem;
+  font-size: 0.94rem;
+  font-family: MontserratRegular;
+  font-weight: 400;
+  line-height: 0.94rem;
+  padding: 1.13rem 0;
+  text-align: center;
+  width: 50%;
+}
+.make-btn button.create{
+  margin-left: 1.88rem;
+  color: #141C1D;
+  background: #FFFFFF;
+  border: 0.06rem solid rgba(20,28,29,0.2);
+}
+.make-btn button.import{
+  margin-right: 1.88rem;
+  color: #ffffff;
+  background: #297AFF;;
+}

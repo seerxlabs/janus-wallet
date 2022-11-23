@@ -4,6 +4,7 @@ import BackupPage from "./pages/Backup";
 import SendSOLPage from "./pages/SendSOL";
 import SendNFTPage from "./pages/SendNFT";
 import SwapPage from "./pages/Swap";
+import WalletPage from "./pages/Wallet";
 import NFTPage from "./pages/NFT";
 import NFTDetailPage from "./pages/NFT/Detail";
 import DappPage from "./pages/Dapp";
@@ -21,6 +22,7 @@ function App() {
         <Route path='sendSOL' element={<SendSOLPage />} />
         <Route path='sendNFT' element={<SendNFTPage />} />
         <Route path='swap' element={<SwapPage />} />
+        <Route path='wallet' element={<WalletPage />} />
         <Route path='nft' element={<NFTPage />} />
         <Route path='nft/detail' element={<NFTDetailPage />} />
         <Route path='dapp' element={<DappPage />} />
