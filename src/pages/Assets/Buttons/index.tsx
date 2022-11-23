@@ -7,8 +7,8 @@ import swapIcon from "../../../assets/icons/swap.svg"
 function Buttons() {
   return (
     <div className={styles['btn-box']}>
-        <Link to="/send"><img src={sendIcon} alt=""/><p>Receive</p></Link>
-        <Link to="/receive"><img src={receiveIcon} alt=""/><p>Send</p></Link>
+        <a><img src={sendIcon} alt=""/><p>Receive</p></a>
+        <Link to="/sendSOL"><img src={receiveIcon} alt=""/><p>Send</p></Link>
         <Link to="/swap"><img src={swapIcon} alt=""/><p>Swap</p></Link>
     </div>
   );

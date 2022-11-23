@@ -1,8 +1,8 @@
 import LoginPage from "./pages/Login";
 import AssetsPage from "./pages/Assets";
 import BackupPage from "./pages/Backup";
-import SendPage from "./pages/Send";
-import ReceivePage from "./pages/Receive";
+import SendSOLPage from "./pages/SendSOL";
+import SendNFTPage from "./pages/SendNFT";
 import SwapPage from "./pages/Swap";
 import NFTPage from "./pages/NFT";
 import NFTDetailPage from "./pages/NFT/Detail";
@@ -18,8 +18,8 @@ function App() {
         <Route path='assets' element={<AssetsPage />} />
         <Route path='login' element={<LoginPage />} />
         <Route path='backup' element={<BackupPage />} />
-        <Route path='send' element={<SendPage />} />
-        <Route path='receive' element={<ReceivePage />} />
+        <Route path='sendSOL' element={<SendSOLPage />} />
+        <Route path='sendNFT' element={<SendNFTPage />} />
         <Route path='swap' element={<SwapPage />} />
         <Route path='nft' element={<NFTPage />} />
         <Route path='nft/detail' element={<NFTDetailPage />} />
