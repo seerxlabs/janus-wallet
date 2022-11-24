@@ -2,7 +2,7 @@ import classnames from 'classnames';
 import styles from './index.module.scss';
 import iconEth from "../../../assets/icons/net-eth.svg";
 
-function ChangeForm() {
+function SwapForm() {
     return (
         <div className={classnames(styles['form-box'])}>
             <div className={classnames(styles['form-main'])}>
@@ -40,4 +40,4 @@ function ChangeForm() {
     );
 }
 
-export default ChangeForm;
+export default SwapForm;

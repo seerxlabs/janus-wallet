@@ -3,7 +3,7 @@ import styles from './index.module.scss';
 import Header from '../../components/Header';
 import Menu from '../../components/Menu';
 import PageTitle from '../../components/PageTitle';
-import Form from './ChangeForm'
+import Form from './SwapForm'
 
 function SwapPage() {
     return (
