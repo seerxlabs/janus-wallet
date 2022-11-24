@@ -9,7 +9,7 @@ function NFTPage() {
     return (
         <div className={classnames(styles['main-page'])}>
             <Header />
-            <PageTitle ext={true} sub={true} name={'NFT'}/>
+            <PageTitle ext={true} sub={'My NFTs (3)'} name={'NFT'}/>
             <NFTList />
             <Menu />
         </div>

@@ -1,0 +1,43 @@
+.list-main {
+  padding: 0.63rem 1.25rem;
+  display: flex;
+  align-items: normal;
+  flex-direction: column;
+  gap:1.25rem
+}
+.list-main li{
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: 0.06rem solid rgba(110, 117, 133, 0.05);
+  background: rgba(110, 117, 133, 0.05);
+  gap: 0.75rem;
+  border-radius: 0.94rem;
+}
+.list-main li.list-item-on{
+  border: 0.06rem solid rgba(20,28,29,0.2);
+  background: #fff;
+}
+.list-main li img{
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+}
+
+.list-main li p{
+  text-align: left;
+  flex: 1;
+  font-size: 0.94rem;
+  font-family: MontserratRegular;
+  color: #141C1D;
+  line-height: 0.94rem;
+}
+.list-main li i{
+  margin-left: auto;
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: url("../../../assets/icons/selected.svg") no-repeat center center / 100% 100%;
+}

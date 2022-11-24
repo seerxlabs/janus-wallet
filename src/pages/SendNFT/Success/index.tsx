@@ -1,9 +1,10 @@
-import classnames from 'classnames';
 import styles from './index.module.scss';
+import BackBar from "../../../components/BackBar";
 
-function SendSOLSuccess() {
+function SendNFTSuccess() {
     return (
-        <div className={classnames(styles['page-main'])}>
+        <div className={styles['page-main']}>
+            <BackBar/>
             <i/>
             <h1>Send successfully</h1>
             <h6>SdPunk #3319</h6>
@@ -12,4 +13,4 @@ function SendSOLSuccess() {
     );
 }
 
-export default SendSOLSuccess;
+export default SendNFTSuccess;

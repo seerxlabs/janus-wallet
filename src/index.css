@@ -1,14 +1,28 @@
-@import "styles/tailwind.css";
+@font-face {font-display: auto;font-family: "MontserratBold";src: url("./assets/fonts/Montserrat-Bold-3.otf");  }
+@font-face {font-display: auto;font-family: "MontserratMedium";src: url("./assets/fonts/Montserrat-Medium-7.otf");  }
+@font-face {font-display: auto;font-family: "MontserratRegular";src: url("./assets/fonts/Montserrat-Regular-8.otf");  }
+@font-face {font-display: auto;font-family: "MontserratLight";src: url("./assets/fonts/Montserrat-Light.ttf");  }
+@font-face {font-display: auto;font-family: "SourceHanSansCNBold";src: url("./assets/fonts/SourceHanSansCN-Bold.otf");  }
+@font-face {font-display: auto;font-family: "SourceHanSansCNLight";src: url("./assets/fonts/SourceHanSansCN-Light.otf");  }
+@font-face {font-display: auto;font-family: "SourceHanSansCNMedium";src: url("./assets/fonts/SourceHanSansCN-Medium.otf");  }
+@font-face {font-display: auto;font-family: "SourceHanSansCNNormal";src: url("./assets/fonts/SourceHanSansCN-Normal.otf");  }
+
+html,body{padding: 0;margin: 0;font-family: MontserratRegular;}
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
+  line-height: 16px;
+
+  width: 375px;
+  height: 600px;
+
+  margin: 0 auto;
+  padding:0;
+  text-align: left;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: rgba(255, 255, 255, 1);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -16,51 +30,35 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
+  min-height: 100vh;
+
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  padding: 0;
+  margin: 0;
+  line-height: 1
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0
+}
+
+input,textarea,select {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  appearance: none;
+  -webkit-appearance: none;
+  outline: #FFFFFF;
 }
 
 a {
-  font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
 }
 a:hover {
   color: #535bf2;
-}
-
-body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-strong {
-  font-weight: 600;
-  size: 16px;
-  line-height: 24px;
 }
 
 @media (prefers-color-scheme: light) {

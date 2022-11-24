@@ -1,3 +1,49 @@
 .page-main {
-  padding: 0.63rem 1.25rem;
+  padding: 4rem 1.88rem 2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.page-main i{
+  margin-top: 4.75rem;
+  display: block;
+  width: 3.75rem;
+  height: 3.75rem;
+  background: url("../../../assets/icons/success.svg") no-repeat center center / 100% 100%;
+}
+.page-main h1{
+  margin-top: 1.88rem;
+  font-size: 1.5rem;
+  font-family: MontserratBold;
+  color: #141C1D;
+  line-height: 1.5rem;
+}
+.page-main h6{
+  margin-top: 0.63rem;
+  text-align: left;
+  font-size: 0.94rem;
+  font-family: MontserratLight;
+  font-weight: normal;
+  color: #6E7585;
+  line-height: 1.5rem;
+}
+.page-main button{
+  width: 55%;
+  font-size: 0.94rem;
+  font-family: MontserratRegular;
+  line-height: 0.94rem;
+  padding: 1.06rem 0;
+  border-radius: 0.94rem;
+}
+.page-main button.close{
+  color: #ffffff;
+  background: #297AFF;
+  border: none;
+  margin-top: 2.5rem;
+}
+.page-main button.detail{
+  background: #ffffff;
+  margin-top: 1.25rem;
+  color: #141C1D;
+  border: 0.06rem solid rgba(20,28,29,0.2);
 }

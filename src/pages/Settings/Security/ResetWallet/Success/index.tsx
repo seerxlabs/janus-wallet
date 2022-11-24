@@ -1,9 +1,10 @@
-import classnames from 'classnames';
 import styles from './index.module.scss';
+import BackBar from "../../../../../components/BackBar";
 
 function ResetWalletSuccess() {
     return (
-        <div className={classnames(styles['page-main'])}>
+        <div className={styles['page-main']}>
+            <BackBar/>
             <i/>
             <h1>Reset successfully</h1>
             <h6>Click the button below to create or import a wallet</h6>
