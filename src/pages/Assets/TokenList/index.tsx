@@ -1,6 +1,6 @@
 import styles from './index.module.scss';
-import iconEth from "../../../assets/icons/net-eth.svg"
-import iconTron from "../../../assets/icons/net-tron.svg"
+import iconEth from "@/assets/icons/net-eth.svg"
+import iconTron from "@/assets/icons/net-tron.svg"
 
 const TokenList = () => {
   return (

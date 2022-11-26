@@ -1,16 +1,15 @@
-import classnames from 'classnames';
 import styles from './index.module.scss';
-import iconUnlockWallet from '../../../assets/icons/settings/unlock.svg'
-import iconLockTime from '../../../assets/icons/settings/lock-time.svg'
-import iconBackupWallet from '../../../assets/icons/settings/wallet.svg'
-import iconAuth from '../../../assets/icons/settings/auth.svg'
-import iconBag from '../../../assets/icons/settings/bag.svg'
-import iconRemove from '../../../assets/icons/settings/remove.svg'
-import iconReset from '../../../assets/icons/settings/reset.svg'
+import iconUnlockWallet from '@/assets/icons/settings/unlock.svg'
+import iconLockTime from '@/assets/icons/settings/lock-time.svg'
+import iconBackupWallet from '@/assets/icons/settings/wallet.svg'
+import iconAuth from '@/assets/icons/settings/auth.svg'
+import iconBag from '@/assets/icons/settings/bag.svg'
+import iconRemove from '@/assets/icons/settings/remove.svg'
+import iconReset from '@/assets/icons/settings/reset.svg'
 
 function SecuritySetting() {
     return (
-        <div className={classnames(styles['item-box'])}>
+        <div className={styles['item-box']}>
             <label>SECURITY</label>
             <ul>
                 <li>

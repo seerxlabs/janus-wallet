@@ -1,9 +1,8 @@
-import classnames from 'classnames';
 import styles from './index.module.scss';
 
 function SendForm() {
     return (
-        <div className={classnames(styles['form-box'])}>
+        <div className={styles['form-box']}>
             <div className={styles['form-item']}>
                 <label>Address</label>
                 <div className={styles['textarea-box']}>

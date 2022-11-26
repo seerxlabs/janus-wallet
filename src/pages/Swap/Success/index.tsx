@@ -1,9 +1,8 @@
-import classnames from 'classnames';
 import styles from './index.module.scss';
 
 function SwapSuccess() {
     return (
-        <div className={classnames(styles['page-main'])}>
+        <div className={styles['page-main']}>
             <i/>
             <h1>Swap successfully</h1>
             <h6>+ 0.56537 USDC</h6>

@@ -1,14 +1,13 @@
-import classnames from 'classnames';
 import styles from './index.module.scss';
-import Header from '../../components/Header';
+import Header from '@/components/Header';
 import Dashboard from './Dashboard';
 import Buttons from './Buttons';
 import TokenList from './TokenList';
-import Menu from '../../components/Menu';
+import Menu from '@/components/Menu';
 
 function AssetsPage() {
   return (
-    <div className={classnames(styles['main-page'])}>
+    <div className={styles['main-page']}>
         <Header />
         <Dashboard />
         <Buttons />

@@ -1,5 +1,5 @@
 import styles from './index.module.scss';
-import BackBar from "../../../components/BackBar";
+import BackBar from "@/components/BackBar";
 
 function SendSOLSuccess() {
     return (

@@ -1,15 +1,14 @@
-import classnames from 'classnames';
 import styles from './index.module.scss';
-import iconSite from "../../../assets/icons/settings/site.svg";
-import iconDiscord from "../../../assets/icons/settings/discord.svg";
-import iconTwitter from "../../../assets/icons/settings/twitter.svg";
-import iconUser from "../../../assets/icons/settings/user.svg";
-import iconPrivacy from "../../../assets/icons/settings/privacy.svg";
-import iconVersion from "../../../assets/icons/settings/version.svg";
+import iconSite from "@/assets/icons/settings/site.svg";
+import iconDiscord from "@/assets/icons/settings/discord.svg";
+import iconTwitter from "@/assets/icons/settings/twitter.svg";
+import iconUser from "@/assets/icons/settings/user.svg";
+import iconPrivacy from "@/assets/icons/settings/privacy.svg";
+import iconVersion from "@/assets/icons/settings/version.svg";
 
 function AboutSetting() {
     return (
-        <div className={classnames(styles['item-box'])}>
+        <div className={styles['item-box']}>
             <label>ABOUT</label>
             <ul>
                 <li>

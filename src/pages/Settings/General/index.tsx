@@ -1,14 +1,13 @@
-import classnames from 'classnames';
 import styles from './index.module.scss';
-import iconLockWallet from '../../../assets/icons/settings/lock.svg'
-import iconTheme from '../../../assets/icons/settings/theme.svg'
-import iconLanguage from '../../../assets/icons/settings/language.svg'
-import iconCurrency from '../../../assets/icons/settings/currency.svg'
-import iconSet from '../../../assets/icons/settings/set.svg'
+import iconLockWallet from '@/assets/icons/settings/lock.svg'
+import iconTheme from '@/assets/icons/settings/theme.svg'
+import iconLanguage from '@/assets/icons/settings/language.svg'
+import iconCurrency from '@/assets/icons/settings/currency.svg'
+import iconSet from '@/assets/icons/settings/set.svg'
 
 function GeneralSetting() {
     return (
-        <div className={classnames(styles['item-box'])}>
+        <div className={styles['item-box']}>
             <label>GENERAL</label>
             <ul>
                 <li>

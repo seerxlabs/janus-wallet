@@ -1,10 +1,9 @@
-import classnames from 'classnames';
 import styles from './index.module.scss';
 import pictureNFT from './img/nft.webp'
 
 function SendForm() {
     return (
-        <div className={classnames(styles['form-box'])}>
+        <div className={styles['form-box']}>
             <div className={styles['form-item']}>
                 <label>NFT</label>
                 <div className={styles['info-box']}>

@@ -12,7 +12,7 @@
   display: block;
   width: 1.5rem;
   height: 1.5rem;
-  background: url("../../../assets/icons/backup.svg") no-repeat center center / 100% 100%;
+  background: url("@/assets/icons/backup.svg") no-repeat center center / 100% 100%;
 }
 .backup p{
   padding: 0;
@@ -41,7 +41,7 @@
   width: 1.5rem;
   height: 1.5rem;
   margin-left: auto;
-  background: url("../../../assets/icons/close-btn-red.svg") no-repeat center center / 100% 100%;
+  background: url("@/assets/icons/close-btn-red.svg") no-repeat center center / 100% 100%;
 }
 .total-assets{
   margin: 1.88rem 0 0.63rem;
@@ -76,6 +76,6 @@
   display: block;
   width: 1.5rem;
   height: 1.5rem;
-  background: url("../../../assets/icons/copy.svg") no-repeat center center / 100% 100%;
+  background: url("@/assets/icons/copy.svg") no-repeat center center / 100% 100%;
 }
 

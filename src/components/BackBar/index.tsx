@@ -1,11 +1,11 @@
 import styles from './index.module.scss';
-import { useNavigate } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 function BackBar() {
-    const navigate = useNavigate();
+    const history = useHistory();
     return (
         <div className={styles['back-bar']}>
-            <a onClick={() => navigate(-1)} />
+            <a onClick={() => history.goBack()} />
         </div>
     );
 }

@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import styles from './index.module.scss';
-import sendIcon from "../../../assets/icons/send.svg"
-import receiveIcon from "../../../assets/icons/receive.svg"
-import swapIcon from "../../../assets/icons/swap.svg"
+import sendIcon from "@/assets/icons/send.svg"
+import receiveIcon from "@/assets/icons/receive.svg"
+import swapIcon from "@/assets/icons/swap.svg"
 
 function Buttons() {
   return (

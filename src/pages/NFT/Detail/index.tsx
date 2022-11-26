@@ -1,7 +1,7 @@
 import styles from './index.module.scss';
 import pictureNFT from './img/nft.webp'
-import PageTitle from '../../../components/PageTitle';
-import BackBar from '../../../components/BackBar';
+import PageTitle from '@/components/PageTitle';
+import BackBar from '@/components/BackBar';
 
 function NFTDetail() {
   return (

@@ -1,11 +1,10 @@
-import classnames from 'classnames';
 import styles from './index.module.scss';
-import iconEth from "../../../assets/icons/net-eth.svg";
+import iconEth from "@/assets/icons/net-eth.svg";
 
 function SwapForm() {
     return (
-        <div className={classnames(styles['form-box'])}>
-            <div className={classnames(styles['form-main'])}>
+        <div className={styles['form-box']}>
+            <div className={styles['form-main']}>
                 <div className={styles['form-item']}>
                     <div className={styles['item-name']}>
                         <label>Pay</label>
