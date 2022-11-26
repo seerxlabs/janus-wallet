@@ -5,7 +5,7 @@ import iconLanguage from '@/assets/icons/settings/language.svg'
 import iconCurrency from '@/assets/icons/settings/currency.svg'
 import iconSet from '@/assets/icons/settings/set.svg'
 
-function GeneralSetting() {
+export default function GeneralSetting() {
     return (
         <div className={styles['item-box']}>
             <label>GENERAL</label>
@@ -35,4 +35,3 @@ function GeneralSetting() {
     );
 }
 
-export default GeneralSetting;

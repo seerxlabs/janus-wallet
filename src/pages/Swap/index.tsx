@@ -4,9 +4,9 @@ import Menu from '@/components/Menu';
 import PageTitle from '@/components/PageTitle';
 import Form from './SwapForm'
 
-function SwapPage() {
+export default function SwapPage() {
     return (
-        <div className={styles['main-page']}>
+        <div className={styles['page-main']}>
             <Header />
             <PageTitle ext={false} sub={false} name={'Swap'}/>
             <Form />
@@ -15,4 +15,3 @@ function SwapPage() {
     );
 }
 
-export default SwapPage;

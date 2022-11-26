@@ -1,7 +1,7 @@
 import styles from './index.module.scss';
 import BackBar from "@/components/BackBar";
 
-function SendSOLSuccess() {
+export default function SendSOLSuccess() {
     return (
         <div className={styles['page-main']}>
             <BackBar/>
@@ -13,5 +13,3 @@ function SendSOLSuccess() {
         </div>
     );
 }
-
-export default SendSOLSuccess;

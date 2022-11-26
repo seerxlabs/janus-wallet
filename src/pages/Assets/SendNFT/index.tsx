@@ -3,9 +3,9 @@ import BackBar from '@/components/BackBar';
 import PageTitle from '@/components/PageTitle';
 import Form from './Form';
 
-function SendNFTPage() {
+export default function SendNFTPage() {
     return (
-        <div className={styles['main-page']}>
+        <div className={styles['page-main']}>
             <BackBar />
             <PageTitle ext={false} sub={false} name={'Send NFT'}/>
             <Form />
@@ -13,4 +13,3 @@ function SendNFTPage() {
     );
 }
 
-export default SendNFTPage;

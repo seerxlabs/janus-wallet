@@ -1,0 +1,98 @@
+.form-box {
+  padding: 0 1.88rem;
+}
+.form-item{
+  margin-bottom: 0.63rem;
+}
+.form-item label{
+  font-size: 0.81rem;
+  font-family: MontserratLight;
+  font-weight: 300;
+  color: #6E7585;
+  line-height: 0.81rem;
+  padding: 1.25rem 0;
+  display: block;
+}
+
+.form-item .input-box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  background: #FAFAFA;
+  border-radius: 0.94rem;
+  border: 0.06rem solid rgba(20,28,29,0.2);
+  padding: 1.06rem 1.25rem;
+}
+.form-item .input-box input{
+  font-size: 0.94rem;
+  font-family: MontserratRegular;
+  font-weight: 400;
+  color: #141C1D;
+  line-height: 0.94rem;
+  background: none;
+  width: 100%;
+  border: none;
+}
+.form-item .input-box input::placeholder{
+  font-size: 0.94rem;
+  font-family: MontserratRegular;
+  font-weight: 400;
+  color: rgba(110,117,133,0.5);
+  line-height: 0.94rem;
+}
+.form-item .textarea-box{
+  background: #FAFAFA;
+  border-radius: 0.94rem;
+  border: 0.06rem solid rgba(20,28,29,0.2);
+  padding: 1.13rem 1.25rem;
+}
+
+.form-item .textarea-box textarea{
+  border: none;
+  width: 100%;
+  font-size: 0.94rem;
+  font-family: MontserratRegular;
+  font-weight: 400;
+  color: #141C1D;
+  line-height: 1.2rem;
+  background: none;
+  border:transparent;
+  resize: none;
+}
+.form-item .textarea-box textarea::placeholder{
+  font-size: 0.94rem;
+  font-family: MontserratRegular;
+  font-weight: 400;
+  color: rgba(110,117,133,0.5);
+  line-height: 0.94rem;
+}
+
+.submit-btn{
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.94rem;
+  padding: 1.25rem 0;
+}
+.submit-btn button{
+  border-radius: 0.94rem;
+  font-size: 0.94rem;
+  font-family: MontserratRegular;
+  font-weight: 400;
+  line-height: 0.94rem;
+  padding: 1.13rem 0;
+  text-align: center;
+  width: 100%;
+}
+.submit-btn button.add{
+  margin-left: 1.88rem;
+  margin-right: 1.88rem;
+  color: #FFFFFF;
+  background: #297AFF;;
+  border: none
+}

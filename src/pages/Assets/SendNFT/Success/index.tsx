@@ -1,7 +1,7 @@
 import styles from './index.module.scss';
 import BackBar from "@/components/BackBar";
 
-function SendNFTSuccess() {
+export default function SendNFTSuccess() {
     return (
         <div className={styles['page-main']}>
             <BackBar/>
@@ -13,4 +13,3 @@ function SendNFTSuccess() {
     );
 }
 
-export default SendNFTSuccess;

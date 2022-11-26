@@ -3,9 +3,9 @@ import BackBar from '@/components/BackBar';
 import PageTitle from '@/components/PageTitle';
 import List from './List';
 
-function Network() {
+export default function Network() {
     return (
-        <div className={styles['main-page']}>
+        <div className={styles['page-main']}>
             <BackBar />
             <PageTitle ext={false} sub={'Switch between different network.'} name={'Network'}/>
             <List />
@@ -13,4 +13,3 @@ function Network() {
     );
 }
 
-export default Network;

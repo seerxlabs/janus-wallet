@@ -1,7 +1,7 @@
 import styles from './index.module.scss';
 import BackBar from "@/components/BackBar";
 
-function VerifyPassword() {
+export default function VerifyPassword() {
     return (
         <div className={styles['page-main']}>
             <BackBar/>
@@ -15,4 +15,3 @@ function VerifyPassword() {
     );
 }
 
-export default VerifyPassword;

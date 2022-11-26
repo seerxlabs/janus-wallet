@@ -1,7 +1,7 @@
 import styles from './index.module.scss';
 import picture from './img/nft.webp'
 
-function DappList() {
+export default function DappList() {
   return (
     <ul className={styles['list-main']}>
         <li className={styles['list-item']}>
@@ -28,4 +28,3 @@ function DappList() {
   );
 }
 
-export default DappList;

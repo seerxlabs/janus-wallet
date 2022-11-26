@@ -9,7 +9,7 @@
 
 html,body{padding: 0;margin: 0;font-family: MontserratRegular;}
 
-:root {
+#root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 16px;
@@ -30,8 +30,7 @@ html,body{padding: 0;margin: 0;font-family: MontserratRegular;}
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 
-  min-height: 100vh;
-
+  position: relative;
 }
 
 h1,h2,h3,h4,h5,h6,p {

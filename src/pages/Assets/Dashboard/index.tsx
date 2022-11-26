@@ -1,6 +1,6 @@
 import styles from './index.module.scss';
 
-function Dashboard() {
+export default function Dashboard() {
   return (
     <div className={styles['main']}>
       <div className={styles['backup']}>
@@ -16,5 +16,3 @@ function Dashboard() {
     </div>
   );
 }
-
-export default Dashboard;

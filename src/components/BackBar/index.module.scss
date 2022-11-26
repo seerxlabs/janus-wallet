@@ -1,18 +1,17 @@
 .back-bar {
-  padding: 1.25rem;
+  padding: 1.25rem 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: #ffffff;
-  position: fixed;
-  width: 100%;
+  position: sticky;
   top: 0;
-  left: 0;
-  z-index: 5;
+  width: 100%;
 }
 .back-bar a{
   display: block;
   width: 1.5rem;
   height: 1.5rem;
-  background: url("../../assets/icons/back.svg") no-repeat center center / 100% 100%;
+  margin-left: 1.25rem;
+  background: url("@/assets/icons/back.svg") no-repeat center center / 100% 100%;
 }

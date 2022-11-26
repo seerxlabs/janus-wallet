@@ -4,9 +4,9 @@ import Menu from '@/components/Menu';
 import PageTitle from '@/components/PageTitle';
 import NFTList from './List';
 
-function NFTPage() {
+export default function NFTPage() {
     return (
-        <div className={styles['main-page']}>
+        <div className={styles['page-main']}>
             <Header />
             <PageTitle ext={true} sub={'My NFTs (3)'} name={'NFT'}/>
             <NFTList />
@@ -15,4 +15,3 @@ function NFTPage() {
     );
 }
 
-export default NFTPage;

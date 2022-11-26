@@ -2,7 +2,7 @@ import styles from './index.module.scss';
 import pictureNFT from './img/nft.webp'
 import {Link} from "react-router-dom";
 
-function NFTList() {
+export default function NFTList() {
   return (
     <ul className={styles['list-main']}>
         <li className={styles['list-item']}>
@@ -18,4 +18,3 @@ function NFTList() {
   );
 }
 
-export default NFTList;

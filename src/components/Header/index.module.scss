@@ -1,11 +1,9 @@
 .header-bar {
   border-bottom: rgba(110, 117, 133, 0.05) 1px solid;
   background: #ffffff;
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
   width: 100%;
-  z-index: 5;
 }
 
 .bar-main{

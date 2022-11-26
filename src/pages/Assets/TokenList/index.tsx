@@ -2,7 +2,7 @@ import styles from './index.module.scss';
 import iconEth from "@/assets/icons/net-eth.svg"
 import iconTron from "@/assets/icons/net-tron.svg"
 
-const TokenList = () => {
+export default function TokenList () {
   return (
     <div className={styles['token-list']}>
         <div className={styles['item']}>
@@ -37,4 +37,3 @@ const TokenList = () => {
   );
 };
 
-export default TokenList;

@@ -3,9 +3,9 @@ import BackBar from '@/components/BackBar';
 import PageTitle from '@/components/PageTitle';
 import Form from './Form';
 
-function SendSOLPage() {
+export default function SendSOLPage() {
     return (
-        <div className={styles['main-page']}>
+        <div className={styles['page-main']}>
             <BackBar />
             <PageTitle ext={false} sub={false} name={'Send SOL'}/>
             <Form />
@@ -13,4 +13,3 @@ function SendSOLPage() {
     );
 }
 
-export default SendSOLPage;

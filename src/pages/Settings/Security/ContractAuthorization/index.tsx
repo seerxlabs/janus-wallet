@@ -3,7 +3,7 @@ import PageTitle from "@/components/PageTitle";
 import BackBar from "@/components/BackBar";
 import List from "./List"
 
-function ContractAuthorization() {
+export default function ContractAuthorization() {
     return (
         <div className={styles['page-main']}>
             <BackBar/>
@@ -13,4 +13,3 @@ function ContractAuthorization() {
     );
 }
 
-export default ContractAuthorization;

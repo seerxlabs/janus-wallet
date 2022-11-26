@@ -3,9 +3,9 @@ import BackBar from '@/components/BackBar';
 import PageTitle from '@/components/PageTitle';
 import List from './List';
 
-function WalletPage() {
+export default function WalletPage() {
     return (
-        <div className={styles['main-page']}>
+        <div className={styles['page-main']}>
             <BackBar />
             <PageTitle ext={false} sub={false} name={'My Wallet'}/>
             <List />
@@ -17,4 +17,3 @@ function WalletPage() {
     );
 }
 
-export default WalletPage;

@@ -6,7 +6,7 @@ import iconUser from "@/assets/icons/settings/user.svg";
 import iconPrivacy from "@/assets/icons/settings/privacy.svg";
 import iconVersion from "@/assets/icons/settings/version.svg";
 
-function AboutSetting() {
+export default function AboutSetting() {
     return (
         <div className={styles['item-box']}>
             <label>ABOUT</label>
@@ -40,4 +40,3 @@ function AboutSetting() {
     );
 }
 
-export default AboutSetting;

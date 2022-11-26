@@ -2,7 +2,7 @@ import styles from './index.module.scss';
 import iconUSDC from '@/assets/icons/net-usdc.svg'
 import iconETH from '@/assets/icons/net-eth.svg'
 
-function WalletList() {
+export default function WalletList() {
   return (
     <ul className={styles['list-main']}>
         <li className={styles['list-item-on']}>
@@ -15,4 +15,3 @@ function WalletList() {
   );
 }
 
-export default WalletList;

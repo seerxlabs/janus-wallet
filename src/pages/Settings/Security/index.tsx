@@ -7,7 +7,7 @@ import iconBag from '@/assets/icons/settings/bag.svg'
 import iconRemove from '@/assets/icons/settings/remove.svg'
 import iconReset from '@/assets/icons/settings/reset.svg'
 
-function SecuritySetting() {
+export default function SecuritySetting() {
     return (
         <div className={styles['item-box']}>
             <label>SECURITY</label>
@@ -45,4 +45,3 @@ function SecuritySetting() {
     );
 }
 
-export default SecuritySetting;

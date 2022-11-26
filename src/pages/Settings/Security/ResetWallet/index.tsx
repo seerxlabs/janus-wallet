@@ -1,7 +1,7 @@
 import styles from './index.module.scss';
 import BackBar from "@/components/BackBar";
 
-function ResetWallet() {
+export default function ResetWallet() {
     return (
         <div className={styles['page-main']}>
             <BackBar/>
@@ -19,4 +19,3 @@ function ResetWallet() {
     );
 }
 
-export default ResetWallet;

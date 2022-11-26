@@ -1,0 +1,46 @@
+.page-main {
+
+}
+.page-content{
+  height: 100vh;
+}
+.empty-tip{
+  padding: 0 1.88rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.empty-tip img{
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  margin: 1.25rem 0;
+}
+.empty-tip h1{
+  font-size: 1.5rem;
+  font-family: Montserrat-Bold, Montserrat;
+  font-weight: bold;
+  color: #141C1D;
+  line-height: 1.5rem;
+  padding: 1.25rem 0 0.63rem;
+}
+.empty-tip h6{
+  font-size: 0.94rem;
+  font-family: Montserrat-Light, Montserrat;
+  font-weight: 300;
+  color: #6E7585;
+  line-height: 1.5rem;
+}
+.empty-tip button{
+  margin-top: 2.5rem;
+  padding: 1.06rem 3rem;
+  background: #FFFFFF;
+  border-radius: 0.94rem;
+  border: 0.06rem solid rgba(20,28,29,0.2);
+  font-size: 0.94rem;
+  font-family: MontserratRegular;
+  font-weight: 400;
+  color: #141C1D;
+  line-height: 0.94rem;
+}

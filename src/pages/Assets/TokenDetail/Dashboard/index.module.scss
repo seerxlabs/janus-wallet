@@ -1,0 +1,29 @@
+img.logo{
+  display: block;
+  margin:2.5rem auto 1.88rem;
+  width: 3.75rem;
+  height: 3.75rem;
+}
+.token{
+  margin: 1.88rem 0 0.63rem;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-family: MontserratMedium;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.token b{
+  color: #6E7585;
+}
+.token span{
+  color: #141C1DFF;
+}
+.currency{
+  text-align: center;
+  font-size: 0.81rem;
+  line-height: 0.81rem;
+  font-family: MontserratLight;
+  color: #6E7585FF;
+}

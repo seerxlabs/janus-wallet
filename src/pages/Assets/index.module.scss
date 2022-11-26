@@ -1,3 +1,26 @@
-.main-page {
-  padding: 4rem 0 4.5rem;
+.page-main { height: 100vh;position: relative; }
+.page-content {
+
+}
+.manage-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:0.5rem;
+  margin: 0 auto 1rem;
+  padding: 0.5rem 0.75rem;
+  background: rgba(110, 117, 133, 0.05);
+  border-radius: 0.63rem;
+  width: 11rem;
+}
+.manage-btn i{
+  width: 1.5rem;
+  height: 1.5rem;
+  background: url("@/assets/icons/manage.svg") no-repeat center center / 100% 100%;
+}
+.manage-btn span{
+  font-size: 0.81rem;
+  font-family: MontserratRegular;
+  color: #6E7585;
+  line-height: 0.81rem;
 }

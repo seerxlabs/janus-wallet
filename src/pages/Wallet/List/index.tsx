@@ -1,6 +1,6 @@
 import styles from './index.module.scss';
 
-function WalletList() {
+export default function WalletList() {
   return (
     <ul className={styles['list-main']}>
         <li className={styles['list-item-on']}>
@@ -18,4 +18,3 @@ function WalletList() {
   );
 }
 
-export default WalletList;

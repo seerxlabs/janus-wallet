@@ -6,9 +6,9 @@ import General from './General';
 import Security from './Security';
 import About from './About';
 
-function SettingsPage() {
+export default function SettingsPage() {
     return (
-        <div className={styles['main-page']}>
+        <div className={styles['page-main']}>
             <Header />
             <PageTitle ext={false} sub={false} name={'Setting'}/>
             <General />
@@ -19,4 +19,3 @@ function SettingsPage() {
     );
 }
 
-export default SettingsPage;

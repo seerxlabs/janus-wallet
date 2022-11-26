@@ -3,7 +3,7 @@ import pictureNFT from './img/nft.webp'
 import PageTitle from '@/components/PageTitle';
 import BackBar from '@/components/BackBar';
 
-function NFTDetail() {
+export default function NFTDetail() {
   return (
       <div className={styles['detail-main']}>
           <BackBar/>
@@ -43,4 +43,3 @@ function NFTDetail() {
   );
 }
 
-export default NFTDetail;

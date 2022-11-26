@@ -1,7 +1,7 @@
 import styles from './index.module.scss';
 import iconEth from "@/assets/icons/net-eth.svg";
 
-function SwapForm() {
+export default function SwapForm() {
     return (
         <div className={styles['form-box']}>
             <div className={styles['form-main']}>
@@ -39,4 +39,3 @@ function SwapForm() {
     );
 }
 
-export default SwapForm;

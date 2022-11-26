@@ -1,6 +1,6 @@
 import styles from './index.module.scss';
 
-function SwapSuccess() {
+export default function SwapSuccess() {
     return (
         <div className={styles['page-main']}>
             <i/>
@@ -12,4 +12,3 @@ function SwapSuccess() {
     );
 }
 
-export default SwapSuccess;

@@ -1,6 +1,6 @@
 import styles from './index.module.scss';
 
-function SendForm() {
+export default function SendForm() {
     return (
         <div className={styles['form-box']}>
             <div className={styles['form-item']}>
@@ -24,4 +24,3 @@ function SendForm() {
     );
 }
 
-export default SendForm;
