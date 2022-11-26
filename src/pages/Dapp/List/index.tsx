@@ -24,6 +24,18 @@ export default function DappList() {
             <img src={picture} alt=""/>
             <p><b>Web3 Storage</b><span>Making decentralized storage easy</span></p>
         </li>
+        <li className={styles['list-item']}>
+            <img src={picture} alt=""/>
+            <p><b>Web3 Storage</b><span>Making decentralized storage easy</span></p>
+        </li>
+        <li className={styles['list-item']}>
+            <img src={picture} alt=""/>
+            <p><b>Web3 Storage</b><span>Making decentralized storage easy</span></p>
+        </li>
+        <li className={styles['list-item']}>
+            <img src={picture} alt=""/>
+            <p><b>Web3 Storage</b><span>Making decentralized storage easy</span></p>
+        </li>
     </ul>
   );
 }
