@@ -8,8 +8,10 @@ export default function SwapPage() {
     return (
         <div className={styles['page-main']}>
             <Header />
-            <PageTitle ext={false} sub={false} name={'Swap'}/>
-            <Form />
+            <div className={styles['page-content']}>
+                <PageTitle ext={false} sub={false} name={'Swap'}/>
+                <Form />
+            </div>
             <Menu />
         </div>
     );

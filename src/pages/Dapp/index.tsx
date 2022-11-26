@@ -8,8 +8,10 @@ export default function DappPage() {
     return (
         <div className={styles['page-main']}>
             <Header />
-            <PageTitle ext={false} sub={false} name={'Browse Apps'}/>
-            <List/>
+            <div className={styles['page-content']}>
+                <PageTitle ext={false} sub={false} name={'Browse Apps'}/>
+                <List/>
+            </div>
             <Menu />
         </div>
     );
