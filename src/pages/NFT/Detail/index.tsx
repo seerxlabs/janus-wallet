@@ -7,7 +7,7 @@ export default function NFTDetail() {
   return (
       <div className={styles['detail-main']}>
           <BackBar/>
-          <PageTitle ext={false} sub={false} name={'NFT Details'}/>
+          <PageTitle sub={false} name={'NFT Details'}/>
           <div className={styles['page-main']}>
               <img className={styles['nft-body']} src={pictureNFT} alt=""/>
               <div className={styles['sd-punk']}>

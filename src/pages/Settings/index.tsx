@@ -10,7 +10,7 @@ export default function SettingsPage() {
     return (
         <div className={styles['page-main']}>
             <Header />
-            <PageTitle ext={false} sub={false} name={'Setting'}/>
+            <PageTitle sub={false} name={'Setting'}/>
             <General />
             <Security />
             <About />

@@ -5,7 +5,6 @@ import MyWalletPage from "@/pages/Wallet";
 import UnlockPage from "@/pages/Unlock";
 import VerifyPage from "@/pages/Verify";
 import AssetsPage from "@/pages/Assets";
-import BackupPage from "@/pages/Assets/Backup";
 import ManageTokenPage from "@/pages/Assets/ManageToken";
 import AddTokenPage from "@/pages/Assets/AddToken";
 import TokenDetailPage from "@/pages/Assets/TokenDetail";
@@ -30,7 +29,6 @@ const routes: RouteConfig[] = [
     {path: '/', exact: true, component: AssetsPage},
     {path: '/assets', exact: true, component: AssetsPage},
     {path: '/wallet', exact: true, component: MyWalletPage},
-    {path: '/assets/backup', exact: true, component: BackupPage},
     {path: '/assets/manageToken', exact: true, component: ManageTokenPage},
     {path: '/assets/addToken', exact: true, component: AddTokenPage},
     {path: '/assets/tokenDetail', exact: true, component: TokenDetailPage},

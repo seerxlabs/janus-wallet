@@ -1,8 +1,5 @@
 .page-title {
   padding: 1.25rem 1.88rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 .page-title .title-content{
   display: flex;
@@ -22,27 +19,4 @@
   font-size: 0.94rem;
   line-height: 0.94rem;
   font-family: MontserratLight;
-}
-.page-title .ext{
-  display: flex;
-  align-items: center;
-  gap: 0.56rem;
-  border-radius: 0.75rem;
-  padding: 0.5rem 0.63rem;
-  border: 0.06rem solid rgba(20,28,29,0.2);
-}
-.page-title .ext i{
-  display: block;
-  width: 1.5rem;
-  height: 1.5rem;
-  background: url("../../assets/icons/gift.svg") no-repeat center center / 100% 100%;
-}
-.page-title .ext span{
-  color: #141C1DFF;
-  font-size: 0.94rem;
-  line-height: 0.94rem;
-  font-family: MontserratRegular;
-}
-.page-title .ext a{
-
 }

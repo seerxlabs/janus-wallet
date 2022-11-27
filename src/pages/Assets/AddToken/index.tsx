@@ -7,7 +7,7 @@ export default function AddTokenPage() {
     return (
         <div className={styles['page-main']}>
             <BackBar/>
-            <PageTitle name={'Add custom token'} sub={false} ext={false}/>
+            <PageTitle name={'Add custom token'} sub={false}/>
             <Form/>
         </div>
     );

@@ -1,9 +1,12 @@
 .page-main {
-  padding: 4rem 1.88rem 2rem;
+  position: relative;
+  height: 100vh;
+  padding: 0 1.88rem;
   display: flex;
   align-items: center;
   flex-direction: column;
 }
+
 .page-main i{
   margin-top: 4.75rem;
   display: block;

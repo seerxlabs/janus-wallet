@@ -9,7 +9,7 @@ export default function DappPage() {
         <div className={styles['page-main']}>
             <Header />
             <div className={styles['page-content']}>
-                <PageTitle ext={false} sub={false} name={'Browse Apps'}/>
+                <PageTitle sub={false} name={'Browse Apps'}/>
                 <List/>
             </div>
             <Menu />

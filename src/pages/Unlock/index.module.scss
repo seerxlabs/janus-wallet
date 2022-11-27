@@ -1,5 +1,4 @@
 .page-main {
-  @apply flex flex-col;
-  width: 375px;
-  height: 600px;
+  position: relative;
+  height: 100vh;
 }

@@ -9,7 +9,7 @@ export default function SwapPage() {
         <div className={styles['page-main']}>
             <Header />
             <div className={styles['page-content']}>
-                <PageTitle ext={false} sub={false} name={'Swap'}/>
+                <PageTitle sub={false} name={'Swap'}/>
                 <Form />
             </div>
             <Menu />

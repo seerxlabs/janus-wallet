@@ -7,7 +7,7 @@ export default function SendSOLPage() {
     return (
         <div className={styles['page-main']}>
             <BackBar />
-            <PageTitle ext={false} sub={false} name={'Send SOL'}/>
+            <PageTitle sub={false} name={'Send SOL'}/>
             <Form />
         </div>
     );
