@@ -1,5 +1,5 @@
 import styles from './index.module.scss';
-import iconEth from "../../assets/icons/net-eth.svg"
+import iconEth from "/src/assets/icons/net-eth.svg"
 import {Link} from 'react-router-dom';
 
 function Header() {

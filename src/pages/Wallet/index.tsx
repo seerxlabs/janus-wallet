@@ -1,6 +1,6 @@
 import styles from './index.module.scss';
-import BackBar from '@/components/BackBar';
-import PageTitle from '@/components/PageTitle';
+import BackBar from '../../components/BackBar';
+import PageTitle from '../../components/PageTitle';
 import List from './List';
 
 export default function WalletPage() {

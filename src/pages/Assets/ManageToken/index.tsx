@@ -1,6 +1,6 @@
 import styles from './index.module.scss';
-import PageTitle from "@/components/PageTitle";
-import BackBar from "@/components/BackBar";
+import PageTitle from "../../../components/PageTitle";
+import BackBar from "../../../components/BackBar";
 import {Link} from "react-router-dom";
 import List from "./List"
 

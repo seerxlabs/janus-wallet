@@ -1,15 +1,15 @@
 import styles from './index.module.scss';
 import {Link, useLocation} from 'react-router-dom';
-import iconAssets from "../../assets/icons/menu-assets.svg";
-import iconAssetsHover from "../../assets/icons/menu-assets-hover.svg";
-import iconNft from "../../assets/icons/menu-nft.svg";
-import iconNftHover from "../../assets/icons/menu-nft-hover.svg";
-import iconDapp from "../../assets/icons/menu-dapp.svg";
-import iconDappHover from "../../assets/icons/menu-dapp-hover.svg";
-import iconSwap from "../../assets/icons/menu-swap.svg";
-import iconSwapHover from "../../assets/icons/menu-swap-hover.svg";
-import iconSettings from "../../assets/icons/menu-settings.svg";
-import iconSettingsHover from "../../assets/icons/menu-settings-hover.svg";
+import iconAssets from "/src/assets/icons/menu-assets.svg";
+import iconAssetsHover from "/src/assets/icons/menu-assets-hover.svg";
+import iconNft from "/src/assets/icons/menu-nft.svg";
+import iconNftHover from "/src/assets/icons/menu-nft-hover.svg";
+import iconDapp from "/src/assets/icons/menu-dapp.svg";
+import iconDappHover from "/src/assets/icons/menu-dapp-hover.svg";
+import iconSwap from "/src/assets/icons/menu-swap.svg";
+import iconSwapHover from "/src/assets/icons/menu-swap-hover.svg";
+import iconSettings from "/src/assets/icons/menu-settings.svg";
+import iconSettingsHover from "/src/assets/icons/menu-settings-hover.svg";
 
 
 function Menu() {
