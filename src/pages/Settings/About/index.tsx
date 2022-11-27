@@ -5,6 +5,7 @@ import iconTwitter from "@/assets/icons/settings/twitter.svg";
 import iconUser from "@/assets/icons/settings/user.svg";
 import iconPrivacy from "@/assets/icons/settings/privacy.svg";
 import iconVersion from "@/assets/icons/settings/version.svg";
+import { Link } from "react-router-dom"
 
 export default function AboutSetting() {
     return (
@@ -12,28 +13,40 @@ export default function AboutSetting() {
             <label>ABOUT</label>
             <ul>
                 <li>
-                    <p><img src={iconSite} alt=""/><b>Official website</b></p>
-                    <a><i/></a>
+                    <Link to="">
+                        <img src={iconSite} alt=""/><b>Official website</b>
+                        <p><i/></p>
+                    </Link>
                 </li>
                 <li>
-                    <p><img src={iconDiscord} alt=""/><b>Discord</b></p>
-                    <a><i/></a>
+                    <Link to="">
+                        <img src={iconDiscord} alt=""/><b>Discord</b>
+                        <p><i/></p>
+                    </Link>
                 </li>
                 <li>
-                    <p><img src={iconTwitter} alt=""/><b>Twitter</b></p>
-                    <a><i/></a>
+                    <Link to="">
+                        <img src={iconTwitter} alt=""/><b>Twitter</b>
+                        <p><i/></p>
+                    </Link>
                 </li>
                 <li>
-                    <p><img src={iconUser} alt=""/><b>User agreement</b></p>
-                    <a><i/></a>
+                    <Link to="">
+                        <img src={iconUser} alt=""/><b>User agreement</b>
+                        <p><i/></p>
+                    </Link>
                 </li>
                 <li>
-                    <p><img src={iconPrivacy} alt=""/><b>Privacy terms</b></p>
-                    <a><i/></a>
+                    <Link to="">
+                        <img src={iconPrivacy} alt=""/><b>Privacy terms</b>
+                        <p><i/></p>
+                    </Link>
                 </li>
                 <li>
-                    <p><img src={iconVersion} alt=""/><b>Wallet version</b></p>
-                    <a><span>1.0.1</span><i/></a>
+                    <Link to="">
+                        <img src={iconVersion} alt=""/><b>Wallet version</b>
+                        <p><span>1.0.1</span><i/></p>
+                    </Link>
                 </li>
             </ul>
         </div>

@@ -4,6 +4,7 @@ import iconTheme from '@/assets/icons/settings/theme.svg'
 import iconLanguage from '@/assets/icons/settings/language.svg'
 import iconCurrency from '@/assets/icons/settings/currency.svg'
 import iconSet from '@/assets/icons/settings/set.svg'
+import {Link} from "react-router-dom"
 
 export default function GeneralSetting() {
     return (
@@ -11,24 +12,34 @@ export default function GeneralSetting() {
             <label>GENERAL</label>
             <ul>
                 <li>
-                    <p><img src={iconLockWallet} alt=""/><b>Lock wallet</b></p>
-                    <a><i/></a>
+                    <Link to="">
+                        <img src={iconLockWallet} alt=""/><b>Lock wallet</b>
+                        <p><i/></p>
+                    </Link>
                 </li>
                 <li>
-                    <p><img src={iconTheme} alt=""/><b>Theme</b></p>
-                    <a><span>Auto</span><i/></a>
+                    <Link to="">
+                        <img src={iconTheme} alt=""/><b>Theme</b>
+                        <p><span>Auto</span><i/></p>
+                    </Link>
                 </li>
                 <li>
-                    <p><img src={iconLanguage} alt=""/><b>Language</b></p>
-                    <a><span>English</span><i/></a>
+                    <Link to="">
+                        <img src={iconLanguage} alt=""/><b>Language</b>
+                        <p><span>English</span><i/></p>
+                    </Link>
                 </li>
                 <li>
-                    <p><img src={iconCurrency} alt=""/><b>Default currency</b></p>
-                    <a><span>CNY</span><i/></a>
+                    <Link to="">
+                        <img src={iconCurrency} alt=""/><b>Default currency</b>
+                        <p><span>CNY</span><i/></p>
+                    </Link>
                 </li>
                 <li>
-                    <p><img src={iconSet} alt=""/><b>Set up block</b></p>
-                    <a><i/></a>
+                    <Link to="">
+                        <img src={iconSet} alt=""/><b>Set up block</b>
+                        <p><i/></p>
+                    </Link>
                 </li>
             </ul>
         </div>

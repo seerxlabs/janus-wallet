@@ -16,38 +16,37 @@
 }
 .item-box ul li{
   padding: 1rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.item-box ul li p{
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-.item-box ul li p img{
-  display: block;
-  width: 1.5rem;
-  height: 1.5rem;
-}
-.item-box ul li p b{
-  font-size: 0.94rem;
-  font-family: MontserratRegular;
-  color: #141C1D;
-  line-height: 0.94rem;
 }
 .item-box ul li a{
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  gap: 0.75rem;
 }
-.item-box ul li a span{
+.item-box ul li a img{
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.item-box ul li b{
+  font-size: 0.94rem;
+  font-family: MontserratRegular;
+  color: #141C1D;
+  line-height: 0.94rem;
+  flex: 1;
+}
+.item-box ul li p{
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+.item-box ul li p span{
   font-size: 0.94rem;
   font-family: MontserratLight;
   color: #141C1D;
   line-height: 0.94rem;
 }
-.item-box ul li a i{
+.item-box ul li p i{
   display: block;
   width: 1.5rem;
   height: 1.5rem;

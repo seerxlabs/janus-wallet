@@ -6,6 +6,7 @@ import iconAuth from '@/assets/icons/settings/auth.svg'
 import iconBag from '@/assets/icons/settings/bag.svg'
 import iconRemove from '@/assets/icons/settings/remove.svg'
 import iconReset from '@/assets/icons/settings/reset.svg'
+import { Link } from "react-router-dom"
 
 export default function SecuritySetting() {
     return (
@@ -13,32 +14,53 @@ export default function SecuritySetting() {
             <label>SECURITY</label>
             <ul>
                 <li>
-                    <p><img src={iconUnlockWallet} alt=""/><b>Change password</b></p>
-                    <a><i/></a>
+                    <Link to="/settings/changePassword">
+                        <img src={iconUnlockWallet} alt=""/>
+                        <b>Change password</b>
+                        <p><i/></p>
+                    </Link>
                 </li>
                 <li>
-                    <p><img src={iconLockTime} alt=""/><b>Lock time</b></p>
-                    <a><span>2 hours</span><i/></a>
+                    <Link to="/settings/changePassword">
+                        <img src={iconLockTime} alt=""/>
+                        <b>Lock time</b>
+                        <p><span>2 hours</span><i/></p>
+                    </Link>
                 </li>
                 <li>
-                    <p><img src={iconBackupWallet} alt=""/><b>Back up wallet</b></p>
-                    <a><i/></a>
+                    <Link to="/settings/changePassword">
+                        <img src={iconBackupWallet} alt=""/>
+                        <b>Back up wallet</b>
+                        <p><i/></p>
+                    </Link>
                 </li>
                 <li>
-                    <p><img src={iconAuth} alt=""/><b>Contract authorization</b></p>
-                    <a><i/></a>
+                    <Link to="/settings/changePassword">
+                        <img src={iconAuth} alt=""/>
+                        <b>Contract authorization</b>
+                        <p><i/></p>
+                    </Link>
                 </li>
                 <li>
-                    <p><img src={iconBag} alt=""/><b>Delete Email account</b></p>
-                    <a><i/></a>
+                    <Link to="/settings/changePassword">
+                        <img src={iconBag} alt=""/>
+                        <b>Delete Email account</b>
+                        <p><i/></p>
+                    </Link>
                 </li>
                 <li>
-                    <p><img src={iconRemove} alt=""/><b>Remove wallet</b></p>
-                    <a><i/></a>
+                    <Link to="/settings/changePassword">
+                        <img src={iconRemove} alt=""/>
+                        <b>Remove wallet</b>
+                        <p><i/></p>
+                    </Link>
                 </li>
                 <li>
-                    <p><img src={iconReset} alt=""/><b>Reset wallet</b></p>
-                    <a><i/></a>
+                    <Link to="/settings/changePassword">
+                        <img src={iconReset} alt=""/>
+                        <b>Reset wallet</b>
+                        <p><i/></p>
+                    </Link>
                 </li>
             </ul>
         </div>

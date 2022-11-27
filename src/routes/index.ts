@@ -24,6 +24,7 @@ import SettingsPage from "@/pages/Settings";
 import ResetWalletPage from "@/pages/Settings/Security/ResetWallet";
 import ResetWalletSuccessPage from "@/pages/Settings/Security/ResetWallet/Success";
 import ContractAuthorizationPage from "@/pages/Settings/Security/ContractAuthorization";
+import ChangePasswordPage from "@/pages/Settings/Security/ChangePassword";
 
 const routes: RouteConfig[] = [
     {path: '/', exact: true, component: AssetsPage},
@@ -50,6 +51,7 @@ const routes: RouteConfig[] = [
     {path: '/settings', exact: true, component: SettingsPage},
     {path: '/settings/resetWallet', exact: true, component: ResetWalletPage},
     {path: '/settings/resetWallet/success', exact: true, component: ResetWalletSuccessPage},
-    {path: '/settings/ContractAuthorization', exact: true, component: ContractAuthorizationPage},
+    {path: '/settings/contractAuthorization', exact: true, component: ContractAuthorizationPage},
+    {path: '/settings/changePassword', exact: true, component: ChangePasswordPage},
 ]
 export default routes
