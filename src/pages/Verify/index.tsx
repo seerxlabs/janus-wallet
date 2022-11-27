@@ -8,7 +8,7 @@ export default function VerifyPassword() {
             <h1>Verify Password</h1>
             <h6>Verify your password to continue</h6>
             <div className={styles['input-box']}>
-                <input placeholder={'Enter your password'} /><i/>
+                <input placeholder={'Enter your password'}/><i/>
             </div>
             <button>Continue</button>
         </div>

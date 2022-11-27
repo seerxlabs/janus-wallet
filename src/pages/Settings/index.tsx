@@ -9,12 +9,12 @@ import About from './About';
 export default function SettingsPage() {
     return (
         <div className={styles['page-main']}>
-            <Header />
+            <Header/>
             <PageTitle sub={false} name={'Setting'}/>
-            <General />
-            <Security />
-            <About />
-            <Menu />
+            <General/>
+            <Security/>
+            <About/>
+            <Menu/>
         </div>
     );
 }

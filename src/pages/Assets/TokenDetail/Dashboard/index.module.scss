@@ -1,10 +1,11 @@
-img.logo{
+img.logo {
   display: block;
-  margin:2.5rem auto 1.88rem;
+  margin: 2.5rem auto 1.88rem;
   width: 3.75rem;
   height: 3.75rem;
 }
-.token{
+
+.token {
   margin: 1.88rem 0 0.63rem;
   font-size: 1.5rem;
   line-height: 1.5rem;
@@ -14,13 +15,16 @@ img.logo{
   justify-content: center;
   gap: 0.5rem;
 }
-.token b{
+
+.token b {
   color: #6E7585;
 }
-.token span{
+
+.token span {
   color: #141C1DFF;
 }
-.currency{
+
+.currency {
   text-align: center;
   font-size: 0.81rem;
   line-height: 0.81rem;

@@ -1,21 +1,24 @@
 .list-main {
   padding: 0.63rem 1.25rem;
 }
-.list-item{
+
+.list-item {
   padding: 0.94rem 0;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 0.75rem;
 }
-.list-item img{
+
+.list-item img {
   display: block;
   width: 2.5rem;
   height: 2.5rem;
-  background: rgba(110,117,133,0.5);
+  background: rgba(110, 117, 133, 0.5);
   border-radius: 0.75rem;
 }
-.list-item p{
+
+.list-item p {
   display: flex;
   align-items: normal;
   flex-direction: column;
@@ -23,19 +26,21 @@
   gap: 0.38rem;
   flex: 1
 }
-.list-item p b{
+
+.list-item p b {
   font-size: 0.94rem;
   font-family: MontserratRegular;
   color: #141C1D;
   line-height: 0.94rem;
 }
-.list-item p span{
+
+.list-item p span {
   display: block;
   font-size: 0.81rem;
   font-family: MontserratLight;
   color: #6E7585;
   line-height: 0.81rem;
-  overflow:hidden;
-  text-overflow:ellipsis;
-  white-space:nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

@@ -6,9 +6,9 @@ import List from './List';
 export default function WalletPage() {
     return (
         <div className={styles['page-main']}>
-            <BackBar />
+            <BackBar/>
             <PageTitle sub={false} name={'My Wallet'}/>
-            <List />
+            <List/>
             <div className={styles['make-btn']}>
                 <button className={styles['create']}>Create Wallet</button>
                 <button className={styles['import']}>Import Wallet</button>

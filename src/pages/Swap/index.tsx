@@ -7,12 +7,12 @@ import Form from './SwapForm'
 export default function SwapPage() {
     return (
         <div className={styles['page-main']}>
-            <Header />
+            <Header/>
             <div className={styles['page-content']}>
                 <PageTitle sub={false} name={'Swap'}/>
-                <Form />
+                <Form/>
             </div>
-            <Menu />
+            <Menu/>
         </div>
     );
 }

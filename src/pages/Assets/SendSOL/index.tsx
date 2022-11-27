@@ -6,9 +6,9 @@ import Form from './Form';
 export default function SendSOLPage() {
     return (
         <div className={styles['page-main']}>
-            <BackBar />
+            <BackBar/>
             <PageTitle sub={false} name={'Send SOL'}/>
-            <Form />
+            <Form/>
         </div>
     );
 }

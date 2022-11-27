@@ -1,0 +1,98 @@
+.page-main {
+  position: relative;
+  height: 100vh;
+  background: url("/src/assets/bg.png") no-repeat center top / 100% auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.88rem;
+}
+
+.page-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.page-content img {
+  display: block;
+  width: 3.75rem;
+  height: 3.75rem;
+}
+
+.page-content h1 {
+  font-size: 1.5rem;
+  font-family: MontserratBold;
+  font-weight: bold;
+  color: #141C1D;
+  line-height: 1.5rem;
+  margin: 1.88rem 0 0.63rem;
+}
+
+.page-content h6 {
+  font-size: 0.94rem;
+  font-family: MontserratLight;
+  font-weight: 300;
+  color: #6E7585;
+  line-height: 1.5rem;
+}
+
+.page-content .password-box {
+  background: #FAFAFA;
+  border-radius: 0.94rem;
+  border: 0.06rem solid rgba(20, 28, 29, 0.2);
+  margin-top: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap:0.75rem;
+  padding: 0.81rem 0;
+}
+
+.page-content .password-box input {
+  border: none;
+  flex: 1;
+  margin-left: 1.25rem;
+  background: none;
+  font-size: 0.94rem;
+  font-family: MontserratRegular;
+  font-weight: 400;
+  line-height: 0.94rem;
+  color: #141C1D;
+}
+.page-content .password-box input::placeholder{
+  color: rgba(110,117,133,0.5);
+}
+
+.page-content .password-box a {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 1.25rem;
+  background: url("/src/assets/icons/hide.svg") no-repeat center center / 100% 100%;
+}
+
+.page-content button {
+  margin-top: 1.88rem;
+  background: #297AFF;
+  border-radius: 0.94rem;
+  padding: 1.06rem;
+  width: 100%;
+  font-size: 0.94rem;
+  font-family: MontserratRegular;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 0.94rem;
+}
+
+.page-content a.forget {
+  margin-top: 6.44rem;
+  font-size: 0.94rem;
+  font-family: MontserratRegular;
+  font-weight: 400;
+  color: #6E7585;
+  line-height: 0.94rem;
+}

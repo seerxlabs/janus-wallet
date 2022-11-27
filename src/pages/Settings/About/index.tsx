@@ -1,11 +1,11 @@
 import styles from './index.module.scss';
-import iconSite from "@/assets/icons/settings/site.svg";
-import iconDiscord from "@/assets/icons/settings/discord.svg";
-import iconTwitter from "@/assets/icons/settings/twitter.svg";
-import iconUser from "@/assets/icons/settings/user.svg";
-import iconPrivacy from "@/assets/icons/settings/privacy.svg";
-import iconVersion from "@/assets/icons/settings/version.svg";
-import { Link } from "react-router-dom"
+import iconSite from "/src/assets/icons/settings/site.svg";
+import iconDiscord from "/src/assets/icons/settings/discord.svg";
+import iconTwitter from "/src/assets/icons/settings/twitter.svg";
+import iconUser from "/src/assets/icons/settings/user.svg";
+import iconPrivacy from "/src/assets/icons/settings/privacy.svg";
+import iconVersion from "/src/assets/icons/settings/version.svg";
+import {Link} from "react-router-dom"
 
 export default function AboutSetting() {
     return (
@@ -14,37 +14,43 @@ export default function AboutSetting() {
             <ul>
                 <li>
                     <Link to="">
-                        <img src={iconSite} alt=""/><b>Official website</b>
+                        <img src={iconSite} alt=""/>
+                        <b>Official website</b>
                         <p><i/></p>
                     </Link>
                 </li>
                 <li>
                     <Link to="">
-                        <img src={iconDiscord} alt=""/><b>Discord</b>
+                        <img src={iconDiscord} alt=""/>
+                        <b>Discord</b>
                         <p><i/></p>
                     </Link>
                 </li>
                 <li>
                     <Link to="">
-                        <img src={iconTwitter} alt=""/><b>Twitter</b>
+                        <img src={iconTwitter} alt=""/>
+                        <b>Twitter</b>
                         <p><i/></p>
                     </Link>
                 </li>
                 <li>
                     <Link to="">
-                        <img src={iconUser} alt=""/><b>User agreement</b>
+                        <img src={iconUser} alt=""/>
+                        <b>User agreement</b>
                         <p><i/></p>
                     </Link>
                 </li>
                 <li>
                     <Link to="">
-                        <img src={iconPrivacy} alt=""/><b>Privacy terms</b>
+                        <img src={iconPrivacy} alt=""/>
+                        <b>Privacy terms</b>
                         <p><i/></p>
                     </Link>
                 </li>
                 <li>
                     <Link to="">
-                        <img src={iconVersion} alt=""/><b>Wallet version</b>
+                        <img src={iconVersion} alt=""/>
+                        <b>Wallet version</b>
                         <p><span>1.0.1</span><i/></p>
                     </Link>
                 </li>

@@ -1,4 +1,4 @@
-.log-list{
+.log-list {
   display: flex;
   align-items: normal;
   justify-content: flex-start;
@@ -6,7 +6,8 @@
   flex-direction: column;
   padding: 1.25rem;
 }
-.log-list h6{
+
+.log-list h6 {
   font-size: 0.94rem;
   font-family: MontserratRegular;
   font-weight: 400;
@@ -14,7 +15,8 @@
   line-height: 0.94rem;
   padding-left: 0.63rem;
 }
-.log-list ul{
+
+.log-list ul {
   display: flex;
   align-items: normal;
   justify-content: flex-start;
@@ -22,7 +24,8 @@
   gap: 1.25rem;
   padding-bottom: 4rem;
 }
-.log-list ul label{
+
+.log-list ul label {
   font-size: 0.81rem;
   font-family: MontserratLight;
   font-weight: 300;
@@ -31,56 +34,63 @@
   padding-left: 0.63rem;
 }
 
-.log-list ul li{
+.log-list ul li {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 0.75rem;
-  padding:1.44rem 1.25rem;
+  padding: 1.44rem 1.25rem;
   border-radius: 0.94rem;
   background: rgba(110, 117, 133, 0.05);
 }
-.log-list ul li img{
+
+.log-list ul li img {
   display: block;
   width: 2.5rem;
   height: 2.5rem;
 }
-.log-list ul li .net-name{
+
+.log-list ul li .net-name {
   display: flex;
   align-items: normal;
   gap: 0.38rem;
   flex-direction: column;
   flex: 1;
 }
-.log-list ul li .net-name b{
+
+.log-list ul li .net-name b {
   text-align: left;
   font-size: 0.94rem;
   line-height: 0.94rem;
   font-family: MontserratRegular;
   color: #141C1D;
 }
-.log-list ul li .net-name span{
+
+.log-list ul li .net-name span {
   gap: 0.3rem;
   line-height: 0.81rem;
   font-size: 0.81rem;
   font-family: MontserratLight;
   color: #6E7585FF;
 }
-.log-list ul li .net-assets{
+
+.log-list ul li .net-assets {
   display: flex;
   align-items: normal;
   gap: 0.38rem;
   flex-direction: column;
   margin-left: auto;
 }
-.log-list ul li .net-assets b{
+
+.log-list ul li .net-assets b {
   text-align: left;
   font-size: 0.94rem;
   line-height: 0.94rem;
   font-family: MontserratRegular;
   color: #141C1D;
 }
-.log-list ul li .net-assets span{
+
+.log-list ul li .net-assets span {
   font-size: 0.81rem;
   font-family: MontserratLight;
   color: #6E7585FF;

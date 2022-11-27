@@ -1,7 +1,8 @@
 .item-box {
   padding: 0.63rem 1.25rem;
 }
-.item-box label{
+
+.item-box label {
   padding: 0.63rem 0.63rem 1.25rem;
   display: block;
   font-size: 0.81rem;
@@ -9,46 +10,54 @@
   color: #6E7585;
   line-height: 0.81rem;
 }
-.item-box ul{
+
+.item-box ul {
   background: rgba(110, 117, 133, 0.05);
   border-radius: 0.94rem;
   padding: 0 1.25rem;
 }
-.item-box ul li{
+
+.item-box ul li {
   padding: 1rem 0;
 }
-.item-box ul li a{
+
+.item-box ul li a {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 0.75rem;
 }
-.item-box ul li a img{
+
+.item-box ul li a img {
   display: block;
   width: 1.5rem;
   height: 1.5rem;
 }
-.item-box ul li b{
+
+.item-box ul li b {
   font-size: 0.94rem;
   font-family: MontserratRegular;
   color: #141C1D;
   line-height: 0.94rem;
   flex: 1;
 }
-.item-box ul li p{
+
+.item-box ul li p {
   margin-left: auto;
   display: flex;
   align-items: center;
 }
-.item-box ul li p span{
+
+.item-box ul li p span {
   font-size: 0.94rem;
   font-family: MontserratLight;
   color: #141C1D;
   line-height: 0.94rem;
 }
-.item-box ul li p i{
+
+.item-box ul li p i {
   display: block;
   width: 1.5rem;
   height: 1.5rem;
-  background: url("@/assets/icons/to.svg") no-repeat center center / 100% 100%;
+  background: url("/src/assets/icons/to.svg") no-repeat center center / 100% 100%;
 }

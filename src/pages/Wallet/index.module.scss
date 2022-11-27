@@ -3,7 +3,7 @@
 
 }
 
-.make-btn{
+.make-btn {
   position: fixed;
   width: 100%;
   left: 0;
@@ -14,7 +14,8 @@
   gap: 0.94rem;
   padding: 1.25rem 0;
 }
-.make-btn button{
+
+.make-btn button {
   border-radius: 0.94rem;
   font-size: 0.94rem;
   font-family: MontserratRegular;
@@ -24,13 +25,15 @@
   text-align: center;
   width: 50%;
 }
-.make-btn button.create{
+
+.make-btn button.create {
   margin-left: 1.88rem;
   color: #141C1D;
   background: #FFFFFF;
-  border: 0.06rem solid rgba(20,28,29,0.2);
+  border: 0.06rem solid rgba(20, 28, 29, 0.2);
 }
-.make-btn button.import{
+
+.make-btn button.import {
   margin-right: 1.88rem;
   color: #ffffff;
   background: #297AFF;;

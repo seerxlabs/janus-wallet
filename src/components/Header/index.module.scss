@@ -27,7 +27,7 @@
   background: linear-gradient(135deg, #C2FFD4 0%, #71D7FF 100%);
 }
 
-.wallet-name span {
+.wallet-name b {
   font-size: 0.94rem;
   color: #6E7585;
   margin: 0 0.38rem 0 0.63rem;
@@ -35,7 +35,7 @@
   font-family: MontserratRegular;
 }
 
-.wallet-name a {
+.wallet-name span {
   display: block;
   width: 1.5rem;
   height: 1.5rem;

@@ -2,12 +2,12 @@ import styles from './index.module.scss';
 import Header from '@/components/Header';
 import Menu from '@/components/Menu';
 import PageTitle from '@/components/PageTitle';
-import iconNFTEmpty from "@/assets/icons/nft-none.svg"
+import iconNFTEmpty from "/src/assets/icons/nft-none.svg"
 
 export default function NFTEmptyPage() {
     return (
         <div className={styles['page-main']}>
-            <Header />
+            <Header/>
             <div className={styles['page-content']}>
                 <PageTitle sub={false} name={'NFT'}/>
                 <div className={styles['empty-tip']}>
@@ -17,7 +17,7 @@ export default function NFTEmptyPage() {
                     <button>Mint NFT</button>
                 </div>
             </div>
-            <Menu />
+            <Menu/>
         </div>
     );
 }

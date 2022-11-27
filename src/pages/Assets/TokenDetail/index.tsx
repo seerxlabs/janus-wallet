@@ -8,9 +8,9 @@ export default function TokenDetail() {
     return (
         <div className={styles['page-main']}>
             <BackBar/>
-            <Dashboard />
-            <Buttons />
-            <Log />
+            <Dashboard/>
+            <Buttons/>
+            <Log/>
         </div>
     );
 }

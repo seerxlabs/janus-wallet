@@ -1,40 +1,47 @@
-.detail-main{
+.detail-main {
 
 }
-.page-main{
+
+.page-main {
   padding: 0 1.25rem;
 }
-.nft-body{
+
+.nft-body {
   display: block;
   width: 100%;
   border-radius: 1.2rem;
 }
-.sd-punk{
+
+.sd-punk {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1.44rem 0.63rem 0;
 }
-.sd-punk p{
+
+.sd-punk p {
   display: flex;
   align-items: normal;
   gap: 0.37rem;
   flex-direction: column;
   text-align: left;
 }
-.sd-punk p b{
+
+.sd-punk p b {
   font-size: 0.94rem;
   font-family: MontserratRegular;
   color: #141C1D;
   line-height: 0.94rem;
 }
-.sd-punk p span{
+
+.sd-punk p span {
   font-size: 0.81rem;
   font-family: MontserratLight;
   color: #6E7585;
   line-height: 0.81rem;
 }
-.sd-punk button{
+
+.sd-punk a {
   font-size: 0.94rem;
   font-family: MontserratLight;
   color: #6E7585;
@@ -43,11 +50,13 @@
   border-radius: 0.75rem;
   padding: 0.7rem 1.38rem;
 }
-.description{
+
+.description {
   text-align: left;
   padding: 0.63rem 0;
 }
-.description label{
+
+.description label {
   padding: 1.25rem 0.63rem;
   font-size: 0.81rem;
   font-family: MontserratLight;
@@ -55,7 +64,8 @@
   line-height: 0.81rem;
   display: block;
 }
-.description p{
+
+.description p {
   padding: 1.25rem;
   background: rgba(110, 117, 133, 0.05);
   border-radius: 0.94rem;
@@ -64,10 +74,12 @@
   color: #6E7585;
   line-height: 1.88rem;
 }
-.details{
+
+.details {
   padding: 0.63rem 0;
 }
-.details label{
+
+.details label {
   padding: 1.25rem 0.63rem;
   font-size: 0.81rem;
   font-family: MontserratLight;
@@ -75,23 +87,27 @@
   line-height: 0.81rem;
   display: block;
 }
-.details .info{
+
+.details .info {
   padding: 1.25rem;
   background: rgba(110, 117, 133, 0.05);
   border-radius: 0.94rem;
 }
-.details .info .item{
+
+.details .info .item {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.details .info .item b{
+
+.details .info .item b {
   font-size: 0.94rem;
   font-family: MontserratRegular;
   color: #141C1D;
   line-height: 1.88rem;
 }
-.details .info .item span{
+
+.details .info .item span {
   font-size: 0.94rem;
   font-family: MontserratLight;
   color: #6E7585;

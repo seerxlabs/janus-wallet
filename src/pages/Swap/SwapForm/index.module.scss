@@ -1,64 +1,73 @@
-.form-box{
+.form-box {
   padding: 1.25rem;
 }
-.form-main{
+
+.form-main {
   background: #FFFFFF;
   border-radius: 0.94rem;
-  border: 0.06rem solid rgba(20,28,29,0.2);
+  border: 0.06rem solid rgba(20, 28, 29, 0.2);
   padding: 1.25rem;
 }
-.form-item{
+
+.form-item {
   display: flex;
   align-items: normal;
   justify-content: space-between;
   flex-direction: column;
   gap: 0.63rem
 }
-.form-item .item-name{
+
+.form-item .item-name {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.form-item .item-name label{
+
+.form-item .item-name label {
   font-size: 0.81rem;
   font-family: MontserratLight;
   color: #6E7585;
   line-height: 0.81rem;
 }
-.form-item .item-name b{
+
+.form-item .item-name b {
   font-size: 0.81rem;
   font-family: MontserratRegular;
   color: #6E7585;
   line-height: 0.81rem;
 }
-.form-item .item-data{
+
+.form-item .item-data {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.form-item .item-data b{
+
+.form-item .item-data b {
   font-size: 0.94rem;
   font-family: MontserratRegular;
   color: #141C1D;
   line-height: 0.94rem;
 }
 
-.switch-btn{
+.switch-btn {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1.25rem 0;
 }
-.switch-btn i{
+
+.switch-btn i {
   height: 1px;
   width: 40%;
   background: rgba(110, 117, 133, 0.05);
 }
-.switch-btn a{
+
+.switch-btn a {
   display: block;
   width: 1.5rem;
   height: 1.5rem;
-  background: url("@/assets/icons/switch.svg") no-repeat center center / 100% 100%;
+  background: url("/src/assets/icons/switch.svg") no-repeat center center / 100% 100%;
 }
 
 .net-name {
@@ -89,9 +98,10 @@
   display: block;
   width: 1.5rem;
   height: 1.5rem;
-  background: url("@/assets/icons/select-down.svg") no-repeat center center / 100% 100%;
+  background: url("/src/assets/icons/select-down.svg") no-repeat center center / 100% 100%;
 }
-.form-box button.check{
+
+.form-box button.check {
   margin-top: 1.25rem;
   background: #297AFF;
   border-radius: 0.94rem;

@@ -1,4 +1,4 @@
-.token-list{
+.token-list {
   display: flex;
   align-items: normal;
   justify-content: flex-start;
@@ -6,7 +6,8 @@
   flex-direction: column;
   padding: 1.25rem 1.88rem;
 }
-.input-box{
+
+.input-box {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -16,7 +17,8 @@
   border: 0.06rem solid rgba(41, 122, 255, 0.5);
   padding: 0.8rem 1.25rem;
 }
-.input-box input{
+
+.input-box input {
   font-size: 0.94rem;
   font-family: MontserratRegular;
   font-weight: 400;
@@ -26,20 +28,22 @@
   border: none;
   flex: 1;
 }
-.input-box input::placeholder{
+
+.input-box input::placeholder {
   font-size: 0.94rem;
   font-family: MontserratRegular;
   font-weight: 400;
-  color: rgba(110,117,133,0.5);
+  color: rgba(110, 117, 133, 0.5);
   line-height: 0.94rem;
 }
-.input-box a{
+
+.input-box a {
   width: 1.5rem;
   height: 1.5rem;
-  background: url("@/assets/icons/search.svg") no-repeat center center / 100% 100%;
+  background: url("/src/assets/icons/search.svg") no-repeat center center / 100% 100%;
 }
 
-.token-list .item{
+.token-list .item {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -48,12 +52,14 @@
   border-radius: 0.94rem;
   padding: 1.25rem;
 }
-.token-list .item img{
+
+.token-list .item img {
   display: block;
   width: 1.5rem;
   height: 1.5rem;
 }
-.token-list .item p{
+
+.token-list .item p {
   font-size: 0.94rem;
   font-family: MontserratRegular;
   font-weight: 400;
@@ -61,9 +67,10 @@
   line-height: 0.94rem;
   flex: 1;
 }
+
 .token-list .item a {
   margin-left: auto;
   width: 2.5rem;
   height: 1.5rem;
-  background: url("@/assets/icons/on.svg") no-repeat center center / 100% 100%;
+  background: url("/src/assets/icons/on.svg") no-repeat center center / 100% 100%;
 }

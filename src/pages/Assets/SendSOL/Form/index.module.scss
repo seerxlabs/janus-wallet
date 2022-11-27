@@ -1,10 +1,12 @@
 .form-box {
   padding: 0 1.88rem;
 }
-.form-item{
+
+.form-item {
   margin-bottom: 0.63rem;
 }
-.form-item label{
+
+.form-item label {
   font-size: 0.81rem;
   font-family: MontserratLight;
   font-weight: 300;
@@ -13,13 +15,15 @@
   padding: 1.25rem 0;
   display: block;
 }
-.form-item .textarea-box{
+
+.form-item .textarea-box {
   background: #FAFAFA;
   border-radius: 0.94rem;
-  border: 0.06rem solid rgba(20,28,29,0.2);
+  border: 0.06rem solid rgba(20, 28, 29, 0.2);
   padding: 1.13rem 1.25rem;
 }
-.form-item .textarea-box textarea{
+
+.form-item .textarea-box textarea {
   border: none;
   width: 100%;
   font-size: 0.94rem;
@@ -28,27 +32,30 @@
   color: #141C1D;
   line-height: 1.2rem;
   background: none;
-  border:transparent;
+  border: transparent;
   resize: none;
 }
-.form-item .textarea-box textarea::placeholder{
+
+.form-item .textarea-box textarea::placeholder {
   font-size: 0.94rem;
   font-family: MontserratRegular;
   font-weight: 400;
-  color: rgba(110,117,133,0.5);
+  color: rgba(110, 117, 133, 0.5);
   line-height: 0.94rem;
 }
-.form-item .input-box{
+
+.form-item .input-box {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
   background: #FAFAFA;
   border-radius: 0.94rem;
-  border: 0.06rem solid rgba(20,28,29,0.2);
+  border: 0.06rem solid rgba(20, 28, 29, 0.2);
   padding: 1.06rem 1.25rem;
 }
-.form-item .input-box input{
+
+.form-item .input-box input {
   font-size: 0.94rem;
   font-family: MontserratRegular;
   font-weight: 400;
@@ -59,34 +66,39 @@
   width: 50%;
   flex: 1;
 }
-.form-item .input-box input::placeholder{
+
+.form-item .input-box input::placeholder {
   font-size: 0.94rem;
   font-family: MontserratRegular;
   font-weight: 400;
-  color: rgba(110,117,133,0.5);
+  color: rgba(110, 117, 133, 0.5);
   line-height: 0.94rem;
 }
-.form-item .input-box .input-ext{
+
+.form-item .input-box .input-ext {
   display: flex;
   align-items: center;
   gap: 0.75rem;
 }
-.form-item .input-box .input-ext span{
+
+.form-item .input-box .input-ext span {
   width: 1.81rem;
   height: 0.94rem;
   font-size: 0.94rem;
   font-family: MontserratRegular;
   font-weight: 400;
-  color: rgba(110,117,133,0.5);
+  color: rgba(110, 117, 133, 0.5);
   line-height: 0.94rem;
 }
-.form-item .input-box .input-ext b{
+
+.form-item .input-box .input-ext b {
   font-size: 0.94rem;
   font-family: MontserratRegular;
   color: #141C1D;
   line-height: 0.94rem;
 }
-.submit-btn{
+
+.submit-btn {
   position: fixed;
   width: 100%;
   left: 0;
@@ -97,7 +109,8 @@
   gap: 0.94rem;
   padding: 1.25rem 0;
 }
-.submit-btn button{
+
+.submit-btn button {
   border-radius: 0.94rem;
   font-size: 0.94rem;
   font-family: MontserratRegular;
@@ -107,13 +120,15 @@
   text-align: center;
   width: 50%;
 }
-.submit-btn button.cancel{
+
+.submit-btn button.cancel {
   margin-left: 1.88rem;
   color: #141C1D;
   background: #FFFFFF;
-  border: 0.06rem solid rgba(20,28,29,0.2);
+  border: 0.06rem solid rgba(20, 28, 29, 0.2);
 }
-.submit-btn button.next{
+
+.submit-btn button.next {
   margin-right: 1.88rem;
   color: rgba(110, 117, 133, 0.50);
   background: rgba(110, 117, 133, 0.2);

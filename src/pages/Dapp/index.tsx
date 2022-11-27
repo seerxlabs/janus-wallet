@@ -7,12 +7,12 @@ import List from './List';
 export default function DappPage() {
     return (
         <div className={styles['page-main']}>
-            <Header />
+            <Header/>
             <div className={styles['page-content']}>
                 <PageTitle sub={false} name={'Browse Apps'}/>
                 <List/>
             </div>
-            <Menu />
+            <Menu/>
         </div>
     );
 }

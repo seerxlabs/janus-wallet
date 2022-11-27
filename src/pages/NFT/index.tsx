@@ -6,7 +6,7 @@ import NFTList from './List';
 export default function NFTPage() {
     return (
         <div className={styles['page-main']}>
-            <Header />
+            <Header/>
             <div className={styles['page-content']}>
                 <div className={styles['page-title']}>
                     <div className={styles['title-content']}>
@@ -15,9 +15,9 @@ export default function NFTPage() {
                     </div>
                     <div className={styles['ext']}><i/><span>Mint</span></div>
                 </div>
-                <NFTList />
+                <NFTList/>
             </div>
-            <Menu />
+            <Menu/>
         </div>
     );
 }

@@ -7,16 +7,16 @@ import Menu from '@/components/Menu';
 import {Link} from 'react-router-dom';
 
 export default function AssetsPage() {
-  return (
-    <div className={styles['page-main']}>
-        <Header />
-        <div className={styles['page-content']}>
-            <Dashboard />
-            <Buttons />
-            <TokenList />
-            <Link to="/assets/manageToken" className={styles['manage-btn']}><i/><span>Manage Token List</span></Link>
+    return (
+        <div className={styles['page-main']}>
+            <Header/>
+            <div className={styles['page-content']}>
+                <Dashboard/>
+                <Buttons/>
+                <TokenList/>
+                <Link to="/assets/manageToken" className={styles['manage-btn']}><i/><span>Manage Token List</span></Link>
+            </div>
+            <Menu/>
         </div>
-        <Menu />
-    </div>
-  );
+    );
 }

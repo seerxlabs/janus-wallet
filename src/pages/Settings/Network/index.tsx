@@ -6,9 +6,9 @@ import List from './List';
 export default function Network() {
     return (
         <div className={styles['page-main']}>
-            <BackBar />
+            <BackBar/>
             <PageTitle sub={'Switch between different network.'} name={'Network'}/>
-            <List />
+            <List/>
         </div>
     );
 }

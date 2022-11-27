@@ -6,9 +6,9 @@ import Form from './Form';
 export default function SendNFTPage() {
     return (
         <div className={styles['page-main']}>
-            <BackBar />
+            <BackBar/>
             <PageTitle sub={false} name={'Send NFT'}/>
-            <Form />
+            <Form/>
         </div>
     );
 }

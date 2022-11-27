@@ -6,7 +6,7 @@ export default function SendForm() {
             <div className={styles['form-item']}>
                 <label>Address</label>
                 <div className={styles['textarea-box']}>
-                    <textarea placeholder='Enter or paste Address' rows={4} />
+                    <textarea placeholder='Enter or paste Address' rows={4}/>
                 </div>
             </div>
             <div className={styles['form-item']}>

@@ -8,10 +8,10 @@ function Header() {
         <div className={styles['bar-main']}>
             <Link to="/wallet" className={styles['wallet-name']}>
                 <i/>
-                <span>MyWallet1</span>
-                <a/>
+                <b>MyWallet1</b>
+                <span/>
             </Link>
-            <Link to="/network" className={styles['net-name']}>
+            <Link to="/settings/network" className={styles['net-name']}>
                 <img src={iconEth} alt=""/>
                 <span>EVM #1</span>
             </Link>
