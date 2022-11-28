@@ -40,7 +40,7 @@
 .input-box a {
   width: 1.5rem;
   height: 1.5rem;
-  background: url("/src/assets/icons/search.svg") no-repeat center center / 100% 100%;
+  background: url("@/assets/icons/search.svg") no-repeat center center / 100% 100%;
 }
 
 .token-list .item {
@@ -72,5 +72,5 @@
   margin-left: auto;
   width: 2.5rem;
   height: 1.5rem;
-  background: url("/src/assets/icons/on.svg") no-repeat center center / 100% 100%;
+  background: url("@/assets/icons/on.svg") no-repeat center center / 100% 100%;
 }

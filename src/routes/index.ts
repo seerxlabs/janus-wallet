@@ -1,30 +1,30 @@
 import { RouteConfig } from 'react-router-config'
 
-import LoginPage from "../pages/Login";
-import MyWalletPage from "../pages/Wallet";
-import UnlockPage from "../pages/Settings/Unlock";
-import VerifyPage from "../pages/Verify";
-import AssetsPage from "../pages/Assets";
-import ManageTokenPage from "../pages/Assets/ManageToken";
-import AddTokenPage from "../pages/Assets/AddToken";
-import TokenDetailPage from "../pages/Assets/TokenDetail";
-import SendSOLPage from "../pages/Assets/SendSOL";
-import SendSOLSuccessPage from "../pages/Assets/SendSOL/Success";
-import SwapPage from "../pages/Swap";
-import SwapSuccessPage from "../pages/Swap/Success";
-import NetworkPage from "../pages/Settings/Network";
-import WalletPage from "../pages/Wallet";
-import NFTPage from "../pages/NFT";
-import NFTDetailPage from "../pages/NFT/Detail";
-import NFTEmptyPage from "../pages/NFT/Empty";
-import NFTSendPage from "../pages/NFT/Send";
-import NFTSendSuccessPage from "../pages/NFT/Send/Success";
-import DappPage from "../pages/Dapp";
-import SettingsPage from "../pages/Settings";
-import ResetWalletPage from "../pages/Settings/Security/ResetWallet";
-import ResetWalletSuccessPage from "../pages/Settings/Security/ResetWallet/Success";
-import ContractAuthorizationPage from "../pages/Settings/Security/ContractAuthorization";
-import ChangePasswordPage from "../pages/Settings/Security/ChangePassword";
+import LoginPage from "@/pages/Login";
+import MyWalletPage from "@/pages/Wallet";
+import UnlockPage from "@/pages/Settings/Unlock";
+import VerifyPage from "@/pages/Verify";
+import AssetsPage from "@/pages/Assets";
+import ManageTokenPage from "@/pages/Assets/ManageToken";
+import AddTokenPage from "@/pages/Assets/AddToken";
+import TokenDetailPage from "@/pages/Assets/TokenDetail";
+import SendSOLPage from "@/pages/Assets/SendSOL";
+import SendSOLSuccessPage from "@/pages/Assets/SendSOL/Success";
+import SwapPage from "@/pages/Swap";
+import SwapSuccessPage from "@/pages/Swap/Success";
+import NetworkPage from "@/pages/Settings/Network";
+import WalletPage from "@/pages/Wallet";
+import NFTPage from "@/pages/NFT";
+import NFTDetailPage from "@/pages/NFT/Detail";
+import NFTEmptyPage from "@/pages/NFT/Empty";
+import NFTSendPage from "@/pages/NFT/Send";
+import NFTSendSuccessPage from "@/pages/NFT/Send/Success";
+import DappPage from "@/pages/Dapp";
+import SettingsPage from "@/pages/Settings";
+import ResetWalletPage from "@/pages/Settings/Security/ResetWallet";
+import ResetWalletSuccessPage from "@/pages/Settings/Security/ResetWallet/Success";
+import ContractAuthorizationPage from "@/pages/Settings/Security/ContractAuthorization";
+import ChangePasswordPage from "@/pages/Settings/Security/ChangePassword";
 
 const routes: RouteConfig[] = [
     {path: '/', exact: true, component: AssetsPage},

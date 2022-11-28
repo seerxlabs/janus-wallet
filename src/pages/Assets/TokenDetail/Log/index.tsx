@@ -1,7 +1,7 @@
 import styles from './index.module.scss';
-import iconReceive from "/src/assets/icons/type-receive.svg"
-import iconSend from "/src/assets/icons/type-send.svg"
-import iconSwap from "/src/assets/icons/type-swap.svg"
+import iconReceive from "@/assets/icons/type-receive.svg"
+import iconSend from "@/assets/icons/type-send.svg"
+import iconSwap from "@/assets/icons/type-swap.svg"
 
 export default function TradeLog() {
     return (

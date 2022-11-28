@@ -1,10 +1,10 @@
 import styles from './index.module.scss';
-import iconSite from "/src/assets/icons/settings/site.svg";
-import iconDiscord from "/src/assets/icons/settings/discord.svg";
-import iconTwitter from "/src/assets/icons/settings/twitter.svg";
-import iconUser from "/src/assets/icons/settings/user.svg";
-import iconPrivacy from "/src/assets/icons/settings/privacy.svg";
-import iconVersion from "/src/assets/icons/settings/version.svg";
+import iconSite from "@/assets/icons/settings/site.svg";
+import iconDiscord from "@/assets/icons/settings/discord.svg";
+import iconTwitter from "@/assets/icons/settings/twitter.svg";
+import iconUser from "@/assets/icons/settings/user.svg";
+import iconPrivacy from "@/assets/icons/settings/privacy.svg";
+import iconVersion from "@/assets/icons/settings/version.svg";
 import {Link} from "react-router-dom"
 
 export default function AboutSetting() {

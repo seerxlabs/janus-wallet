@@ -1,11 +1,11 @@
 import styles from './index.module.scss';
-import iconUnlockWallet from '/src/assets/icons/settings/unlock.svg'
-import iconLockTime from '/src/assets/icons/settings/lock-time.svg'
-import iconBackupWallet from '/src/assets/icons/settings/wallet.svg'
-import iconAuth from '/src/assets/icons/settings/auth.svg'
-import iconBag from '/src/assets/icons/settings/bag.svg'
-import iconRemove from '/src/assets/icons/settings/remove.svg'
-import iconReset from '/src/assets/icons/settings/reset.svg'
+import iconUnlockWallet from '@/assets/icons/settings/unlock.svg'
+import iconLockTime from '@/assets/icons/settings/lock-time.svg'
+import iconBackupWallet from '@/assets/icons/settings/wallet.svg'
+import iconAuth from '@/assets/icons/settings/auth.svg'
+import iconBag from '@/assets/icons/settings/bag.svg'
+import iconRemove from '@/assets/icons/settings/remove.svg'
+import iconReset from '@/assets/icons/settings/reset.svg'
 import {Link} from "react-router-dom"
 
 export default function SecuritySetting() {

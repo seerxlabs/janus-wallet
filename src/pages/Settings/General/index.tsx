@@ -1,9 +1,9 @@
 import styles from './index.module.scss';
-import iconLockWallet from '/src/assets/icons/settings/lock.svg'
-import iconTheme from '/src/assets/icons/settings/theme.svg'
-import iconLanguage from '/src/assets/icons/settings/language.svg'
-import iconCurrency from '/src/assets/icons/settings/currency.svg'
-import iconSet from '/src/assets/icons/settings/set.svg'
+import iconLockWallet from '@/assets/icons/settings/lock.svg'
+import iconTheme from '@/assets/icons/settings/theme.svg'
+import iconLanguage from '@/assets/icons/settings/language.svg'
+import iconCurrency from '@/assets/icons/settings/currency.svg'
+import iconSet from '@/assets/icons/settings/set.svg'
 import {Link} from "react-router-dom"
 
 export default function GeneralSetting() {

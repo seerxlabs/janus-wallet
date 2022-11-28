@@ -1,8 +1,8 @@
 import styles from './index.module.scss';
-import Header from '../../../components/Header';
-import Menu from '../../../components/Menu';
-import PageTitle from '../../../components/PageTitle';
-import iconNFTEmpty from "/src/assets/icons/nft-none.svg"
+import Header from '@/components/Header';
+import Menu from '@/components/Menu';
+import PageTitle from '@/components/PageTitle';
+import iconNFTEmpty from "@/assets/icons/nft-none.svg"
 
 export default function NFTEmptyPage() {
     return (

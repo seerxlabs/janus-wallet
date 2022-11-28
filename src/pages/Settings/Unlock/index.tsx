@@ -1,5 +1,5 @@
 import styles from './index.module.scss';
-import JanusLogo from "/src/assets/avatars/janus.svg"
+import JanusLogo from "@/assets/avatars/janus.svg"
 import {Link} from "react-router-dom";
 
 export default function UnlockPage() {

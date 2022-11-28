@@ -1,6 +1,6 @@
 import styles from './index.module.scss';
-import iconUSDC from '/src/assets/icons/net-usdc.svg'
-import iconETH from '/src/assets/icons/net-eth.svg'
+import iconUSDC from '@/assets/icons/net-usdc.svg'
+import iconETH from '@/assets/icons/net-eth.svg'
 
 export default function WalletList() {
     return (

@@ -1,7 +1,7 @@
 .page-main {
   position: relative;
   height: 100vh;
-  background: url("/src/assets/bg.png") no-repeat center top / 100% auto;
+  background: url("@/assets/bg.png") no-repeat center top / 100% auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -72,7 +72,7 @@
   width: 1.5rem;
   height: 1.5rem;
   margin-right: 1.25rem;
-  background: url("/src/assets/icons/hide.svg") no-repeat center center / 100% 100%;
+  background: url("@/assets/icons/hide.svg") no-repeat center center / 100% 100%;
 }
 
 .page-content button {

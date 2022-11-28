@@ -1,6 +1,6 @@
 import {renderRoutes} from 'react-router-config'
-import routes from './routes'
-import './App.css';
+import routes from '@/routes'
+import '@/App.css';
 
 function App() {
     return (

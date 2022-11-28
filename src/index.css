@@ -1,11 +1,11 @@
-@font-face {font-display: auto;font-family: "MontserratBold";src: url("/src/assets/fonts/Montserrat-Bold-3.otf");  }
-@font-face {font-display: auto;font-family: "MontserratMedium";src: url("/src/assets/fonts/Montserrat-Medium-7.otf");  }
-@font-face {font-display: auto;font-family: "MontserratRegular";src: url("/src/assets/fonts/Montserrat-Regular-8.otf");  }
-@font-face {font-display: auto;font-family: "MontserratLight";src: url("/src/assets/fonts/Montserrat-Light.ttf");  }
-@font-face {font-display: auto;font-family: "SourceHanSansCNBold";src: url("/src/assets/fonts/SourceHanSansCN-Bold.otf");  }
-@font-face {font-display: auto;font-family: "SourceHanSansCNLight";src: url("/src/assets/fonts/SourceHanSansCN-Light.otf");  }
-@font-face {font-display: auto;font-family: "SourceHanSansCNMedium";src: url("/src/assets/fonts/SourceHanSansCN-Medium.otf");  }
-@font-face {font-display: auto;font-family: "SourceHanSansCNNormal";src: url("/src/assets/fonts/SourceHanSansCN-Normal.otf");  }
+@font-face {font-display: auto;font-family: "MontserratBold";src: url("@/assets/fonts/Montserrat-Bold-3.otf");  }
+@font-face {font-display: auto;font-family: "MontserratMedium";src: url("@/assets/fonts/Montserrat-Medium-7.otf");  }
+@font-face {font-display: auto;font-family: "MontserratRegular";src: url("@/assets/fonts/Montserrat-Regular-8.otf");  }
+@font-face {font-display: auto;font-family: "MontserratLight";src: url("@/assets/fonts/Montserrat-Light.ttf");  }
+@font-face {font-display: auto;font-family: "SourceHanSansCNBold";src: url("@/assets/fonts/SourceHanSansCN-Bold.otf");  }
+@font-face {font-display: auto;font-family: "SourceHanSansCNLight";src: url("@/assets/fonts/SourceHanSansCN-Light.otf");  }
+@font-face {font-display: auto;font-family: "SourceHanSansCNMedium";src: url("@/assets/fonts/SourceHanSansCN-Medium.otf");  }
+@font-face {font-display: auto;font-family: "SourceHanSansCNNormal";src: url("@/assets/fonts/SourceHanSansCN-Normal.otf");  }
 
 html,body{padding: 0;margin: 0;font-family: MontserratRegular;}
 
