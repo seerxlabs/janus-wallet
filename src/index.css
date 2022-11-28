@@ -63,9 +63,16 @@ button{
   border: none;
 }
 
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+::-webkit-scrollbar,
+::-webkit-scrollbar {
+  width: 2px;
+  background-color: rgba(0,0,0,0);
+}
+
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: rgba(0,0,0,0.2);
 }
 
 @media (prefers-color-scheme: light) {
