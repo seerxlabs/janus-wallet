@@ -8,7 +8,7 @@ export default function NFTEmptyPage() {
     return (
         <div className={styles['page-main']}>
             <Header/>
-            <div className={styles['page-content']}>
+            <div className={styles['page-container']}>
                 <PageTitle sub={false} name={'NFT'}/>
                 <div className={styles['empty-tip']}>
                     <img src={iconNFTEmpty} alt=""/>

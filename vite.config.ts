@@ -6,11 +6,6 @@ import {resolve} from "path";
 
 
 export default defineConfig({
-    server:{
-        hmr:{
-            overlay:false
-        }
-    },
     plugins: [
         react(),
         crx({manifest}),

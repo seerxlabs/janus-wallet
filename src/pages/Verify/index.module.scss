@@ -1,10 +1,23 @@
 .page-main {
   position: relative;
-
-  padding: 0 1.88rem;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
-.page-main h1 {
+.page-container {
+  flex: 1;
+  overflow-y: auto;
+  width: 100%;
+  position: relative;
+  padding: 0 1.88rem;
+  box-sizing: border-box;
+}
+
+
+.page-container h1 {
   margin-top: 2.5rem;
   font-size: 1.5rem;
   font-family: MontserratBold;
@@ -13,7 +26,7 @@
   text-align: center;
 }
 
-.page-main h6 {
+.page-container h6 {
   margin-top: 0.63rem;
   text-align: center;
   font-size: 0.94rem;
@@ -23,25 +36,25 @@
   line-height: 1.5rem;
 }
 
-.page-main .input-box {
+.page-container .input-box {
   margin-top: 2.5rem;
   background: #FFFFFF;
   border-radius: 0.94rem;
   border: 0.06rem solid rgba(41, 122, 255, 0.5);
-  padding: 1.06rem 1.25rem;
+  padding: 0.81rem 1.25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.page-main .input-box i {
+.page-container .input-box i {
   width: 1.5rem;
   height: 1.5rem;
   display: block;
   background: url("@/assets/icons/hide.svg") no-repeat center center / 100% 100%;
 }
 
-.page-main .input-box input {
+.page-container .input-box input {
   border: none;
   background: none;
   font-size: 0.94rem;
@@ -53,7 +66,7 @@
   flex: 1;
 }
 
-.page-main .input-box input::placeholder {
+.page-container .input-box input::placeholder {
   font-size: 0.94rem;
   font-family: MontserratRegular;
   font-weight: 400;
@@ -61,7 +74,7 @@
   line-height: 0.94rem;
 }
 
-.page-main button {
+.page-container button {
   margin-top: 1.88rem;
   font-size: 0.94rem;
   font-family: MontserratRegular;

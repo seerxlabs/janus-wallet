@@ -10,10 +10,12 @@ export default function SettingsPage() {
     return (
         <div className={styles['page-main']}>
             <Header/>
-            <PageTitle sub={false} name={'Setting'}/>
-            <General/>
-            <Security/>
-            <About/>
+            <div className={styles['page-container']}>
+                <PageTitle sub={false} name={'Setting'}/>
+                <General/>
+                <Security/>
+                <About/>
+            </div>
             <Menu/>
         </div>
     );

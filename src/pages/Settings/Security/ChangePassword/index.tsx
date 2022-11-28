@@ -6,7 +6,9 @@ export default function ChangePassword() {
     return (
         <div className={styles['page-main']}>
             <BackBar/>
-            <Form/>
+            <div className={styles['page-container']}>
+                <Form/>
+            </div>
         </div>
     );
 }

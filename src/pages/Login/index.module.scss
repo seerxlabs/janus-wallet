@@ -9,6 +9,16 @@
   background: url("@/assets/bg.png") no-repeat center top / 100% auto;
 }
 
+.page-container {
+  overflow-y: auto;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .page-main img {
   display: block;
   width: 3.75rem;

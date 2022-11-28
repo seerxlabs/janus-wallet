@@ -5,10 +5,12 @@ export default function SendNFTSuccess() {
     return (
         <div className={styles['page-main']}>
             <BackBar/>
-            <i/>
-            <h1>Send successfully</h1>
-            <h6>SdPunk #3319</h6>
-            <button>Got it</button>
+            <div className={styles['page-container']}>
+                <i/>
+                <h1>Send successfully</h1>
+                <h6>SdPunk #3319</h6>
+                <button>Got it</button>
+            </div>
         </div>
     );
 }

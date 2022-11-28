@@ -56,7 +56,7 @@ export default function SecuritySetting() {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/settings/changePassword">
+                    <Link to="/settings/resetWallet">
                         <img src={iconReset} alt=""/>
                         <b>Reset wallet</b>
                         <p><i/></p>

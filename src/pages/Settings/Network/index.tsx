@@ -7,8 +7,10 @@ export default function Network() {
     return (
         <div className={styles['page-main']}>
             <BackBar/>
-            <PageTitle sub={'Switch between different network.'} name={'Network'}/>
-            <List/>
+            <div className={styles['page-container']}>
+                <PageTitle sub={'Switch between different network.'} name={'Network'}/>
+                <List/>
+            </div>
         </div>
     );
 }

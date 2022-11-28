@@ -7,8 +7,10 @@ export default function ContractAuthorization() {
     return (
         <div className={styles['page-main']}>
             <BackBar/>
-            <PageTitle name={'Contract authorization'} sub={false}/>
-            <List/>
+            <div className={styles['page-container']}>
+                <PageTitle name={'Contract authorization'} sub={false}/>
+                <List/>
+            </div>
         </div>
     );
 }

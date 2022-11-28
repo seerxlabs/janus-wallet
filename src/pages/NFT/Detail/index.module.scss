@@ -1,8 +1,20 @@
-.detail-main {
-
+.page-main {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
-.page-main {
+.page-container {
+  flex: 1;
+  overflow-y: auto;
+  width: 100%;
+  position: relative;
+}
+
+.detail-main {
   padding: 0 1.25rem;
 }
 
@@ -76,7 +88,7 @@
 }
 
 .details {
-  padding: 0.63rem 0;
+  padding: 0.63rem 0 2rem;
 }
 
 .details label {

@@ -2,7 +2,7 @@ import { RouteConfig } from 'react-router-config'
 
 import LoginPage from "@/pages/Login";
 import MyWalletPage from "@/pages/Wallet";
-import UnlockPage from "@/pages/Settings/Unlock";
+import UnlockPage from "@/pages/Settings/Security/Unlock";
 import VerifyPage from "@/pages/Verify";
 import AssetsPage from "@/pages/Assets";
 import ManageTokenPage from "@/pages/Assets/ManageToken";
@@ -43,8 +43,8 @@ const routes: RouteConfig[] = [
     {path: '/nft', exact: true, component: NFTPage},
     {path: '/nft/detail', exact: true, component: NFTDetailPage},
     {path: '/nft/empty', exact: true, component: NFTEmptyPage},
-    {path: '/NFT/send', exact: true, component: NFTSendPage},
-    {path: '/NFT/send/success', exact: true, component: NFTSendSuccessPage},
+    {path: '/nft/send', exact: true, component: NFTSendPage},
+    {path: '/nft/send/success', exact: true, component: NFTSendSuccessPage},
     {path: '/dapp', exact: true, component: DappPage},
     {path: '/settings', exact: true, component: SettingsPage},
     {path: '/settings/unlock', exact: true, component: UnlockPage},

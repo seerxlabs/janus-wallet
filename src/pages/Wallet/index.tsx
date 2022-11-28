@@ -7,11 +7,13 @@ export default function WalletPage() {
     return (
         <div className={styles['page-main']}>
             <BackBar/>
-            <PageTitle sub={false} name={'My Wallet'}/>
-            <List/>
-            <div className={styles['make-btn']}>
-                <button className={styles['create']}>Create Wallet</button>
-                <button className={styles['import']}>Import Wallet</button>
+            <div className={styles['page-container']}>
+                <PageTitle sub={false} name={'My Wallet'}/>
+                <List/>
+                <div className={styles['make-btn']}>
+                    <button className={styles['create']}>Create Wallet</button>
+                    <button className={styles['import']}>Import Wallet</button>
+                </div>
             </div>
         </div>
     );

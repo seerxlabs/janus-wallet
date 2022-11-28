@@ -7,7 +7,7 @@ export default function NFTPage() {
     return (
         <div className={styles['page-main']}>
             <Header/>
-            <div className={styles['page-content']}>
+            <div className={styles['page-container']}>
                 <div className={styles['page-title']}>
                     <div className={styles['title-content']}>
                         <h1 className={styles['main-title']}>NFT</h1>

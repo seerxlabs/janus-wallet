@@ -7,8 +7,10 @@ export default function SendNFTPage() {
     return (
         <div className={styles['page-main']}>
             <BackBar/>
-            <PageTitle sub={false} name={'Send NFT'}/>
-            <Form/>
+            <div className={styles['page-container']}>
+                <PageTitle sub={false} name={'Send NFT'}/>
+                <Form/>
+            </div>
         </div>
     );
 }

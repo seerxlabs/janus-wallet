@@ -3,11 +3,10 @@
   align-items: center;
   justify-content: space-between;
   padding: 1.5rem 0;
-  position: sticky;
-  width: 100%;
-  bottom: 0;
+  position: relative;
   border-top: rgba(110, 117, 133, 0.05) 1px solid;
   background: #ffffff;
+  width: 100%;
 }
 .menu-bar a{
   width: 20%;

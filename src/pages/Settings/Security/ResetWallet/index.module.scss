@@ -1,13 +1,26 @@
 .page-main {
   position: relative;
-
-  padding: 0 1.88rem;
+  height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   flex-direction: column;
 }
 
-.page-main i {
+.page-container {
+  flex: 1;
+  overflow-y: auto;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 1.88rem;
+  box-sizing: border-box;
+}
+
+
+.page-container i {
   margin-top: 3.5rem;
   display: block;
   width: 3.75rem;
@@ -15,7 +28,7 @@
   background: url("@/assets/icons/warn.svg") no-repeat center center / 100% 100%;
 }
 
-.page-main h1 {
+.page-container h1 {
   margin-top: 1.88rem;
   font-size: 1.5rem;
   font-family: MontserratBold;
@@ -23,7 +36,7 @@
   line-height: 1.5rem;
 }
 
-.page-main h6 {
+.page-container h6 {
   margin-top: 0.63rem;
   text-align: left;
   font-size: 0.94rem;
@@ -33,7 +46,7 @@
   line-height: 1.5rem;
 }
 
-.page-main .input-box {
+.page-container .input-box {
   margin-top: 2.5rem;
   background: #FFFFFF;
   border-radius: 0.94rem;
@@ -41,9 +54,10 @@
   width: 100%;
   padding: 1.06rem 0;
   display: flex;
+  box-sizing: border-box;
 }
 
-.page-main .input-box input {
+.page-container .input-box input {
   border: none;
   background: none;
   font-size: 0.94rem;
@@ -55,7 +69,7 @@
   flex: 1;
 }
 
-.page-main .input-box input::placeholder {
+.page-container .input-box input::placeholder {
   font-size: 0.94rem;
   font-family: MontserratRegular;
   font-weight: 400;
@@ -63,7 +77,7 @@
   line-height: 0.94rem;
 }
 
-.page-main .reset-btn {
+.page-container .reset-btn {
   margin-top: 1.88rem;
   width: 100%;
   display: flex;
@@ -72,7 +86,7 @@
   gap: 0.94rem;
 }
 
-.page-main .reset-btn button {
+.page-container .reset-btn button {
   font-size: 0.94rem;
   font-family: MontserratRegular;
   line-height: 0.94rem;
@@ -81,13 +95,13 @@
   border-radius: 0.94rem;
 }
 
-.page-main .reset-btn button.cancel {
+.page-container .reset-btn button.cancel {
   color: #141C1D;
   background: #FFFFFF;
   border: 0.06rem solid rgba(20, 28, 29, 0.2);
 }
 
-.page-main .reset-btn button.confirm {
+.page-container .reset-btn button.confirm {
   color: rgba(240, 68, 56, 0.5);
   background: rgba(240, 68, 56, 0.1);
   border: none;

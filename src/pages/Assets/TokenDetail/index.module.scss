@@ -1,6 +1,17 @@
 .page-main {
   position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
 
+.page-container {
+  flex: 1;
+  overflow-y: auto;
+  width: 100%;
+  position: relative;
 }
 
 .add-btn {
