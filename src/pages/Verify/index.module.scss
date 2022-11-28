@@ -1,4 +1,7 @@
 .page-main {
+  background-color: #ffffff;
+  margin: auto;
+  width: 375px;
   position: relative;
   height: 100vh;
   display: flex;
@@ -12,8 +15,10 @@
   overflow-y: auto;
   width: 100%;
   position: relative;
-  padding: 0 1.88rem;
+  padding: 0 1.88rem 4rem;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
 

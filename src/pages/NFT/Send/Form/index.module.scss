@@ -1,5 +1,8 @@
 .form-box {
   padding: 0 1.88rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-item {
@@ -111,10 +114,9 @@
 }
 
 .submit-btn {
-  position: fixed;
+  margin-top: auto;
+  position: relative;
   width: 100%;
-  left: 0;
-  bottom: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -134,8 +136,6 @@
 }
 
 .submit-btn button.send {
-  margin-left: 1.88rem;
-  margin-right: 1.88rem;
   color: #FFFFFF;
   background: #297AFF;;
   border: none

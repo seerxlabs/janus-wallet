@@ -14,8 +14,8 @@ html,body{padding: 0;margin: 0;position: relative}
   font-size: 16px;
   line-height: 16px;
 
-  width: 375px;
-  height: 600px;
+  min-width: 375px;
+  min-height: 600px;
 
   margin: 0 auto;
   padding:0;
