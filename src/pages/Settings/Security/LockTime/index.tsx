@@ -9,7 +9,7 @@ export type ModalProps = DialogProps & {
   contentProps?: DialogContentProps;
 };
 
-const LanguageModal = (props: ModalProps) => {
+const LockTimeModal = (props: ModalProps) => {
   const { trigger, title, contentProps, ...restProps } = props;
 
   return (
@@ -22,9 +22,10 @@ const LanguageModal = (props: ModalProps) => {
                   <Dialog.Close className={styles['close']}/>
                   <h1>Language</h1>
                   <ul>
-                      <li className={styles['on']}><b>English</b><i/></li>
-                      <li><b>简体中文</b></li>
-                      <li><b>繁體中文</b></li>
+                      <li className={styles['on']}><b>Always</b><i/></li>
+                      <li><b>5 mins</b></li>
+                      <li><b>30 mins</b></li>
+                      <li><b>2 hours</b></li>
                   </ul>
               </div>
           </Dialog.Content>
@@ -34,4 +35,4 @@ const LanguageModal = (props: ModalProps) => {
   );
 };
 
-export default LanguageModal;
+export default LockTimeModal;

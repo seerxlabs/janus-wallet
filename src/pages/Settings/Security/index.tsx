@@ -7,18 +7,8 @@ import iconBag from '@/assets/icons/settings/bag.svg'
 import iconRemove from '@/assets/icons/settings/remove.svg'
 import iconReset from '@/assets/icons/settings/reset.svg'
 import {Link} from "react-router-dom"
+import LockTimeModal from "@/pages/Settings/Security/LockTime";
 
-// const SecurityItem = (props: SecurityItemProps) => {
-//     return (
-//         <li>
-//             <Link to="/settings/changePassword">
-//                 <img src={iconUnlockWallet} alt=""/>
-//                 <b>Change password</b>
-//                 <p><i/></p>
-//             </Link>
-//         </li>
-//     );
-// }
 
 export default function SecuritySetting() {
     return (
@@ -33,11 +23,13 @@ export default function SecuritySetting() {
                     </Link>
                 </li>
                 <li>
-                    <Link to="">
-                        <img src={iconLockTime} alt=""/>
-                        <b>Lock time</b>
-                        <p><span>2 hours</span><i/></p>
-                    </Link>
+                    <LockTimeModal title={'Auto lock time'} trigger={
+                        <a>
+                            <img src={iconLockTime} alt=""/>
+                            <b>Lock time</b>
+                            <p><span>2 hours</span><i/></p>
+                        </a>
+                    }/>
                 </li>
                 <li>
                     <Link to="">
