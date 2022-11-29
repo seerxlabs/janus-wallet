@@ -14,12 +14,15 @@ let useNetwork = "1"
 const NetworkItem = (props: NetworkProps) => {
     return (
         <li
-            onClick={()=>{ useNetwork = props.id; console.log(useNetwork);  }}
-            className={props.id === useNetwork ? styles['list-item-on']:''}
+            onClick={() => {
+                useNetwork = props.id;
+                console.log(useNetwork);
+            }}
+            className={props.id === useNetwork ? styles['list-item-on'] : ''}
         >
             <img src={props.icon} alt=""/>
             <p>{props.name}</p>
-            { useNetwork === props.id ? <i/>: null }
+            {useNetwork === props.id ? <i/> : null}
         </li>
     )
 }
@@ -32,8 +35,8 @@ function NetworkList() {
     ]
     return (
         <ul className={styles['list-main']}>
-            {network.map((item , i) => {
-                return <NetworkItem key={i} name={item.name} icon={item.icon}  id={item.id} />
+            {network.map((item, i) => {
+                return <NetworkItem key={i} name={item.name} icon={item.icon} id={item.id}/>
             })}
         </ul>
     );

@@ -1,4 +1,4 @@
-.menu-bar{
+.menu-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -8,10 +8,12 @@
   background: #ffffff;
   width: 100%;
 }
-.menu-bar a{
+
+.menu-bar a {
   width: 20%;
 }
-.menu-bar a img{
+
+.menu-bar a img {
   width: 1.5rem;
   height: 1.5rem;
   display: block;

@@ -12,9 +12,17 @@ import message from "@/components/message";
 
 function Buttons() {
     const [modalIsOpen, setIsOpen] = React.useState(false);
-    function openModal() {setIsOpen(true);}
-    function afterOpenModal() {}
-    function closeModal() { setIsOpen(false);}
+
+    function openModal() {
+        setIsOpen(true);
+    }
+
+    function afterOpenModal() {
+    }
+
+    function closeModal() {
+        setIsOpen(false);
+    }
 
     return (
         <div className={styles['btn-box']}>
@@ -30,24 +38,25 @@ function Buttons() {
                 shouldCloseOnOverlayClick={false}
             >
                 <div className={styles['modal-main']}>
-                        <i className={styles['close']} onClick={closeModal} />
-                        <h1>Receive ETH</h1>
-                        <h6>Assets can only be transformed in the same network</h6>
-                        <div className={styles['qrcode']}>
-                            <QRCodeSVG value={'https://www.google.com'}/>
-                        </div>
-                        <div className={styles['address']}>
-                            <span>0x194cd…c88c</span>
-                            <i onClick={() => {
-                                copy('123');
-                                message.success('Copied');
-                            }}/>
-                        </div>
+                    <i className={styles['close']} onClick={closeModal}/>
+                    <h1>Receive ETH</h1>
+                    <h6>Assets can only be transformed in the same network</h6>
+                    <div className={styles['qrcode']}>
+                        <QRCodeSVG value={'https://www.google.com'}/>
                     </div>
+                    <div className={styles['address']}>
+                        <span>0x194cd…c88c</span>
+                        <i onClick={() => {
+                            copy('123');
+                            message.success('Copied');
+                        }}/>
+                    </div>
+                </div>
             </Modal>
             <Link to="/assets/sendSOL"><img src={receiveIcon} alt=""/><p>Send</p></Link>
             <Link to="/swap"><img src={swapIcon} alt=""/><p>Swap</p></Link>
         </div>
     );
 }
+
 export default Buttons

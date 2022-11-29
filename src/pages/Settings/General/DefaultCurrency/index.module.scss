@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -13,7 +13,7 @@
 
 .content {
   position: relative;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0, 0, 0, 0.3);
   width: 375px;
   flex: 1;
   display: flex;
@@ -23,7 +23,7 @@
   box-sizing: border-box;
 }
 
-.modal-main{
+.modal-main {
   border-radius: 1.25rem 1.25rem 0 0;
   background: #FFFFFF;
   width: 100%;
@@ -36,7 +36,8 @@
   justify-content: center;
   flex-direction: column;
 }
-.modal-main .close{
+
+.modal-main .close {
   z-index: 5;
   position: absolute;
   top: 1.25rem;
@@ -47,7 +48,8 @@
   height: 1.5rem;
   background: url("@/assets/icons/close-btn-gray.svg") no-repeat center center / 100% 100%;
 }
-.modal-main h1{
+
+.modal-main h1 {
   font-size: 0.94rem;
   font-family: MontserratRegular;
   font-weight: bold;
@@ -55,7 +57,8 @@
   line-height: 0.94rem;
   padding: 0.13rem 0 1.69rem;
 }
-.modal-main .search-box{
+
+.modal-main .search-box {
   padding: 0.7rem 1.25rem;
   border: 0.06rem solid rgba(41, 122, 255, 0.5);
   border-radius: 0.94rem;
@@ -65,7 +68,8 @@
   align-items: center;
   justify-content: space-between;
 }
-.modal-main .search-box input{
+
+.modal-main .search-box input {
   flex: 1;
   background: none;
   border: none;
@@ -75,16 +79,19 @@
   color: #141C1D;
   line-height: 1.5rem;
 }
-.modal-main .search-box input::placeholder{
-  color: rgba(110,117,133,0.5);
+
+.modal-main .search-box input::placeholder {
+  color: rgba(110, 117, 133, 0.5);
 }
-.modal-main .search-box a{
+
+.modal-main .search-box a {
   display: block;
   width: 1.5rem;
   height: 1.5rem;
   background: url("@/assets/icons/search.svg") no-repeat center center / 100% 100%;
 }
-.modal-main ul{
+
+.modal-main ul {
   margin-top: 1.88rem;
   display: flex;
   flex-direction: column;
@@ -92,7 +99,7 @@
   width: 100%;
 }
 
-.modal-main ul li{
+.modal-main ul li {
   background: rgba(110, 117, 133, 0.05);
   border-radius: 0.94rem;
   border: 0.06rem solid #ffffff;
@@ -102,15 +109,18 @@
   justify-content: flex-start;
   gap: 0.75rem;
 }
-.modal-main ul li.on{
+
+.modal-main ul li.on {
   background: #ffffff;
-  border: 0.06rem solid rgba(20,28,29,0.2);
+  border: 0.06rem solid rgba(20, 28, 29, 0.2);
 }
-.modal-main ul li img{
+
+.modal-main ul li img {
   width: 1.5rem;
   height: 1.5rem;
 }
-.modal-main ul li b{
+
+.modal-main ul li b {
   font-size: 0.94rem;
   font-family: MontserratRegular;
   font-weight: 400;
@@ -118,7 +128,8 @@
   line-height: 0.94rem;
   flex: 1;
 }
-.modal-main ul li i{
+
+.modal-main ul li i {
   margin-left: auto;
   display: block;
   width: 1.5rem;

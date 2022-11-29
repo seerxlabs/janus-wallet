@@ -1,5 +1,6 @@
 import styles from './index.module.scss';
 import pictureNFT from './img/nft.webp'
+import NFTSendingModal from "@/pages/NFT/Send/Sending";
 
 export default function SendForm() {
     return (
@@ -21,7 +22,9 @@ export default function SendForm() {
                 </div>
             </div>
             <div className={styles['submit-btn']}>
-                <button className={styles['send']}>Send</button>
+                <NFTSendingModal tips={'Sending ...'} trigger={
+                    <button className={styles['send']}>Send</button>
+                }/>
             </div>
         </div>
     );

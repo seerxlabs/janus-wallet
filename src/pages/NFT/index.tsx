@@ -2,6 +2,7 @@ import styles from './index.module.scss';
 import Header from '@/components/Header';
 import Menu from '@/components/Menu';
 import NFTList from './List';
+import NFTMintingModal from "@/pages/NFT/Mint/Minting";
 
 export default function NFTPage() {
     return (
@@ -13,7 +14,9 @@ export default function NFTPage() {
                         <h1 className={styles['main-title']}>NFT</h1>
                         <h5 className={styles['sub-title']}>My NFTs (3)</h5>
                     </div>
-                    <div className={styles['ext']}><i/><span>Mint</span></div>
+                    <NFTMintingModal tips={'Minting NFT ...'} trigger={
+                        <div className={styles['ext']}><i/><span>Mint</span></div>
+                    }/>
                 </div>
                 <NFTList/>
             </div>

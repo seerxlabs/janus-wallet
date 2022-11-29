@@ -1,4 +1,5 @@
 import styles from './index.module.scss';
+import SOLSendingModal from "@/pages/Assets/SendSOL/Sending";
 
 export default function SendForm() {
     return (
@@ -18,7 +19,9 @@ export default function SendForm() {
             </div>
             <div className={styles['submit-btn']}>
                 <button className={styles['cancel']}>Cancel</button>
-                <button className={styles['next']}>Next</button>
+                <SOLSendingModal tips={'Sending …'} trigger={
+                    <button className={styles['next']}>Next</button>
+                }/>
             </div>
         </div>
     );

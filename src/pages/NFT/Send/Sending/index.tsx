@@ -2,15 +2,16 @@ import React, {ReactNode} from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
 import {DialogContentProps, DialogProps} from '@radix-ui/react-dialog';
 import styles from './index.module.scss';
+import IconSending from '@/assets/icons/sending.svg'
 
 export type ModalProps = DialogProps & {
-    title: string | ReactNode;
+    tips: string | ReactNode;
     trigger: ReactNode;
     contentProps?: DialogContentProps;
 };
 
-const ThemeModal = (props: ModalProps) => {
-    const {trigger, title, contentProps, ...restProps} = props;
+const NFTSendingModal = (props: ModalProps) => {
+    const {trigger, tips, contentProps, ...restProps} = props;
 
     return (
         <Dialog.Root {...restProps}>
@@ -19,13 +20,8 @@ const ThemeModal = (props: ModalProps) => {
                 <Dialog.Overlay className={styles['overlay']}>
                     <Dialog.Content className={styles['content']} {...contentProps}>
                         <div className={styles['modal-main']}>
-                            <Dialog.Close className={styles['close']}/>
-                            <h1>{title}</h1>
-                            <ul>
-                                <li><b>Auto</b></li>
-                                <li className={styles['on']}><b>Light color</b><i/></li>
-                                <li><b>Dark color</b></li>
-                            </ul>
+                            <img src={IconSending} alt=""/>
+                            <h1>{tips}</h1>
                         </div>
                     </Dialog.Content>
                 </Dialog.Overlay>
@@ -34,4 +30,4 @@ const ThemeModal = (props: ModalProps) => {
     );
 };
 
-export default ThemeModal;
+export default NFTSendingModal;

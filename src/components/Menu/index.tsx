@@ -15,24 +15,24 @@ import iconSettingsHover from "@/assets/icons/menu-settings-hover.svg";
 function Menu() {
     const location = useLocation();
     return (
-    <div className={styles['menu-bar']}>
-        <Link to="/assets">
-            <img src={location.pathname === "/assets" || location.pathname === "/" ? iconAssetsHover : iconAssets} alt=""/>
-        </Link>
-        <Link to="/nft">
-            <img src={location.pathname === "/nft" ? iconNftHover : iconNft} alt=""/>
-        </Link>
-        <Link to="/dapp">
-            <img src={location.pathname === "/dapp" ? iconDappHover: iconDapp} alt=""/>
-        </Link>
-        <Link to="/swap">
-            <img src={location.pathname === "/swap" ? iconSwapHover: iconSwap} alt=""/>
-        </Link>
-        <Link to="/settings">
-            <img src={location.pathname === "/settings" ? iconSettingsHover : iconSettings} alt=""/>
-        </Link>
-    </div>
-  );
+        <div className={styles['menu-bar']}>
+            <Link to="/assets">
+                <img src={location.pathname === "/assets" || location.pathname === "/" ? iconAssetsHover : iconAssets} alt=""/>
+            </Link>
+            <Link to="/nft">
+                <img src={location.pathname === "/nft" ? iconNftHover : iconNft} alt=""/>
+            </Link>
+            <Link to="/dapp">
+                <img src={location.pathname === "/dapp" ? iconDappHover : iconDapp} alt=""/>
+            </Link>
+            <Link to="/swap">
+                <img src={location.pathname === "/swap" ? iconSwapHover : iconSwap} alt=""/>
+            </Link>
+            <Link to="/settings">
+                <img src={location.pathname === "/settings" ? iconSettingsHover : iconSettings} alt=""/>
+            </Link>
+        </div>
+    );
 }
 
 export default Menu;
