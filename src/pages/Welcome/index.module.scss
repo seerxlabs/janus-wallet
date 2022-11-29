@@ -1,0 +1,97 @@
+.page-main {
+  background-color: #ffffff;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+}
+
+.page-container {
+  overflow-y: auto;
+  width: 800px;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+.page-container img.logo{
+  display: block;
+  width: 5rem;
+  height: 5rem;
+}
+.page-container h1{
+  font-size: 2rem;
+  font-family: MontserratMedium;
+  font-weight: 500;
+  color: #141C1D;
+  line-height: 2rem;
+  margin: 2.5rem auto 0.88rem;
+}
+.page-container h6{
+  font-size: 1.5rem;
+  font-family: MontserratLight;
+  font-weight: 300;
+  color: #6E7585;
+  line-height: 1.5rem;
+}
+.page-container .create-import{
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.page-container .create-import a{
+  width: 50%;
+  height: 15rem;
+  background: #FFFFFF;
+  border-radius: 0.94rem;
+  border: 0.06rem solid rgba(20,28,29,0.2);
+  display: flex;
+  align-items: normal;
+  flex-direction: column;
+  padding: 2.5rem;
+  box-sizing: border-box;
+}
+.page-container .create-import a img{
+  width: 3rem;
+  height: 3rem;
+  display: block;
+  margin-bottom: 2.31rem;
+}
+.page-container .create-import a b{
+  font-size: 1.31rem;
+  font-family: MontserratMedium;
+  font-weight: 500;
+  color: #141C1D;
+  line-height: 1.31rem;
+  margin-bottom: 0.88rem;
+}
+.page-container .create-import a span{
+  font-size: 0.94rem;
+  font-family: MontserratLight;
+  font-weight: 300;
+  color: #6E7585;
+  line-height: 1.25rem;
+}
+
+.copyright{
+  padding: 3.75rem 0;
+}
+.copyright p{
+  font-size: 0.94rem;
+  font-family: MontserratLight;
+  font-weight: 300;
+  color: #6E7585;
+  line-height: 0.94rem;
+}
+.copyright p a{
+  color: #141C1D;
+  text-decoration: underline;
+}

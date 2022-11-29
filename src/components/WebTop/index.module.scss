@@ -1,0 +1,23 @@
+.top-bar {
+  background: #ffffff;
+  position: relative;
+  width: 100%;
+  padding: 2.5rem;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap:1rem
+}
+.top-bar img{
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.top-bar p{
+  font-size: 1.31rem;
+  font-family: MontserratMedium;
+  font-weight: 500;
+  color: #141C1D;
+  line-height: 1.31rem;
+}

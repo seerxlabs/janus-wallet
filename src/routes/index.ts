@@ -1,7 +1,9 @@
 import { RouteConfig } from 'react-router-config'
 
 import Login from "@/pages/Login";
-import MyWallet from "@/pages/Wallet";
+import Welcome from "@/pages/Welcome";
+import CreateWallet from "@/pages/Wallet/Create";
+import ImportWallet from "@/pages/Wallet/Import";
 import Unlock from "@/pages/Settings/Security/Unlock";
 import Verify from "@/pages/Settings/Security/Verify";
 import Assets from "@/pages/Assets";
@@ -34,7 +36,6 @@ import OrderDetail from "@/pages/Swap/History/Detail";
 const routes: RouteConfig[] = [
     {path: '/', exact: true, component: Assets},
     {path: '/assets', exact: true, component: Assets},
-    {path: '/wallet', exact: true, component: MyWallet},
     {path: '/assets/manageToken', exact: true, component: ManageToken},
     {path: '/assets/addToken', exact: true, component: AddToken},
     {path: '/assets/tokenDetail', exact: true, component: TokenDetail},
@@ -47,7 +48,10 @@ const routes: RouteConfig[] = [
     {path: '/swap/order/detail', exact: true, component: OrderDetail},
     {path: '/swap/success', exact: true, component: SwapSuccess},
     {path: '/login', exact: true, component: Login},
+    {path: '/welcome', exact: true, component: Welcome},
     {path: '/wallet', exact: true, component: Wallet},
+    {path: '/wallet/create', exact: true, component: CreateWallet},
+    {path: '/wallet/import', exact: true, component: ImportWallet},
     {path: '/nft', exact: true, component: NFT},
     {path: '/nft/detail', exact: true, component: NFTDetail},
     {path: '/nft/empty', exact: true, component: NFTEmpty},
