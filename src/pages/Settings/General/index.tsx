@@ -19,11 +19,11 @@ export default function GeneralSetting() {
                     </Link>
                 </li>
                 <li>
-                    <Link to="">
+                    <a>
                         <img src={iconTheme} alt=""/>
                         <b>Theme</b>
                         <p><span>Auto</span><i/></p>
-                    </Link>
+                    </a>
                 </li>
                 <li>
                     <Link to="">

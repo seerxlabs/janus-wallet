@@ -8,6 +8,18 @@ import iconRemove from '@/assets/icons/settings/remove.svg'
 import iconReset from '@/assets/icons/settings/reset.svg'
 import {Link} from "react-router-dom"
 
+// const SecurityItem = (props: SecurityItemProps) => {
+//     return (
+//         <li>
+//             <Link to="/settings/changePassword">
+//                 <img src={iconUnlockWallet} alt=""/>
+//                 <b>Change password</b>
+//                 <p><i/></p>
+//             </Link>
+//         </li>
+//     );
+// }
+
 export default function SecuritySetting() {
     return (
         <div className={styles['item-box']}>

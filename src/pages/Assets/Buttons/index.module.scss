@@ -66,6 +66,7 @@
   flex-direction: column;
 }
 .modal-main .close{
+  z-index: 5;
   position: absolute;
   top: 1.25rem;
   right: 1.25rem;
@@ -124,7 +125,7 @@
   line-height: 1.5rem;
 }
 .modal-main .address i{
-  cursor: pointer;
+  cursor: copy;
   display: block;
   width: 1.5rem;
   height: 1.5rem;
