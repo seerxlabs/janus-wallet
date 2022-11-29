@@ -5,7 +5,6 @@ import iconTwitter from "@/assets/icons/settings/twitter.svg";
 import iconUser from "@/assets/icons/settings/user.svg";
 import iconPrivacy from "@/assets/icons/settings/privacy.svg";
 import iconVersion from "@/assets/icons/settings/version.svg";
-import {Link} from "react-router-dom"
 
 export default function AboutSetting() {
     return (

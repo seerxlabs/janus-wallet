@@ -6,6 +6,7 @@ import iconCurrency from '@/assets/icons/settings/currency.svg'
 import iconSet from '@/assets/icons/settings/set.svg'
 import {Link} from "react-router-dom"
 import LanguageModal from "@/pages/Settings/General/Language";
+import ThemeModal from "@/pages/Settings/General/Theme";
 
 export default function GeneralSetting() {
     return (
@@ -20,11 +21,13 @@ export default function GeneralSetting() {
                     </Link>
                 </li>
                 <li>
-                    <a>
-                        <img src={iconTheme} alt=""/>
-                        <b>Theme</b>
-                        <p><span>Auto</span><i/></p>
-                    </a>
+                    <ThemeModal title={'Theme'} trigger={
+                        <a>
+                            <img src={iconTheme} alt=""/>
+                            <b>Theme</b>
+                            <p><span>Auto</span><i/></p>
+                        </a>
+                    }/>
                 </li>
                 <li>
                     <LanguageModal title={'Language'} trigger={
