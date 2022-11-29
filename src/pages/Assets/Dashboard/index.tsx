@@ -1,4 +1,4 @@
-import message from '@/components/message';
+import message from '@/components/Message/message';
 import copy from 'copy-to-clipboard';
 import styles from './index.module.scss';
 
