@@ -1,5 +1,4 @@
-// import message from '@/components/message';
-import { toast } from 'react-toastify';
+import message from '@/components/message';
 import copy from 'copy-to-clipboard';
 import styles from './index.module.scss';
 
@@ -19,12 +18,7 @@ export default function Dashboard() {
                 <span>0x194cd…c88c</span>
                 <i onClick={() => {
                     copy('123');
-                    toast.success('Copied', {
-                        position: 'top-center',
-                        closeButton: false,
-                        hideProgressBar: true,
-                        autoClose: 2000,
-                    });
+                    message.success('Copied');
                 }}/>
             </p>
         </div>

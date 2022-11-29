@@ -15,6 +15,9 @@
   overflow-y: auto;
   width: 100%;
   position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .manage-btn {
@@ -26,7 +29,6 @@
   padding: 0.5rem 0.75rem;
   background: rgba(110, 117, 133, 0.05);
   border-radius: 0.63rem;
-  width: 11rem;
 }
 
 .manage-btn i {

@@ -3,7 +3,7 @@ import { RouteConfig } from 'react-router-config'
 import Login from "@/pages/Login";
 import MyWallet from "@/pages/Wallet";
 import Unlock from "@/pages/Settings/Security/Unlock";
-import Verify from "@/pages/Verify";
+import Verify from "@/pages/Settings/Security/Verify";
 import Assets from "@/pages/Assets";
 import ManageToken from "@/pages/Assets/ManageToken";
 import AddToken from "@/pages/Assets/AddToken";
@@ -12,7 +12,7 @@ import SendSOL from "@/pages/Assets/SendSOL";
 import SendSOLSuccess from "@/pages/Assets/SendSOL/Success";
 import Swap from "@/pages/Swap";
 import SwapSuccess from "@/pages/Swap/Success";
-import Network from "@/pages/Settings/Network";
+import Network from "@/pages/Settings/General/Network";
 import Wallet from "@/pages/Wallet";
 import NFT from "@/pages/NFT";
 import NFTDetail from "@/pages/NFT/Detail";
@@ -39,7 +39,6 @@ const routes: RouteConfig[] = [
     {path: '/swap', exact: true, component: Swap},
     {path: '/swap/success', exact: true, component: SwapSuccess},
     {path: '/login', exact: true, component: Login},
-    {path: '/verify', exact: true, component: Verify},
     {path: '/wallet', exact: true, component: Wallet},
     {path: '/nft', exact: true, component: NFT},
     {path: '/nft/detail', exact: true, component: NFTDetail},
@@ -50,6 +49,7 @@ const routes: RouteConfig[] = [
     {path: '/settings', exact: true, component: Settings},
     {path: '/settings/unlock', exact: true, component: Unlock},
     {path: '/settings/network', exact: true, component: Network},
+    {path: '/settings/verify', exact: true, component: Verify},
     {path: '/settings/resetWallet', exact: true, component: ResetWallet},
     {path: '/settings/resetWallet/success', exact: true, component: ResetWalletSuccess},
     {path: '/settings/deleteEmailAccount', exact: true, component: DeleteEmailAccount},

@@ -1,7 +1,4 @@
 import { toast, ToastOptions } from 'react-toastify';
-import IconSuccess from '@/assets/icons/msg-success.svg';
-import IconError from '@/assets/icons/msg-error.svg';
-import IconInfo from '@/assets/icons/msg-info.svg';
 
 function createToast(content: string, options?: ToastOptions) {
   const commonOpts: ToastOptions = {
@@ -19,7 +16,6 @@ function createToast(content: string, options?: ToastOptions) {
 
 export const success = (content: string, options?: ToastOptions) => {
   return createToast(content, {
-    icon: ({theme, type}) =>  <img src={IconSuccess} alt={''}/>,
     type: 'success',
     ...options,
   });
@@ -27,7 +23,6 @@ export const success = (content: string, options?: ToastOptions) => {
 
 export const error = (content: string, options?: ToastOptions) => {
   return createToast(content, {
-    icon: ({theme, type}) =>  <img src={IconError} alt={''}/>,
     type: 'error',
     ...options,
   });
@@ -35,7 +30,6 @@ export const error = (content: string, options?: ToastOptions) => {
 
 export const info = (content: string, options?: ToastOptions) => {
   return createToast(content, {
-    icon: ({theme, type}) =>  <img src={IconInfo} alt={''}/>,
     type: 'info',
     ...options,
   });
