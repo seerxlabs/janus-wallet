@@ -1,3 +1,4 @@
+import {toHEX} from '@mysten/bcs';
 import * as bip39 from '@scure/bip39';
 import {wordlist as enWordlist} from '@scure/bip39/wordlists/english';
 import {wordlist as czWordlist} from '@scure/bip39/wordlists/czech';
@@ -9,8 +10,10 @@ import {wordlist as szhWordlist} from '@scure/bip39/wordlists/simplified-chinese
 import {wordlist as spWordlist} from '@scure/bip39/wordlists/spanish';
 import {wordlist as tzhWordlist} from '@scure/bip39/wordlists/traditional-chinese';
 
+declare type Hex = string;
 
-const  BIP39_WORDLISTS = [
+
+const BIP39_WORDLISTS = [
     enWordlist,
     czWordlist,
     frWordlist,
@@ -38,4 +41,7 @@ export function generateMnemonic(): string {
     return bip39.generateMnemonic(enWordlist);
 }
 
-
+export function mnemonicToSeed(mnemonic: string): Hex {
+    const uint8Array = bip39.mnemonicToSeedSync(mnemonic);
+    return toHEX(uint8Array);
+}
