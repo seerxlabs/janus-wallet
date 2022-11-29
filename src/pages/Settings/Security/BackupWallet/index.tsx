@@ -9,7 +9,7 @@ export type ModalProps = DialogProps & {
   contentProps?: DialogContentProps;
 };
 
-const LockTimeModal = (props: ModalProps) => {
+const BackupWalletModal = (props: ModalProps) => {
   const { trigger, title, contentProps, ...restProps } = props;
 
   return (
@@ -21,12 +21,11 @@ const LockTimeModal = (props: ModalProps) => {
               <div className={styles['modal-main']}>
                   <Dialog.Close className={styles['close']}/>
                   <h1>{title}</h1>
-                  <ul>
-                      <li className={styles['on']}><b>Always</b><i/></li>
-                      <li><b>5 mins</b></li>
-                      <li><b>30 mins</b></li>
-                      <li><b>2 hours</b></li>
-                  </ul>
+                  <div className={styles['btn-box']}>
+                      <button className={styles['primary']}>Show private key</button>
+                      <button className={styles['primary']}>Show recovery phrase</button>
+                      <button className={styles['default']}>Download Json file</button>
+                  </div>
               </div>
           </Dialog.Content>
         </Dialog.Overlay>
@@ -35,4 +34,4 @@ const LockTimeModal = (props: ModalProps) => {
   );
 };
 
-export default LockTimeModal;
+export default BackupWalletModal;

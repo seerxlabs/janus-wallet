@@ -8,6 +8,7 @@ import iconRemove from '@/assets/icons/settings/remove.svg'
 import iconReset from '@/assets/icons/settings/reset.svg'
 import {Link} from "react-router-dom"
 import LockTimeModal from "@/pages/Settings/Security/LockTime";
+import BackupWalletModal from "@/pages/Settings/Security/BackupWallet";
 
 
 export default function SecuritySetting() {
@@ -32,11 +33,13 @@ export default function SecuritySetting() {
                     }/>
                 </li>
                 <li>
-                    <Link to="">
-                        <img src={iconBackupWallet} alt=""/>
-                        <b>Back up wallet</b>
-                        <p><i/></p>
-                    </Link>
+                    <BackupWalletModal title={'Back up wallet'} trigger={
+                        <a>
+                            <img src={iconBackupWallet} alt=""/>
+                            <b>Back up wallet</b>
+                            <p><i/></p>
+                        </a>
+                    }/>
                 </li>
                 <li>
                     <Link to="/settings/contractAuthorization">

@@ -55,36 +55,29 @@
   line-height: 0.94rem;
   padding: 0.13rem 0 1.69rem;
 }
-.modal-main ul{
+.modal-main .btn-box{
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
   width: 100%;
 }
 
-.modal-main ul li{
-  background: rgba(110, 117, 133, 0.05);
-  border-radius: 0.94rem;
-  border: 0.06rem solid #ffffff;
-  padding: 0.81rem 1.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.modal-main ul li.on{
-  background: #ffffff;
-  border: 0.06rem solid rgba(20,28,29,0.2);
-}
-.modal-main ul li b{
-  font-size: 0.94rem;
+.modal-main .btn-box button{
   font-family: MontserratRegular;
+  border-radius: 0.94rem;
+  padding: 1.06rem 0;
+  width: 100%;
+  text-align: center;
+  display: block;
+  font-size: 0.94rem;
   font-weight: 400;
-  color: #141C1D;
   line-height: 0.94rem;
 }
-.modal-main ul li i{
-  display: block;
-  width: 1.5rem;
-  height: 1.5rem;
-  background: url("@/assets/icons/selected.svg") no-repeat center center / 100% 100%;
+.modal-main .btn-box button.primary{
+  background: #297AFF;
+  color: #ffffff;
+}
+.modal-main .btn-box button.default{
+  background: rgba(110, 117, 133, 0.05);
+  color: #297AFF;
 }

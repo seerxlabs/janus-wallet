@@ -20,7 +20,7 @@ const LanguageModal = (props: ModalProps) => {
           <Dialog.Content className={styles['content']} {...contentProps}>
               <div className={styles['modal-main']}>
                   <Dialog.Close className={styles['close']}/>
-                  <h1>Language</h1>
+                  <h1>{title}</h1>
                   <ul>
                       <li className={styles['on']}><b>English</b><i/></li>
                       <li><b>简体中文</b></li>
