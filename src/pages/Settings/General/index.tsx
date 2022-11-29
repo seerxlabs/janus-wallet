@@ -7,6 +7,7 @@ import iconSet from '@/assets/icons/settings/set.svg'
 import {Link} from "react-router-dom"
 import LanguageModal from "@/pages/Settings/General/Language";
 import ThemeModal from "@/pages/Settings/General/Theme";
+import DefaultCurrencyModal from "@/pages/Settings/General/DefaultCurrency";
 
 export default function GeneralSetting() {
     return (
@@ -39,11 +40,13 @@ export default function GeneralSetting() {
                     }/>
                 </li>
                 <li>
-                    <Link to="">
-                        <img src={iconCurrency} alt=""/>
-                        <b>Default currency</b>
-                        <p><span>CNY</span><i/></p>
-                    </Link>
+                    <DefaultCurrencyModal title={'Choose a token'} trigger={
+                        <a>
+                            <img src={iconCurrency} alt=""/>
+                            <b>Default currency</b>
+                            <p><span>CNY</span><i/></p>
+                        </a>
+                    }/>
                 </li>
                 <li>
                     <Link to="/settings/network">
