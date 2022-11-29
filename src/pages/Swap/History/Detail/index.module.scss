@@ -1,0 +1,103 @@
+.page-main {
+  background-color: #ffffff;
+  margin: auto;
+  width: 375px;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.page-container {
+  flex: 1;
+  overflow-y: auto;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.confirm-main{
+  padding: 0 1.25rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.confirm-main img{
+  margin: 2.5rem auto 1.88rem;
+  display: block;
+  width: 3.75rem;
+  height: 3.75rem;
+}
+.confirm-main h2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:0.75rem
+}
+
+.confirm-main h2 b{
+  font-size: 1.5rem;
+  font-family: MontserratMedium;
+  font-weight: 500;
+  color: #6E7585;
+  line-height: 1.5rem;
+}
+.confirm-main h2 span{
+  font-size: 1.5rem;
+  font-family: MontserratMedium;
+  font-weight: 500;
+  color: #141C1D;
+  line-height: 1.5rem;
+}
+
+.confirm-main h6{
+  margin-top:0.63rem;
+  font-size: 0.94rem;
+  font-family: MontserratRegular;
+  font-weight: 400;
+  color: #141C1D;
+  line-height: 0.94rem;
+}
+.confirm-main .info-box{
+  margin-top: 2.5rem;
+  width: 100%;
+  background: rgba(110, 117, 133, 0.05);
+  border-radius: 0.94rem;
+  padding: 1.25rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.confirm-main .info-box p{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.confirm-main .info-box p span{
+  font-size: 0.94rem;
+  font-family: MontserratLight;
+  font-weight: 300;
+  color: #6E7585;
+  line-height: 1.88rem;
+}
+.confirm-main .info-box p b{
+  font-size: 0.94rem;
+  font-family: MontserratRegular;
+  font-weight: 400;
+  color: #141C1D;
+  line-height: 1.88rem;
+}
+.confirm-main a.check{
+  margin: 1.25rem auto;
+  width: 100%;
+  line-height: 3.13rem;
+  text-align: center;
+  background: rgba(110, 117, 133, 0.05);
+  border-radius: 0.94rem;
+  color: #297AFF;
+}

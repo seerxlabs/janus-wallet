@@ -101,16 +101,15 @@
   background: url("@/assets/icons/select-down.svg") no-repeat center center / 100% 100%;
 }
 
-.form-box button.check {
-  margin-top: 1.25rem;
+.form-box a.check {
+  margin: 1.25rem auto;
   background: #297AFF;
   border-radius: 0.94rem;
-  padding: 1.13rem 0;
   text-align: center;
   display: block;
   width: 100%;
   font-size: 0.94rem;
   font-family: MontserratRegular;
   color: #FFFFFF;
-  line-height: 0.94rem;
+  line-height: 3.13rem;
 }

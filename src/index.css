@@ -75,6 +75,14 @@ button{
   background-color: rgba(0,0,0,0.2);
 }
 
+button{
+  border-radius: 0.94rem;
+  font-size: 0.94rem;
+  font-family: MontserratRegular;
+  font-weight: 400;
+  line-height: 3.13rem;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

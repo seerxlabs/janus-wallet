@@ -1,5 +1,5 @@
 import styles from './index.module.scss';
-import SOLSendingModal from "@/pages/Assets/SendSOL/Sending";
+import {Link} from "react-router-dom";
 
 export default function SendForm() {
     return (
@@ -19,9 +19,7 @@ export default function SendForm() {
             </div>
             <div className={styles['submit-btn']}>
                 <button className={styles['cancel']}>Cancel</button>
-                <SOLSendingModal tips={'Sending …'} trigger={
-                    <button className={styles['next']}>Next</button>
-                }/>
+                <Link className={styles['next']} to="/assets/sendSOL/confirm">Next</Link>
             </div>
         </div>
     );

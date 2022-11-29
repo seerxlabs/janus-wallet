@@ -9,6 +9,7 @@ import ManageToken from "@/pages/Assets/ManageToken";
 import AddToken from "@/pages/Assets/AddToken";
 import TokenDetail from "@/pages/Assets/TokenDetail";
 import SendSOL from "@/pages/Assets/SendSOL";
+import SendSOLConfirm from "@/pages/Assets/SendSOL/Confirm";
 import SendSOLSuccess from "@/pages/Assets/SendSOL/Success";
 import Swap from "@/pages/Swap";
 import SwapSuccess from "@/pages/Swap/Success";
@@ -26,6 +27,8 @@ import DeleteEmailAccount from "@/pages/Settings/Security/ResetWallet";
 import ResetWalletSuccess from "@/pages/Settings/Security/ResetWallet/Success";
 import ContractAuthorization from "@/pages/Settings/Security/ContractAuthorization";
 import ChangePassword from "@/pages/Settings/Security/ChangePassword";
+import HistoryOrder from "@/pages/Swap/History";
+import OrderDetail from "@/pages/Swap/History/Detail";
 
 const routes: RouteConfig[] = [
     {path: '/', exact: true, component: Assets},
@@ -35,8 +38,11 @@ const routes: RouteConfig[] = [
     {path: '/assets/addToken', exact: true, component: AddToken},
     {path: '/assets/tokenDetail', exact: true, component: TokenDetail},
     {path: '/assets/sendSOL', exact: true, component: SendSOL},
+    {path: '/assets/sendSOL/confirm', exact: true, component: SendSOLConfirm},
     {path: '/assets/sendSOL/success', exact: true, component: SendSOLSuccess},
     {path: '/swap', exact: true, component: Swap},
+    {path: '/swap/order', exact: true, component: HistoryOrder},
+    {path: '/swap/order/detail', exact: true, component: OrderDetail},
     {path: '/swap/success', exact: true, component: SwapSuccess},
     {path: '/login', exact: true, component: Login},
     {path: '/wallet', exact: true, component: Wallet},

@@ -112,14 +112,17 @@
 }
 
 .submit-btn button {
+  text-align: center;
+  width: 50%;
+}
+.submit-btn a {
+  text-align: center;
+  width: 50%;
   border-radius: 0.94rem;
   font-size: 0.94rem;
   font-family: MontserratRegular;
   font-weight: 400;
-  line-height: 0.94rem;
-  padding: 1.13rem 0;
-  text-align: center;
-  width: 50%;
+  line-height: 3.13rem;
 }
 
 .submit-btn button.cancel {
@@ -128,7 +131,7 @@
   border: 0.06rem solid rgba(20, 28, 29, 0.2);
 }
 
-.submit-btn button.next {
+.submit-btn a.next {
   color: rgba(110, 117, 133, 0.50);
   background: rgba(110, 117, 133, 0.2);
 }
