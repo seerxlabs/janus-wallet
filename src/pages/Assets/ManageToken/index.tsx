@@ -11,7 +11,7 @@ export default function ManageTokenPage() {
             <div className={styles['page-container']}>
                 <PageTitle name={'Manage tokens'} sub={false}/>
                 <List/>
-                <Link to="create" className={styles['add-btn']}>
+                <Link to="/assets/addToken" className={styles['add-btn']}>
                     <button>Add custom token</button>
                 </Link>
             </div>
