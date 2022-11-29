@@ -27,6 +27,7 @@ import DeleteEmailAccount from "@/pages/Settings/Security/ResetWallet";
 import ResetWalletSuccess from "@/pages/Settings/Security/ResetWallet/Success";
 import ContractAuthorization from "@/pages/Settings/Security/ContractAuthorization";
 import ChangePassword from "@/pages/Settings/Security/ChangePassword";
+import CheckOrder from "@/pages/Swap/Check";
 import HistoryOrder from "@/pages/Swap/History";
 import OrderDetail from "@/pages/Swap/History/Detail";
 
@@ -41,6 +42,7 @@ const routes: RouteConfig[] = [
     {path: '/assets/sendSOL/confirm', exact: true, component: SendSOLConfirm},
     {path: '/assets/sendSOL/success', exact: true, component: SendSOLSuccess},
     {path: '/swap', exact: true, component: Swap},
+    {path: '/swap/check', exact: true, component: CheckOrder},
     {path: '/swap/order', exact: true, component: HistoryOrder},
     {path: '/swap/order/detail', exact: true, component: OrderDetail},
     {path: '/swap/success', exact: true, component: SwapSuccess},

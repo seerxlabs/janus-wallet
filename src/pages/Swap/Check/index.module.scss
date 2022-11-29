@@ -1,0 +1,104 @@
+.page-main {
+  background-color: #ffffff;
+  margin: auto;
+  width: 375px;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.page-container {
+  flex: 1;
+  overflow-y: auto;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.check-main{
+  padding: 0 1.25rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0.63rem;
+  gap: 1.25rem;
+}
+
+.check-main .info-box{
+  width: 100%;
+  background: rgba(110, 117, 133, 0.05);
+  border-radius: 0.94rem;
+  padding: 1.25rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap:1.25rem
+}
+.check-main .info-box p{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.check-main .info-box p span{
+  font-size: 0.94rem;
+  font-family: MontserratLight;
+  font-weight: 300;
+  color: #6E7585;
+  line-height: 0.94rem;
+}
+.check-main .info-box p b{
+  display: flex;
+  flex-direction: column;
+  gap: 0.38rem;
+}
+.check-main .info-box p b i{
+  font-size: 0.94rem;
+  font-family: MontserratRegular;
+  font-weight: 400;
+  color: #141C1D;
+  line-height: 0.94rem;
+}
+.check-main .info-box p b label{
+  font-size: 0.81rem;
+  font-family: MontserratLight;
+  font-weight: 300;
+  color: #6E7585;
+  line-height: 0.81rem;
+}
+.check-main .info-box h6{
+  font-size: 0.81rem;
+  font-family: MontserratLight;
+  font-weight: 300;
+  color: #6E7585;
+  line-height: 0.81rem;
+  margin-top: 0.63rem;
+}
+
+.check-main .btn-box{
+  margin-top: auto;
+  padding: 1.25rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.94rem;
+  width: 100%;
+}
+.check-main .btn-box button{
+  width: 50%;
+}
+.check-main .btn-box button.cancel{
+  background: #FFFFFF;
+  color: #141C1D;
+  border: 0.06rem solid rgba(20,28,29,0.2);
+}
+.check-main .btn-box button.swap{
+  background: #297AFF;
+  color: #FFFFFF;
+  border: 0.06rem solid #297AFF;
+}

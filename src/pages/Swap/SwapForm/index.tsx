@@ -1,6 +1,5 @@
 import styles from './index.module.scss';
 import iconEth from "@/assets/icons/net-eth.svg";
-import SwappingModal from "@/pages/Swap/Swapping";
 import {Link} from "react-router-dom";
 
 export default function SwapForm() {
@@ -22,11 +21,7 @@ export default function SwapForm() {
                     </div>
                 </div>
                 <div className={styles['switch-btn']}>
-                    <i/>
-                        <SwappingModal tips={'Swapping ...'} trigger={
-                            <a/>
-                        }/>
-                    <i/>
+                    <i/><a/><i/>
                 </div>
                 <div className={styles['form-item']}>
                     <div className={styles['item-name']}>
@@ -42,7 +37,7 @@ export default function SwapForm() {
                     </div>
                 </div>
             </div>
-            <Link to="/swap/order" className={styles['check']}>Check order</Link>
+            <Link to="/swap/check" className={styles['check']}>Check order</Link>
         </div>
     );
 }
