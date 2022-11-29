@@ -13,46 +13,46 @@ export default function AboutSetting() {
             <label>ABOUT</label>
             <ul>
                 <li>
-                    <Link to="">
+                    <a href="https://januswallet.xyz/#/" target="_blank">
                         <img src={iconSite} alt=""/>
                         <b>Official website</b>
                         <p><i/></p>
-                    </Link>
+                    </a>
                 </li>
                 <li>
-                    <Link to="">
+                    <a href="https://januswallet.xyz/#/" target="_blank">
                         <img src={iconDiscord} alt=""/>
                         <b>Discord</b>
                         <p><i/></p>
-                    </Link>
+                    </a>
                 </li>
                 <li>
-                    <Link to="">
+                    <a href="https://januswallet.xyz/#/" target="_blank">
                         <img src={iconTwitter} alt=""/>
                         <b>Twitter</b>
                         <p><i/></p>
-                    </Link>
+                    </a>
                 </li>
                 <li>
-                    <Link to="">
+                    <a href="https://januswallet.xyz/#/" target="_blank">
                         <img src={iconUser} alt=""/>
                         <b>User agreement</b>
                         <p><i/></p>
-                    </Link>
+                    </a>
                 </li>
                 <li>
-                    <Link to="">
+                    <a href="https://januswallet.xyz/#/" target="_blank">
                         <img src={iconPrivacy} alt=""/>
                         <b>Privacy terms</b>
                         <p><i/></p>
-                    </Link>
+                    </a>
                 </li>
                 <li>
-                    <Link to="">
+                    <a href="https://januswallet.xyz/#/" target="_blank">
                         <img src={iconVersion} alt=""/>
                         <b>Wallet version</b>
                         <p><span>1.0.1</span><i/></p>
-                    </Link>
+                    </a>
                 </li>
             </ul>
         </div>
