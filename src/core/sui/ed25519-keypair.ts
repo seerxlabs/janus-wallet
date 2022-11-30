@@ -1,11 +1,10 @@
 import {Ed25519Keypair, isValidHardenedPath, mnemonicToSeedHex} from '@mysten/sui.js'
-import {derivePath, getPublicKey} from "./utils/ed25519-hd-key";
+import {derivePath, getPublicKey} from "../utils/ed25519-hd-key";
 import {Ed25519KeypairData} from "@mysten/sui.js/src/cryptography/ed25519-keypair";
 import {toHEX} from "@mysten/bcs";
 import nacl from 'tweetnacl';
 
 export const DEFAULT_ED25519_DERIVATION_PATH = "m/44'/784'/0'/0'/0'";
-
 
 export class Ed25519KeypairCustom extends Ed25519Keypair {
 
@@ -26,8 +25,8 @@ export class Ed25519KeypairCustom extends Ed25519Keypair {
         }
     }
 
-    getPrivateKeyToBase64(): string {
-        return toHEX(this.keypairCustom.secretKey);
+    getPrivateKeyToHash(): string {
+        return toHEX(this.keypairCustom.secretKey.subarray(0, 32));
     }
 
 
@@ -45,7 +44,6 @@ export class Ed25519KeypairCustom extends Ed25519Keypair {
         let fullPrivateKey = new Uint8Array(64);
         fullPrivateKey.set(key);
         fullPrivateKey.set(pubkey, 32);
-
         return new Ed25519KeypairCustom({publicKey: pubkey, secretKey: fullPrivateKey});
     }
 
