@@ -13,7 +13,7 @@ export default function UnlockPage() {
                     <input type="password" placeholder={'Please enter password'}/><a/>
                 </div>
                 <button>Unlock</button>
-                <Link className={styles['forget']} to="/settings/changePassword">Forget Password?</Link>
+                <Link className={styles['forget']} to="/settings/resetWallet">Forget Password?</Link>
             </div>
         </div>
     );
