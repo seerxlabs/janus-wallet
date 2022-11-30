@@ -1,0 +1,92 @@
+.form-box {
+  padding: 0 1.88rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-item {
+  margin-bottom: 0.63rem;
+}
+
+.form-item label {
+  font-size: 0.81rem;
+  font-family: MontserratLight;
+  font-weight: 300;
+  color: #6E7585;
+  line-height: 0.81rem;
+  padding: 1.25rem 0;
+  display: block;
+}
+
+.form-item .input-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  background: #FAFAFA;
+  border-radius: 0.94rem;
+  border: 0.06rem solid rgba(20, 28, 29, 0.2);
+  padding: 1.06rem 1.25rem;
+}
+
+.form-item .input-box input {
+  font-size: 0.94rem;
+  font-family: MontserratRegular;
+  font-weight: 400;
+  color: #141C1D;
+  line-height: 0.94rem;
+  background: none;
+  width: 100%;
+  border: none;
+}
+
+.form-item .input-box input::placeholder {
+  font-size: 0.94rem;
+  font-family: MontserratRegular;
+  font-weight: 400;
+  color: rgba(110, 117, 133, 0.5);
+  line-height: 0.94rem;
+}
+.form-item ul{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.form-item ul li{
+  position: relative;
+}
+.form-item ul li.on i{
+  display: block;
+}
+.form-item ul li img{
+  width: 3.75rem;
+  height: 3.75rem;
+}
+.form-item ul li i{
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: url("@/assets/icons/selected.svg") no-repeat center center / 100% 100%;
+}
+
+.submit-btn {
+  margin-top: auto;
+  position: relative;
+  width: 100%;
+  padding: 1.25rem 0;
+}
+
+.submit-btn button {
+  text-align: center;
+  width: 100%;
+}
+
+.submit-btn button.save {
+  color: #FFFFFF;
+  background: #297AFF;;
+}

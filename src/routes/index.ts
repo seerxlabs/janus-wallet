@@ -2,6 +2,8 @@ import { RouteConfig } from 'react-router-config'
 
 import Login from "@/pages/Login";
 import Welcome from "@/pages/Welcome";
+import Wallet from "@/pages/Wallet";
+import EditWallet from "@/pages/Wallet/Edit";
 import CreateWallet from "@/pages/Wallet/Create";
 import CreateByEmail from "@/pages/Wallet/Create/CreateByEmail";
 import CreateByPhrase from "@/pages/Wallet/Create/CreateByPhrase";
@@ -20,7 +22,6 @@ import SendSOLSuccess from "@/pages/Assets/SendSOL/Success";
 import Swap from "@/pages/Swap";
 import SwapSuccess from "@/pages/Swap/Success";
 import Network from "@/pages/Settings/General/Network";
-import Wallet from "@/pages/Wallet";
 import NFT from "@/pages/NFT";
 import NFTDetail from "@/pages/NFT/Detail";
 import NFTEmpty from "@/pages/NFT/Empty";
@@ -54,6 +55,7 @@ const routes: RouteConfig[] = [
     {path: '/login', exact: true, component: Login},
     {path: '/welcome', exact: true, component: Welcome},
     {path: '/wallet', exact: true, component: Wallet},
+    {path: '/wallet/edit', exact: true, component: EditWallet},
     {path: '/wallet/create', exact: true, component: CreateWallet},
     {path: '/wallet/create/email', exact: true, component: CreateByEmail},
     {path: '/wallet/create/phrase', exact: true, component: CreateByPhrase},
