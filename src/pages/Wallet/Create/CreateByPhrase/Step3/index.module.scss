@@ -1,0 +1,142 @@
+.step-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.step-container {
+  overflow-y: auto;
+  width: 800px;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+.step-name{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:2.5rem;
+  padding: 3.25rem 0 4.5rem;
+}
+.step-name p{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.step-name p img{
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.step-name p b{
+  font-size: 1.5rem;
+  font-family: MontserratMedium;
+  font-weight: 500;
+  color: #141C1D;
+  line-height: 1.5rem;
+}
+.step-name p b.gray{
+  color: rgba(110,117,133,0.5);
+}
+.step-name i{
+  width: 3.75rem;
+  height: 1px;
+  opacity: 0.5;
+  border-bottom: 0.13rem dashed #6E7585;
+}
+.info-box{
+  padding: 0 1.25rem;
+  display: flex;
+  align-items: normal;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+.info-box .words-box{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.info-box .words-box .word-list{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.88rem;
+  border-radius: 0.94rem;
+  border: 0.06rem solid rgba(20,28,29,0.2);
+}
+.info-box .words-box .word-list ul{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.info-box .words-box .word-list ul li{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.info-box .words-box .word-list ul li label{
+  display: block;
+  width: 2.5rem;
+  font-size: 0.94rem;
+  font-family: MontserratRegular;
+  font-weight: 400;
+  color: #6E7585;
+  line-height: 1.25rem;
+}
+.info-box .words-box .word-list ul li p{
+  display: block;
+  font-size: 0.94rem;
+  font-family: MontserratRegular;
+  font-weight: 400;
+  color: #141C1D;
+  line-height: 1.25rem;
+}
+.info-box .words-box .copy{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.63rem;
+  margin-top: 1.2rem;
+}
+.info-box .words-box .copy p{
+  font-size: 0.94rem;
+  font-family: MontserratRegular;
+  font-weight: 400;
+  color: rgba(110,117,133,0.5);
+  line-height: 1.25rem;
+}
+.info-box .words-box .copy a{
+  cursor: copy;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: url("@/assets/icons/copy.svg") no-repeat center center / 100% 100%;
+}
+.info-box .words-box button{
+  margin-top: auto;
+  color: #FFFFFF;
+  background: #297AFF;
+}
+.info-box .tips{
+  width: 50%;
+  height: 22.5rem;
+  background: rgba(110, 117, 133, 0.05);
+  border-radius: 0.94rem;
+  padding: 1.88rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap:1.3rem
+}
+.info-box .tips p{
+  font-size: 0.94rem;
+  font-family: MontserratLight;
+  font-weight: 300;
+  color: #141C1D;
+  line-height: 1.25rem;
+}

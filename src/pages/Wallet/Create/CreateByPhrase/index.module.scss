@@ -1,0 +1,23 @@
+.page-main {
+  background-color: #ffffff;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+}
+
+.page-container {
+  overflow-y: auto;
+  width: 800px;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 7.5rem;
+  flex: 1;
+}

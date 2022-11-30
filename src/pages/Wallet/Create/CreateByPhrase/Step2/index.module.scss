@@ -1,0 +1,70 @@
+.step-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  flex: 1;
+}
+
+.step-container {
+  overflow-y: auto;
+  width: 800px;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+.step-container h2{
+  font-size: 1.5rem;
+  font-family: MontserratMedium;
+  font-weight: 500;
+  color: #141C1D;
+  line-height: 1.5rem;
+}
+.step-container button{
+  margin-top: 3.75rem;
+  width: 25rem;
+  background: #297AFF;
+  border-radius: 0.94rem;
+  color: #FFFFFF;
+  font-size: 1.13rem;
+}
+ul{
+  width: 100%;
+  padding: 0 1.13rem;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap:1.25rem;
+  box-sizing: border-box;
+}
+ul li{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 0 1.15rem;
+  border-radius: 0.94rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+ul li img{
+  width: 1.5rem;
+  height: 1.5rem;
+}
+ul li p{
+  font-size: 0.94rem;
+  font-family: MontserratLight;
+  font-weight: 300;
+  color: #141C1D;
+  line-height: 3.75rem;
+}
+
+.color-primary{ background: rgba(41, 122, 255, 0.1)}
+.color-success{ background: rgba(59, 193, 100, 0.1)}
+.color-warn{background: rgba(240, 192, 2, 0.1)}
+.color-error{background: rgba(255, 59, 48, 0.1)}

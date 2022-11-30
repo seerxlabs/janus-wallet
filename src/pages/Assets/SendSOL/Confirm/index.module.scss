@@ -20,39 +20,45 @@
   flex-direction: column;
   box-sizing: border-box;
 }
-.confirm-main{
+
+.confirm-main {
   padding: 0 1.88rem;
   flex: 1;
   display: flex;
   flex-direction: column;
 }
-.confirm-main img{
+
+.confirm-main img {
   margin: 0.63rem auto 1.88rem;
   display: block;
   width: 3.75rem;
   height: 3.75rem;
 }
-.confirm-main h2{
+
+.confirm-main h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap:0.75rem
+  gap: 0.75rem
 }
-.confirm-main h2 b{
+
+.confirm-main h2 b {
   font-size: 1.5rem;
   font-family: MontserratMedium;
   font-weight: 500;
   color: #6E7585;
   line-height: 1.5rem;
 }
-.confirm-main h2 span{
+
+.confirm-main h2 span {
   font-size: 1.5rem;
   font-family: MontserratMedium;
   font-weight: 500;
   color: #141C1D;
   line-height: 1.5rem;
 }
-.confirm-main .info-box{
+
+.confirm-main .info-box {
   margin-top: 2.5rem;
   width: 100%;
   background: rgba(110, 117, 133, 0.05);
@@ -62,26 +68,30 @@
   display: flex;
   flex-direction: column;
 }
-.confirm-main .info-box p{
+
+.confirm-main .info-box p {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.confirm-main .info-box p span{
+
+.confirm-main .info-box p span {
   font-size: 0.94rem;
   font-family: MontserratLight;
   font-weight: 300;
   color: #6E7585;
   line-height: 1.88rem;
 }
-.confirm-main .info-box p b{
+
+.confirm-main .info-box p b {
   font-size: 0.94rem;
   font-family: MontserratRegular;
   font-weight: 400;
   color: #141C1D;
   line-height: 1.88rem;
 }
-.confirm-main .btn-box{
+
+.confirm-main .btn-box {
   margin-top: auto;
   padding: 1.25rem 0;
   display: flex;
@@ -89,15 +99,18 @@
   justify-content: space-between;
   gap: 0.94rem;
 }
-.confirm-main .btn-box button{
+
+.confirm-main .btn-box button {
   width: 50%;
 }
-.confirm-main .btn-box button.cancel{
+
+.confirm-main .btn-box button.cancel {
   background: #FFFFFF;
   color: #141C1D;
-  border: 0.06rem solid rgba(20,28,29,0.2);
+  border: 0.06rem solid rgba(20, 28, 29, 0.2);
 }
-.confirm-main .btn-box button.send{
+
+.confirm-main .btn-box button.send {
   background: #297AFF;
   color: #FFFFFF;
   border: 0.06rem solid #297AFF;

@@ -3,7 +3,11 @@ import { RouteConfig } from 'react-router-config'
 import Login from "@/pages/Login";
 import Welcome from "@/pages/Welcome";
 import CreateWallet from "@/pages/Wallet/Create";
+import CreateByEmail from "@/pages/Wallet/Create/CreateByEmail";
+import CreateByPhrase from "@/pages/Wallet/Create/CreateByPhrase";
 import ImportWallet from "@/pages/Wallet/Import";
+import ImportByEmail from "@/pages/Wallet/Import/ImportByEmail";
+import ImportByPhrase from "@/pages/Wallet/Import/ImportByPhrase";
 import Unlock from "@/pages/Settings/Security/Unlock";
 import Verify from "@/pages/Settings/Security/Verify";
 import Assets from "@/pages/Assets";
@@ -51,7 +55,11 @@ const routes: RouteConfig[] = [
     {path: '/welcome', exact: true, component: Welcome},
     {path: '/wallet', exact: true, component: Wallet},
     {path: '/wallet/create', exact: true, component: CreateWallet},
+    {path: '/wallet/create/email', exact: true, component: CreateByEmail},
+    {path: '/wallet/create/phrase', exact: true, component: CreateByPhrase},
     {path: '/wallet/import', exact: true, component: ImportWallet},
+    {path: '/wallet/import/email', exact: true, component: ImportByEmail},
+    {path: '/wallet/import/phrase', exact: true, component: ImportByPhrase},
     {path: '/nft', exact: true, component: NFT},
     {path: '/nft/detail', exact: true, component: NFTDetail},
     {path: '/nft/empty', exact: true, component: NFTEmpty},

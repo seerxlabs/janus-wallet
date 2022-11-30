@@ -20,7 +20,8 @@
   flex-direction: column;
   box-sizing: border-box;
 }
-.check-main{
+
+.check-main {
   padding: 0 1.25rem;
   flex: 1;
   display: flex;
@@ -30,7 +31,7 @@
   gap: 1.25rem;
 }
 
-.check-main .info-box{
+.check-main .info-box {
   width: 100%;
   background: rgba(110, 117, 133, 0.05);
   border-radius: 0.94rem;
@@ -38,40 +39,46 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap:1.25rem
+  gap: 1.25rem
 }
-.check-main .info-box p{
+
+.check-main .info-box p {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.check-main .info-box p span{
+
+.check-main .info-box p span {
   font-size: 0.94rem;
   font-family: MontserratLight;
   font-weight: 300;
   color: #6E7585;
   line-height: 0.94rem;
 }
-.check-main .info-box p b{
+
+.check-main .info-box p b {
   display: flex;
   flex-direction: column;
   gap: 0.38rem;
 }
-.check-main .info-box p b i{
+
+.check-main .info-box p b i {
   font-size: 0.94rem;
   font-family: MontserratRegular;
   font-weight: 400;
   color: #141C1D;
   line-height: 0.94rem;
 }
-.check-main .info-box p b label{
+
+.check-main .info-box p b label {
   font-size: 0.81rem;
   font-family: MontserratLight;
   font-weight: 300;
   color: #6E7585;
   line-height: 0.81rem;
 }
-.check-main .info-box h6{
+
+.check-main .info-box h6 {
   font-size: 0.81rem;
   font-family: MontserratLight;
   font-weight: 300;
@@ -80,7 +87,7 @@
   margin-top: 0.63rem;
 }
 
-.check-main .btn-box{
+.check-main .btn-box {
   margin-top: auto;
   padding: 1.25rem 0;
   display: flex;
@@ -89,15 +96,18 @@
   gap: 0.94rem;
   width: 100%;
 }
-.check-main .btn-box button{
+
+.check-main .btn-box button {
   width: 50%;
 }
-.check-main .btn-box button.cancel{
+
+.check-main .btn-box button.cancel {
   background: #FFFFFF;
   color: #141C1D;
-  border: 0.06rem solid rgba(20,28,29,0.2);
+  border: 0.06rem solid rgba(20, 28, 29, 0.2);
 }
-.check-main .btn-box button.swap{
+
+.check-main .btn-box button.swap {
   background: #297AFF;
   color: #FFFFFF;
   border: 0.06rem solid #297AFF;
