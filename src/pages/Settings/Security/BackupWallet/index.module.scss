@@ -65,18 +65,28 @@
   width: 100%;
 }
 
+.modal-main .btn-box a {
+  width: 100%;
+  text-align: center;
+  display: block;
+  border-radius: 0.94rem;
+  font-size: 0.94rem;
+  font-family: MontserratRegular;
+  font-weight: 400;
+  line-height: 3.13rem;
+}
 .modal-main .btn-box button {
   width: 100%;
   text-align: center;
   display: block;
 }
 
-.modal-main .btn-box button.primary {
+.modal-main .btn-box .primary {
   background: #297AFF;
   color: #ffffff;
 }
 
-.modal-main .btn-box button.default {
+.modal-main .btn-box .default {
   background: rgba(110, 117, 133, 0.05);
   color: #297AFF;
 }

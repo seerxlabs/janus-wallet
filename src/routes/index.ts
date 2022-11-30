@@ -30,6 +30,8 @@ import NFTSendSuccess from "@/pages/NFT/Send/Success";
 import Dapp from "@/pages/Dapp";
 import Settings from "@/pages/Settings";
 import ResetWallet from "@/pages/Settings/Security/ResetWallet";
+import ShowPrivateKey from "@/pages/Settings/Security/ShowPrivateKey";
+import ShowRecoveryPhrase from "@/pages/Settings/Security/ShowRecoveryPhrase";
 import DeleteEmailAccount from "@/pages/Settings/Security/ResetWallet";
 import ResetWalletSuccess from "@/pages/Settings/Security/ResetWallet/Success";
 import ContractAuthorization from "@/pages/Settings/Security/ContractAuthorization";
@@ -72,6 +74,8 @@ const routes: RouteConfig[] = [
     {path: '/settings/unlock', exact: true, component: Unlock},
     {path: '/settings/network', exact: true, component: Network},
     {path: '/settings/verify', exact: true, component: Verify},
+    {path: '/settings/showRecoveryPhrase', exact: true, component: ShowRecoveryPhrase},
+    {path: '/settings/showPrivateKey', exact: true, component: ShowPrivateKey},
     {path: '/settings/resetWallet', exact: true, component: ResetWallet},
     {path: '/settings/resetWallet/success', exact: true, component: ResetWalletSuccess},
     {path: '/settings/deleteEmailAccount', exact: true, component: DeleteEmailAccount},

@@ -2,6 +2,7 @@ import React, {ReactNode} from 'react';
 import * as Dialog from '@radix-ui/react-dialog';
 import {DialogContentProps, DialogProps} from '@radix-ui/react-dialog';
 import styles from './index.module.scss';
+import {Link} from "react-router-dom";
 
 export type ModalProps = DialogProps & {
     title: string | ReactNode;
@@ -22,8 +23,8 @@ const BackupWalletModal = (props: ModalProps) => {
                             <Dialog.Close className={styles['close']}/>
                             <h1>{title}</h1>
                             <div className={styles['btn-box']}>
-                                <button className={styles['primary']}>Show private key</button>
-                                <button className={styles['primary']}>Show recovery phrase</button>
+                                <Link className={styles['primary']} to="/settings/showPrivateKey">Show private key</Link>
+                                <Link className={styles['primary']} to="/settings/showRecoveryPhrase">Show recovery phrase</Link>
                                 <button className={styles['default']}>Download Json file</button>
                             </div>
                         </div>

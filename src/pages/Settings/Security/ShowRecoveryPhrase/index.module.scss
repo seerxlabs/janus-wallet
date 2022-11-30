@@ -1,0 +1,131 @@
+.page-main {
+  background-color: #ffffff;
+  margin: auto;
+  width: 375px;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.page-container {
+  flex: 1;
+  overflow-y: auto;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.word-main {
+  padding: 0 1.88rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.word-main img {
+  margin: 1.25rem auto;
+  display: block;
+  width: 3.75rem;
+  height: 3.75rem;
+}
+
+.word-main h2 {
+  font-size: 1.5rem;
+  font-family: MontserratBold;
+  font-weight: bold;
+  color: #141C1D;
+  line-height: 1.5rem;
+}
+.word-main .note-box {
+  margin-top: 1.88rem;
+  width: 100%;
+  background: rgba(240, 68, 56, 0.1);
+  border-radius: 0.94rem;
+  padding: 0.88rem 1.25rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.word-main .note-box p {
+  word-break: break-word;
+  font-size: 0.81rem;
+  font-family: MontserratLight;
+  font-weight: normal;
+  color: #F04438;
+  line-height: 1.25rem;
+}
+.word-main .note-box p b{
+  font-family: MontserratRegular;
+  color: #F04438;
+  font-weight: bold;
+}
+.word-main .word-list{
+  margin-top: 1.25rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem;
+  border-radius: 0.94rem;
+  box-sizing: border-box;
+  background: rgba(110, 117, 133, 0.05);
+}
+.word-main .word-list ul{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.word-main .word-list ul li{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.word-main .word-list ul li label{
+  display: block;
+  width: 2.5rem;
+  font-size: 0.94rem;
+  font-family: MontserratLight;
+  font-weight: 400;
+  color: #6E7585;
+  line-height: 1.25rem;
+}
+.word-main .word-list ul li p{
+  font-size: 0.94rem;
+  font-family: MontserratLight;
+  font-weight: 300;
+  color: #141C1D;
+  line-height: 1.5rem;
+}
+.word-main .btn-box {
+  margin-top: auto;
+  padding: 1.88rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.94rem;
+  width: 100%;
+}
+
+.word-main .btn-box button {
+  width: 50%;
+}
+
+.word-main .btn-box button.copy {
+  background: #FFFFFF;
+  color: #141C1D;
+  border: 0.06rem solid rgba(20, 28, 29, 0.2);
+}
+
+.word-main .btn-box button.close {
+  background: #297AFF;
+  color: #FFFFFF;
+  border: 0.06rem solid #297AFF;
+}
