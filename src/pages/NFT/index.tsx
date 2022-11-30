@@ -3,6 +3,7 @@ import Header from '@/components/Header';
 import Menu from '@/components/Menu';
 import NFTList from './List';
 import NFTMintingModal from "@/pages/NFT/Mint/Minting";
+// import NFTMintSuccessModal from "@/pages/NFT/Mint/Success";
 
 export default function NFTPage() {
     return (
@@ -17,6 +18,7 @@ export default function NFTPage() {
                     <NFTMintingModal tips={'Minting NFT ...'} trigger={
                         <div className={styles['ext']}><i/><span>Mint</span></div>
                     }/>
+                    {/*<NFTMintSuccessModal tips={'NFT mint successfully'} trigger={1}/>*/}
                 </div>
                 <NFTList/>
             </div>

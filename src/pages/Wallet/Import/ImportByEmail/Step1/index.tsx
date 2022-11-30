@@ -9,9 +9,9 @@ export default function Step1() {
             <WebBack/>
             <div className={styles['step-container']}>
                 <div className={styles['step-name']}>
-                    <p><img src={IconStep1} alt=""/><b>Add Email address</b></p>
+                    <p><img src={IconStep1} alt=""/><b>Verify Email address </b></p>
                     <i/>
-                    <p><img src={IconStep2} alt=""/><b className={styles['gray']}>Set up password</b></p>
+                    <p><img src={IconStep2} alt=""/><b className={styles['gray']}>Verify Password</b></p>
                 </div>
                 <div className={styles['form-box']}>
                     <form>
@@ -25,9 +25,9 @@ export default function Step1() {
                         <button>Continue</button>
                     </form>
                     <div className={styles['tips']}>
-                        <p>This is a wallet creating method recommended by Janus for new wallet users.</p>
-                        <p>When you are familiar with how to operate the wallet, it is recommend that you delete your Email account and use the seed phrase to import the wallet instead.</p>
-                        <p>We can not record or save your private key, nor can we access it, rest assured when you use the wallet！</p>
+                        <p>This is the email you used when creating the wallet on Janus.</p>
+                        <p>When you log in off-site or lost your local private key file, identity verification is needed to restore your wallet assets.</p>
+                        <p>If you have chosen to delete the Email account, use the backup seed phrase to import the wallet please.</p>
                     </div>
                 </div>
             </div>

@@ -3,7 +3,7 @@ import WebTop from "@/components/WebTop";
 // import Step1 from "./Step1"
 import Step2 from "./Step2"
 
-export default function CreateByEmail() {
+export default function ImportByEmail() {
     return (
         <div className={styles['page-main']}>
             <WebTop/>

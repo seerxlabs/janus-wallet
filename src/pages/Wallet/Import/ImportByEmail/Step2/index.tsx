@@ -9,23 +9,20 @@ export default function Step2() {
             <WebBack/>
             <div className={styles['step-container']}>
                 <div className={styles['step-name']}>
-                    <p><img src={IconStep1} alt=""/><b className={styles['gray']}>Add Email address</b></p>
+                    <p><img src={IconStep1} alt=""/><b className={styles['gray']}>Verify Email address</b></p>
                     <i/>
-                    <p><img src={IconStep2} alt=""/><b>Set up password</b></p>
+                    <p><img src={IconStep2} alt=""/><b>Verify Password</b></p>
                 </div>
                 <div className={styles['form-box']}>
                     <form>
                         <div className={styles['input-box']}>
-                            <input type="text" placeholder={'At least 8 characters'} /><a/>
-                        </div>
-                        <div className={styles['input-box']}>
-                            <input type="text" placeholder={'Confirm Password'}/><a/>
+                            <input type="text" placeholder={'Please enter password'} /><a/>
                         </div>
                         <button>Continue</button>
                     </form>
                     <div className={styles['tips']}>
-                        <p>Your wallet data will be encrypted with this password in order to complete the executions such as unlocking your wallet and confirming the transactions.</p>
-                        <p>The password is stored securely on the device you are currently using and we cannot recover it for you, so be sure to remember it.</p>
+                        <p>Please enter the password you used to create the Janus wallet.</p>
+                        <p>If you forget it, we will not be able to restore the wallet for you.</p>
                     </div>
                 </div>
             </div>
