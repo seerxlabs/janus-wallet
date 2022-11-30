@@ -3,7 +3,7 @@ import IconCompleted from "@/assets/icons/completed.svg"
 import IconStep2 from "@/assets/icons/step-2-on.svg"
 import WebBack from "@/components/WebBack";
 import copy from 'copy-to-clipboard';
-import message from "@/components/Message/message";
+import message from "@/components/Message";
 
 export default function Step3() {
     return (

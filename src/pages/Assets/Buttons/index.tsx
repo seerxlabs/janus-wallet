@@ -7,7 +7,7 @@ import {QRCodeSVG} from 'qrcode.react';
 import copy from 'copy-to-clipboard';
 import React from "react";
 import Modal from "react-modal";
-import message from "@/components/Message/message";
+import message from "@/components/Message";
 
 
 function Buttons() {

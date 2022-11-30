@@ -1,0 +1,119 @@
+.step-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.step-container {
+  overflow-y: auto;
+  width: 800px;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+.step-name{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:2.5rem;
+  padding: 3.25rem 0 4.5rem;
+}
+.step-name p{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.step-name p img{
+  width: 2.5rem;
+  height: 2.5rem;
+}
+.step-name p b{
+  font-size: 1.5rem;
+  font-family: MontserratMedium;
+  font-weight: 500;
+  color: #141C1D;
+  line-height: 1.5rem;
+}
+.step-name p b.gray{
+  color: rgba(110,117,133,0.5);
+}
+.step-name i{
+  width: 3.75rem;
+  height: 1px;
+  opacity: 0.5;
+  border-bottom: 0.13rem dashed #6E7585;
+}
+.form-box{
+  padding: 0 1.25rem;
+  display: flex;
+  align-items: normal;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+.form-box form{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.88rem;
+}
+.form-box form .input-box{
+  background: #FAFAFA;
+  border-radius: 0.94rem;
+  border: 0.06rem solid rgba(20,28,29,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+.form-box form .input-box input{
+  line-height: 3.13rem;
+  font-size: 1.13rem;
+  font-family: MontserratRegular;
+  font-weight: 400;
+  color: #141C1D;
+  flex: 1;
+  border: none;
+  background: none;
+}
+.form-box form .input-box input::placeholder{
+  line-height: 3.13rem;
+  font-size: 1.13rem;
+  font-family: MontserratRegular;
+  font-weight: 400;
+  color: rgba(110,117,133,0.5);
+}
+.form-box form .input-box a{
+  width: 1.5rem;
+  height: 1.5rem;
+  background: url("@/assets/icons/hide.svg") no-repeat center center / 100% 100%;
+}
+.form-box form button{
+  margin-top: auto;
+  color: #ffffff;
+  background: #297AFF;
+}
+.form-box .tips{
+  width: 50%;
+  height: 15.25rem;
+  background: rgba(110, 117, 133, 0.05);
+  border-radius: 0.94rem;
+  padding: 1.88rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap:1.3rem
+}
+.form-box .tips p{
+  font-size: 0.94rem;
+  font-family: MontserratLight;
+  font-weight: 300;
+  color: #141C1D;
+  line-height: 1.25rem;
+}
