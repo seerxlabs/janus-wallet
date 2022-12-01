@@ -1,0 +1,103 @@
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content {
+  position: relative;
+  background: rgba(0, 0, 0, 0.3);
+  width: 375px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 0 1.25rem;
+}
+
+.modal-main {
+  border-radius: 1.25rem;
+  background: #FFFFFF;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 0 1.25rem;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.modal-main img {
+  width: 3.75rem;
+  height: 3.75rem;
+  margin: 1.88rem 0;
+}
+
+.modal-main h1 {
+  font-size: 1.5rem;
+  font-family: MontserratBold;
+  font-weight: bold;
+  color: #141C1D;
+  line-height: 1.5rem;
+}
+.modal-main h6 {
+  font-size: 0.94rem;
+  font-family: MontserratLight;
+  font-weight: 300;
+  color: #6E7585;
+  line-height: 1.5rem;
+  margin-top: 0.63rem;
+  text-align: center;
+}
+.modal-main .agree{
+  display: flex;
+  align-items: normal;
+  justify-content: space-between;
+  gap:0.63rem;
+  margin-top: 1.25rem;
+}
+.modal-main .agree a{
+  width: 1.5rem;
+  height: 1.5rem;
+  background: url("@/assets/icons/checkout.svg") no-repeat center center / 100% 100%;
+}
+.modal-main .agree p{
+  flex: 1;
+  font-size: 0.94rem;
+  font-family: MontserratRegular;
+  font-weight: 400;
+  color: #141C1D;
+  line-height: 1.5rem;
+}
+.modal-main .btn-box{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1.88rem 0 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap:0.94rem
+}
+.modal-main .btn-box button{
+  width: 50%;
+}
+.modal-main .btn-box button.cancel{
+  background: #ffffff;
+  border: 0.06rem solid rgba(20,28,29,0.2);
+}
+.modal-main .btn-box button.remove{
+  background: rgba(240, 68, 56, 0.1);
+  color: rgba(240, 68, 56, 0.50);
+  border: 0.06rem solid rgba(240, 68, 56, 0.1);
+}
