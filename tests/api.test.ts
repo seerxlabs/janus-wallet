@@ -1,9 +1,6 @@
-import {
-    generateMnemonic,
-    validateMnemonic,
-    Ed25519KeypairCustom,
-    SuiClient
-} from '../src/core';
+import {Ed25519KeypairCustom, generateMnemonic, SuiClient, validateMnemonic} from '../src/core';
+import {Network, NETWORK_TO_API} from "../src/core/sui/network";
+
 import * as bip39 from '@scure/bip39';
 
 
@@ -30,8 +27,25 @@ test('testEd25519Keypair', async () => {
 });
 
 test('testSuiClient', async () => {
-    let suiClient = new SuiClient("https://fullnode.devnet.sui.io/")
+    let suiClient = new SuiClient(Network.DEVNET)
     let res = await suiClient.getObjectsOwnedByAddress("0x265f6d2c8e0177e59c357accaf17a3c0febc4b24")
     console.log(res)
+});
+
+test('testGetCoinBalancesOwnedByAddress', async () => {
+    let suiClient = new SuiClient(Network.TESTNET)
+    let coinBalancesOwnedByAddress = await suiClient.getCoinBalancesOwnedByAddress("0x4c3d90914821c8ade5fd27ae113a1b1ccf2a86ba");
+    console.log(JSON.stringify(coinBalancesOwnedByAddress,(key, value) =>
+        typeof value === 'bigint'
+            ? value.toString()
+            : value // return everything else unchanged
+    ));
+
+
+});
+
+test('testgetObjectsOwnedByAddress', async () => {
+    let suiClient = new SuiClient(Network.DEVNET)
+    let coinBalancesOwnedByAddress = await suiClient.getObjectsOwnedByAddress("0x4c3d90914821c8ade5fd27ae113a1b1ccf2a86ba")
 
 });
