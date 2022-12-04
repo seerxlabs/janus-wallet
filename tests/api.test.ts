@@ -34,7 +34,7 @@ test('testSuiClient', async () => {
 
 test('testGetCoinBalancesOwnedByAddress', async () => {
     let suiClient = new SuiClient(Network.TESTNET)
-    let coinBalancesOwnedByAddress = await suiClient.getCoinBalancesOwnedByAddress("0x4c3d90914821c8ade5fd27ae113a1b1ccf2a86ba");
+    let coinBalancesOwnedByAddress = await suiClient.getCoinBalancesOwnedByAddress("0x4c3d90914821c8ade5fd27ae113a1b1ccf2a86ba","0x61df0e8caaf7b241d137fdc97906e3ca6bd68cca::btc::BTC");
     console.log(JSON.stringify(coinBalancesOwnedByAddress,(key, value) =>
         typeof value === 'bigint'
             ? value.toString()

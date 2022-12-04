@@ -66,15 +66,16 @@ export class SuiClient {
      * @param address
      */
     public async getCoinBalancesOwnedByAddress(
-        address: string
+        address: string,
+        typeArg?: string
     ): Promise<CoinBalance[]> {
-        let coinBalancesOwnedByAddress = await this.provider.getCoinBalancesOwnedByAddress(address);
+        let coinBalancesOwnedByAddress = await this.provider.getCoinBalancesOwnedByAddress(address, typeArg);
         return coinBalancesOwnedByAddress
             .filter((item) => item.status === 'Exists' && Coin.isCoin(item))
             .reduce<CoinBalance[]>((groups, item) => {
                 const subMoveObject = (item.details as SuiObject).data as SuiData as SuiMoveObject;
-                const type = subMoveObject.type;
-                const symbol = Coin.getCoinSymbol(Coin.getCoinType(type) || "");
+                let type = Coin.getCoinType(subMoveObject.type) || "";
+                const symbol = Coin.getCoinSymbol(type);
                 const balance = subMoveObject.fields.balance;
                 const objectId = subMoveObject.fields.id.id;
                 const group = groups.find(_item => _item.type == type)
