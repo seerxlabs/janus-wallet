@@ -1,12 +1,55 @@
 import {
     JsonRpcProvider,
     SuiObject,
-    SuiMoveObject
+    SuiMoveObject,
+    getTransactionData,
+    getTransactionSender,
+    getTotalGasUsed,
+    getTransferSuiTransaction,
+    ExecutionStatusType,
+    SuiAddress,
+    TransactionDigest,
+    getPayTransaction,
+    CertifiedTransaction,
+    getExecutionStatusType,
+    getPaySuiTransaction
 } from '@mysten/sui.js';
 
 import {SuiData} from "@mysten/sui.js/src/types/objects";
 import {Network, NETWORK_TO_API} from "./network";
 import {Coin, CoinBalance} from "./coin";
+import {Portal} from "@radix-ui/react-dialog";
+
+
+export type TransactionRecord = {
+    from: SuiAddress,
+    to: SuiAddress | SuiAddress[],
+    gasFee: number,
+    amount: number | number[] | null;
+    status: ExecutionStatusType | undefined,
+    name: string,
+    object: CoinObject | OtherObject,
+    type: TransactionType,
+    timestamp: number | null
+}
+
+enum TransactionType {
+    TransferSui,
+    PaySui,
+    Pay,
+    Call
+
+}
+
+
+export type CoinObject = {
+    type: 'coin';
+    symbol: string;
+    balance: string;
+}
+
+
+export type OtherObject = {}
 
 
 export class SuiClient {
@@ -46,8 +89,44 @@ export class SuiClient {
      *
      * @param address
      */
-    public async getTransactionInfoByAddress(address: string) {
-
+    public async getTransactionByAddress(address: string): Promise<TransactionRecord[]> {
+        const txIds = await this.provider.getTransactionsForAddress(address);
+        if (txIds.length === 0 || !txIds[0]) {
+            return [];
+        }
+        const effects = await this.provider.getTransactionWithEffectsBatch(txIds);
+        const transactionRecords = [];
+        for (const effect of effects) {
+            const data = getTransactionData(effect.certificate);
+            for (const tx of data.transactions) {
+                let transactionRecord = {
+                    timestamp: effect.timestamp_ms,
+                    gasFee: getTotalGasUsed(effect),
+                    from: getTransactionSender(effect.certificate),
+                    status: getExecutionStatusType(effect)
+                } as TransactionRecord;
+                let transferSuiTransaction = getTransferSuiTransaction(tx);
+                let payTransaction = getPayTransaction(tx);
+                let paySuiTransaction = getPaySuiTransaction(tx);
+                if (transferSuiTransaction) {
+                    // console.log("getTransferSuiTransaction", JSON.stringify(tx))
+                    transactionRecord.to = transferSuiTransaction.recipient;
+                    transactionRecord.amount = transferSuiTransaction.amount
+                    transactionRecord.name = "SUI"
+                    transactionRecord.type = TransactionType.TransferSui
+                } else if (paySuiTransaction) {
+                    transactionRecord.to = paySuiTransaction.recipients
+                    transactionRecord.amount = paySuiTransaction.amounts
+                    console.log(JSON.stringify(paySuiTransaction))
+                    //TODO
+                } else if (payTransaction) {
+                    // console.log("getPayTransaction", JSON.stringify(tx))
+                    //TODO
+                }
+                transactionRecords.push(transactionRecord)
+            }
+        }
+        return transactionRecords;
     }
 
 

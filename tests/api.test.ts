@@ -6,7 +6,10 @@ import * as bip39 from '@scure/bip39';
 
 import {toHEX} from "@mysten/bcs";
 import {wordlist as enWordlist} from '@scure/bip39/wordlists/english';
+import {json} from "stream/consumers";
 
+const suiClient = new SuiClient(Network.TESTNET)
+const testnetAddress = "0x4c3d90914821c8ade5fd27ae113a1b1ccf2a86ba";
 
 test('testGenerateMnemonic', async () => {
     let mnemonic = generateMnemonic()
@@ -34,8 +37,9 @@ test('testSuiClient', async () => {
 
 test('testGetCoinBalancesOwnedByAddress', async () => {
     let suiClient = new SuiClient(Network.TESTNET)
-    let coinBalancesOwnedByAddress = await suiClient.getCoinBalancesOwnedByAddress("0x4c3d90914821c8ade5fd27ae113a1b1ccf2a86ba","0x61df0e8caaf7b241d137fdc97906e3ca6bd68cca::btc::BTC");
-    console.log(JSON.stringify(coinBalancesOwnedByAddress,(key, value) =>
+    let coinBalancesOwnedByAddress = await suiClient.getCoinBalancesOwnedByAddress("0x4c3d90914821c8ade5fd27ae113a1b1ccf2a86ba",
+        "0x61df0e8caaf7b241d137fdc97906e3ca6bd68cca::btc::BTC");
+    console.log(JSON.stringify(coinBalancesOwnedByAddress, (key, value) =>
         typeof value === 'bigint'
             ? value.toString()
             : value // return everything else unchanged
@@ -48,4 +52,12 @@ test('testgetObjectsOwnedByAddress', async () => {
     let suiClient = new SuiClient(Network.DEVNET)
     let coinBalancesOwnedByAddress = await suiClient.getObjectsOwnedByAddress("0x4c3d90914821c8ade5fd27ae113a1b1ccf2a86ba")
 
+});
+
+/**
+ *
+ */
+test('testGetTransactionByAddress', async () => {
+    let result =  await suiClient.getTransactionByAddress(testnetAddress);
+    console.log(JSON.stringify(result))
 });
