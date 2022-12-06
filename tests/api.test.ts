@@ -1,4 +1,4 @@
-import {Ed25519KeypairCustom, generateMnemonic, SuiClient, validateMnemonic} from '../src/core';
+import {Ed25519KeypairCustom, generateMnemonic, SuiClient, validateMnemonic, Account} from '../src/core';
 import {Network, NETWORK_TO_API} from "../src/core/sui/network";
 
 import * as bip39 from '@scure/bip39';
@@ -7,6 +7,9 @@ import * as bip39 from '@scure/bip39';
 import {toHEX} from "@mysten/bcs";
 import {wordlist as enWordlist} from '@scure/bip39/wordlists/english';
 import {json} from "stream/consumers";
+
+let mnemonic = "stuff steel bless hobby ordinary stem heavy where lottery unfold merge olympic"
+
 
 const suiClient = new SuiClient(Network.TESTNET)
 const testnetAddress = "0x4c3d90914821c8ade5fd27ae113a1b1ccf2a86ba";
@@ -19,7 +22,6 @@ test('testGenerateMnemonic', async () => {
 })
 
 test('testEd25519Keypair', async () => {
-    let mnemonic = "stuff steel bless hobby ordinary stem heavy where lottery unfold merge olympic"
     // let mnemonic = generateMnemonic()
     let ed25519Keypair = Ed25519KeypairCustom.deriveKeypair(mnemonic);
     console.log('publicKey:', toHEX(ed25519Keypair.getPublicKey().toBytes()))
@@ -29,10 +31,8 @@ test('testEd25519Keypair', async () => {
     console.log(toHEX(ar))
 });
 
-test('testSuiClient', async () => {
-    let suiClient = new SuiClient(Network.DEVNET)
-    let res = await suiClient.getObjectsOwnedByAddress("0x265f6d2c8e0177e59c357accaf17a3c0febc4b24")
-    console.log(res)
+test('testGetObjectsOwnedByAddress', async () => {
+    let res = await suiClient.getObjectsOwnedByAddress(testnetAddress)
 });
 
 test('testGetCoinBalancesOwnedByAddress', async () => {
@@ -48,16 +48,22 @@ test('testGetCoinBalancesOwnedByAddress', async () => {
 
 });
 
-test('testgetObjectsOwnedByAddress', async () => {
-    let suiClient = new SuiClient(Network.DEVNET)
-    let coinBalancesOwnedByAddress = await suiClient.getObjectsOwnedByAddress("0x4c3d90914821c8ade5fd27ae113a1b1ccf2a86ba")
-
-});
 
 /**
  *
  */
 test('testGetTransactionByAddress', async () => {
-    let result =  await suiClient.getTransactionByAddress(testnetAddress);
+    let result = await suiClient.getTransactionByAddress(testnetAddress);
     console.log(JSON.stringify(result))
+});
+
+
+/**
+ *
+ */
+test('testAccount', async () => {
+    let account = new Account(mnemonic, 0);
+    console.log(account.getAddress())
+    console.log(account.getPublicKey())
+    console.log(account.getPrivateKey())
 });

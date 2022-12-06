@@ -18,7 +18,7 @@ import {
 import {SuiData} from "@mysten/sui.js/src/types/objects";
 import {Network, NETWORK_TO_API} from "./network";
 import {Coin, CoinBalance} from "./coin";
-import {Portal} from "@radix-ui/react-dialog";
+import {Account} from "./account";
 
 
 export type TransactionRecord = {
@@ -70,7 +70,6 @@ export class SuiClient {
      */
     public async getObjectsOwnedByAddress(address: string) {
         let objectsOwnedByAddress = await this.provider.getObjectsOwnedByAddress(address);
-
         console.log(JSON.stringify(objectsOwnedByAddress))
         return []
     }
@@ -81,7 +80,6 @@ export class SuiClient {
      * @param address
      */
     public async getCoinByAddress(address: string) {
-
     }
 
 
@@ -180,7 +178,12 @@ export class SuiClient {
     }
 
 
-    public async transferCoin() {
+    public async transferCoin(
+        symbol: string,
+        amount: number,
+        toAddress: string,
+        fromAccount: Account
+    ) {
 
     }
 

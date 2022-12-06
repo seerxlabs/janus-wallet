@@ -29,6 +29,10 @@ export class Ed25519KeypairCustom extends Ed25519Keypair {
         return toHEX(this.keypairCustom.secretKey.subarray(0, 32));
     }
 
+    getPublicKeyToHash(): string {
+        return toHEX(this.keypairCustom.publicKey);
+    }
+
 
     static deriveKeypair(mnemonics: string, path?: string): Ed25519KeypairCustom {
         if (path == null) {
