@@ -1,6 +1,8 @@
 import {Ed25519KeypairCustom} from "./ed25519-keypair";
 import {
-    SuiAddress
+    SuiAddress,
+    Base64DataBuffer,
+    Ed25519PublicKey
 } from "@mysten/sui.js";
 
 import {toHEX} from "@mysten/bcs";
@@ -28,12 +30,24 @@ export class Account {
         return '0x' + this.key.getPublicKey().toSuiAddress();
     }
 
-    public getPublicKey(): string {
+    public getPublicKey(): Ed25519PublicKey {
+        return this.key.getPublicKey();
+    }
+
+    public getPublicKeyToHash(): string {
         return '0x' + this.key.getPublicKeyToHash();
     }
 
-    public getPrivateKey(): string {
+    public getPrivateKeyToHash(): string {
         return '0x' + this.key.getPrivateKeyToHash();
+    }
+
+    public signData(data: Base64DataBuffer): Base64DataBuffer {
+        return this.key.signData(data);
+    }
+
+    public getKeyScheme() {
+        return this.key.getKeyScheme();
     }
 
 }

@@ -12,12 +12,14 @@ import {
     getPayTransaction,
     CertifiedTransaction,
     getExecutionStatusType,
-    getPaySuiTransaction
+    getPaySuiTransaction,
+    LocalTxnDataSerializer,
+    PayTransaction
 } from '@mysten/sui.js';
 
 import {SuiData} from "@mysten/sui.js/src/types/objects";
 import {Network, NETWORK_TO_API} from "./network";
-import {Coin, CoinBalance} from "./coin";
+import {Coin, CoinBalance, CoinTypeArg} from "./coin";
 import {Account} from "./account";
 
 
@@ -41,7 +43,6 @@ enum TransactionType {
 
 }
 
-
 export type CoinObject = {
     type: 'coin';
     symbol: string;
@@ -55,6 +56,7 @@ export type OtherObject = {}
 export class SuiClient {
 
     private provider: JsonRpcProvider;
+    private serializer: LocalTxnDataSerializer;
 
     constructor(endpoint: string | Network = Network.DEVNET) {
         let endpoints = endpoint;
@@ -62,6 +64,7 @@ export class SuiClient {
             endpoints = NETWORK_TO_API[endpoint as Network].fullNode;
         }
         this.provider = new JsonRpcProvider(endpoints);
+        this.serializer = new LocalTxnDataSerializer(this.provider)
     }
 
     /**
@@ -144,28 +147,29 @@ export class SuiClient {
      */
     public async getCoinBalancesOwnedByAddress(
         address: string,
-        typeArg?: string
+        coinType?: CoinTypeArg
     ): Promise<CoinBalance[]> {
-        let coinBalancesOwnedByAddress = await this.provider.getCoinBalancesOwnedByAddress(address, typeArg);
+        let coinBalancesOwnedByAddress = await this.provider.getCoinBalancesOwnedByAddress(address, coinType);
         return coinBalancesOwnedByAddress
             .filter((item) => item.status === 'Exists' && Coin.isCoin(item))
             .reduce<CoinBalance[]>((groups, item) => {
                 const subMoveObject = (item.details as SuiObject).data as SuiData as SuiMoveObject;
-                let type = Coin.getCoinType(subMoveObject.type) || "";
-                const symbol = Coin.getCoinSymbol(type);
+                let coinTypeArg = Coin.getCoinType(subMoveObject.type) || "" as CoinTypeArg;
+                const symbol = Coin.getCoinSymbol(coinTypeArg);
                 const balance = subMoveObject.fields.balance;
                 const objectId = subMoveObject.fields.id.id;
-                const group = groups.find(_item => _item.type == type)
+                const group = groups.find(_item => _item.coinTypeArg == coinTypeArg)
                 const coinObject = {
                     objectId: objectId,
-                    balance: BigInt(balance)
+                    balance: BigInt(balance),
+                    object: subMoveObject
                 }
                 if (group) {
                     group.balance += BigInt(balance)
                     group.coinObjects.push(coinObject)
                 } else {
                     groups.push({
-                        type: type,
+                        coinTypeArg: coinTypeArg,
                         symbol: symbol,
                         balance: BigInt(balance),
                         coinObjects: [
@@ -179,12 +183,41 @@ export class SuiClient {
 
 
     public async transferCoin(
-        symbol: string,
+        coinTypeArg: CoinTypeArg,
         amount: number,
-        toAddress: string,
+        toAddress: SuiAddress,
         fromAccount: Account
     ) {
-
+        // const coins = await this.getCoinBalancesOwnedByAddress("0x4c3d90914821c8ade5fd27ae113a1b1ccf2a86ba", coinTypeArg);
+        const coins = await this.getCoinBalancesOwnedByAddress(fromAccount.getAddress(), coinTypeArg);
+        if (coins.length == 0) {
+            throw new Error("Insufficient transfer amount");
+        }
+        const objects = coins[0].coinObjects.map((item) => item.object);
+        const calculateCoinAmount = Coin.selectCoinSetWithCombinedBalanceGreaterThanOrEqual(objects, BigInt(amount));
+        if (calculateCoinAmount.length == 0) {
+            throw new Error("Insufficient transfer amount");
+        }
+        const fromAddress = fromAccount.getAddress() as SuiAddress;
+        // get original data
+        const data = await this.serializer.serializeToBytes(
+            fromAddress,
+            {
+                kind: 'pay',
+                data: {
+                    //   inputCoins: ObjectId[];
+                    // gasBudget: number
+                    recipients: [toAddress],
+                    amounts: [amount],
+                } as PayTransaction
+            }
+        );
+        // sign
+        let signData = fromAccount.signData(data);
+        //
+        this.provider.executeTransaction(
+            data, fromAccount.getKeyScheme(), signData, fromAccount.getPublicKey()
+        );
     }
 
     public async transferObject() {

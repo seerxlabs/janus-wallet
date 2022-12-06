@@ -65,5 +65,12 @@ test('testAccount', async () => {
     let account = new Account(mnemonic, 0);
     console.log(account.getAddress())
     console.log(account.getPublicKey())
-    console.log(account.getPrivateKey())
+});
+
+/**
+ *
+ */
+test('testTransferCoin', async () => {
+    const account = new Account(mnemonic)
+    await suiClient.transferCoin("0x61df0e8caaf7b241d137fdc97906e3ca6bd68cca::btc::BTC", 1000000, "0x61df0e8caaf7b241d137fdc97906e3ca6bd68cca",account)
 });
