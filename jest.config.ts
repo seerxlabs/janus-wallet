@@ -13,6 +13,8 @@ export default {
   // The directory where Jest should store its cached dependency information
   // cacheDirectory: "/private/var/folders/nq/jyhk_ybn0fsbd_jqmrxl45t80000gn/T/jest_dx",
 
+  timeout: 600000,
+
   // Automatically clear mock calls, instances, contexts and results before every test
   clearMocks: true,
 

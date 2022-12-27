@@ -11,8 +11,13 @@ import {json} from "stream/consumers";
 let mnemonic = "stuff steel bless hobby ordinary stem heavy where lottery unfold merge olympic"
 
 
-const suiClient = new SuiClient(Network.TESTNET)
+const suiClient = new SuiClient(Network.DEVNET)
 const testnetAddress = "0x4c3d90914821c8ade5fd27ae113a1b1ccf2a86ba";
+const devnetAddress = "0x265f6d2c8e0177e59c357accaf17a3c0febc4b24";
+// const testnetAddress = "0x335aa6836ea339d98f9f52c9d59d401038f63491";
+
+
+jest.setTimeout(600000);
 
 test('testGenerateMnemonic', async () => {
     let mnemonic = generateMnemonic()
@@ -44,8 +49,6 @@ test('testGetCoinBalancesOwnedByAddress', async () => {
             ? value.toString()
             : value // return everything else unchanged
     ));
-
-
 });
 
 
@@ -53,7 +56,7 @@ test('testGetCoinBalancesOwnedByAddress', async () => {
  *
  */
 test('testGetTransactionByAddress', async () => {
-    let result = await suiClient.getTransactionByAddress(testnetAddress);
+    let result = await suiClient.getTransactionByAddress(devnetAddress);
     console.log(JSON.stringify(result))
 });
 
@@ -72,5 +75,5 @@ test('testAccount', async () => {
  */
 test('testTransferCoin', async () => {
     const account = new Account(mnemonic)
-    await suiClient.transferCoin("0x61df0e8caaf7b241d137fdc97906e3ca6bd68cca::btc::BTC", 1000000, "0x61df0e8caaf7b241d137fdc97906e3ca6bd68cca",account)
+    await suiClient.transferCoin("0x2::sui::SUI", BigInt(20000), "0x61df0e8caaf7b241d137fdc97906e3ca6bd68cca",account)
 });

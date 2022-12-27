@@ -9,7 +9,7 @@ import {toHEX} from "@mysten/bcs";
 
 export class Account {
 
-    private key: Ed25519KeypairCustom;
+    key: Ed25519KeypairCustom;
     private readonly pathId: number
     private readonly path: string;
 
@@ -48,6 +48,10 @@ export class Account {
 
     public getKeyScheme() {
         return this.key.getKeyScheme();
+    }
+
+    public getKey() {
+        return this.key;
     }
 
 }

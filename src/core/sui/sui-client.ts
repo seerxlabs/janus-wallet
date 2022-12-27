@@ -14,13 +14,18 @@ import {
     getExecutionStatusType,
     getPaySuiTransaction,
     LocalTxnDataSerializer,
-    PayTransaction
+    getTransactionKindName,
+    PayTransaction,
+    PaySuiTransaction,
+    UnserializedSignableTransaction,
+    RawSigner
 } from '@mysten/sui.js';
 
 import {SuiData} from "@mysten/sui.js/src/types/objects";
 import {Network, NETWORK_TO_API} from "./network";
 import {Coin, CoinBalance, CoinTypeArg} from "./coin";
 import {Account} from "./account";
+import {SuiExecuteTransactionResponse} from "@mysten/sui.js/src/types";
 
 
 export type TransactionRecord = {
@@ -55,8 +60,8 @@ export type OtherObject = {}
 
 export class SuiClient {
 
-    private provider: JsonRpcProvider;
-    private serializer: LocalTxnDataSerializer;
+    provider: JsonRpcProvider;
+    serializer: LocalTxnDataSerializer;
 
     constructor(endpoint: string | Network = Network.DEVNET) {
         let endpoints = endpoint;
@@ -91,11 +96,14 @@ export class SuiClient {
      * @param address
      */
     public async getTransactionByAddress(address: string): Promise<TransactionRecord[]> {
-        const txIds = await this.provider.getTransactionsForAddress(address);
+        const txIds = await this.provider.getTransactionsForAddress(address, true);
         if (txIds.length === 0 || !txIds[0]) {
             return [];
         }
-        const effects = await this.provider.getTransactionWithEffectsBatch(txIds);
+        const digests = txIds.filter(
+            (value, index, self) => self.indexOf(value) === index
+        );
+        const effects = await this.provider.getTransactionWithEffectsBatch(digests);
         const transactionRecords = [];
         for (const effect of effects) {
             const data = getTransactionData(effect.certificate);
@@ -109,13 +117,16 @@ export class SuiClient {
                 let transferSuiTransaction = getTransferSuiTransaction(tx);
                 let payTransaction = getPayTransaction(tx);
                 let paySuiTransaction = getPaySuiTransaction(tx);
-                if (transferSuiTransaction) {
+                const kind = getTransactionKindName(tx);
+                if (kind === 'TransferSui' && transferSuiTransaction) {
+                    console.log('TransferSui')
                     // console.log("getTransferSuiTransaction", JSON.stringify(tx))
                     transactionRecord.to = transferSuiTransaction.recipient;
-                    transactionRecord.amount = transferSuiTransaction.amount
+                    transactionRecord.amount = transferSuiTransaction.amount ? transferSuiTransaction.amount : 0
                     transactionRecord.name = "SUI"
                     transactionRecord.type = TransactionType.TransferSui
-                } else if (paySuiTransaction) {
+                } else if (kind === 'PaySui' && paySuiTransaction) {
+                    console.log('PaySui')
                     transactionRecord.to = paySuiTransaction.recipients
                     transactionRecord.amount = paySuiTransaction.amounts
                     console.log(JSON.stringify(paySuiTransaction))
@@ -158,7 +169,7 @@ export class SuiClient {
                 const symbol = Coin.getCoinSymbol(coinTypeArg);
                 const balance = subMoveObject.fields.balance;
                 const objectId = subMoveObject.fields.id.id;
-                const group = groups.find(_item => _item.coinTypeArg == coinTypeArg)
+                const group = groups.find(_item => _item.coinTypeArg == coinTypeArg);
                 const coinObject = {
                     objectId: objectId,
                     balance: BigInt(balance),
@@ -183,41 +194,38 @@ export class SuiClient {
 
 
     public async transferCoin(
-        coinTypeArg: CoinTypeArg,
-        amount: number,
+        coinTypeArg: CoinTypeArg, // example 0x2::sui::SUI
+        amount: bigint,
         toAddress: SuiAddress,
         fromAccount: Account
     ) {
-        // const coins = await this.getCoinBalancesOwnedByAddress("0x4c3d90914821c8ade5fd27ae113a1b1ccf2a86ba", coinTypeArg);
         const coins = await this.getCoinBalancesOwnedByAddress(fromAccount.getAddress(), coinTypeArg);
+        console.log('coins:', coins)
         if (coins.length == 0) {
             throw new Error("Insufficient transfer amount");
         }
         const objects = coins[0].coinObjects.map((item) => item.object);
-        const calculateCoinAmount = Coin.selectCoinSetWithCombinedBalanceGreaterThanOrEqual(objects, BigInt(amount));
+        const calculateCoinAmount = Coin.selectCoinSetWithCombinedBalanceGreaterThanOrEqual(objects, amount);
         if (calculateCoinAmount.length == 0) {
             throw new Error("Insufficient transfer amount");
         }
         const fromAddress = fromAccount.getAddress() as SuiAddress;
         // get original data
-        const data = await this.serializer.serializeToBytes(
-            fromAddress,
-            {
-                kind: 'pay',
-                data: {
-                    //   inputCoins: ObjectId[];
-                    // gasBudget: number
-                    recipients: [toAddress],
-                    amounts: [amount],
-                } as PayTransaction
-            }
-        );
-        // sign
-        let signData = fromAccount.signData(data);
-        //
-        this.provider.executeTransaction(
-            data, fromAccount.getKeyScheme(), signData, fromAccount.getPublicKey()
-        );
+        console.log('fromAddress', fromAddress);
+        const payTx = {
+            kind: 'paySui',
+            data: {
+                inputCoins: calculateCoinAmount.map(Coin.getID),
+                recipients: [toAddress],
+                amounts: [Number(amount)],
+                //TODO calculate gasBudget
+                gasBudget: Number(10000)
+            } as PaySuiTransaction
+        } as UnserializedSignableTransaction;
+
+        const signer = new RawSigner(fromAccount.getKey(), this.provider, this.serializer);
+        const ret =  await signer.signAndExecuteTransaction(payTx);
+        console.log(ret)
     }
 
     public async transferObject() {
