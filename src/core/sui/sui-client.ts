@@ -18,35 +18,35 @@ import {
     PayTransaction,
     PaySuiTransaction,
     UnserializedSignableTransaction,
-    RawSigner
+    RawSigner,
+    TransactionKindName
 } from '@mysten/sui.js';
 
 import {SuiData} from "@mysten/sui.js/src/types/objects";
 import {Network, NETWORK_TO_API} from "./network";
 import {Coin, CoinBalance, CoinTypeArg} from "./coin";
 import {Account} from "./account";
+import {formatCurrency, formatCurrencyArr} from "../utils/format-currency";
 import {SuiExecuteTransactionResponse} from "@mysten/sui.js/src/types";
+import addReceiverActionListener = chrome.cast.addReceiverActionListener;
+
+export const SUI_TYPE_ARG = '0x2::sui::SUI';
 
 
 export type TransactionRecord = {
     from: SuiAddress,
     to: SuiAddress | SuiAddress[],
     gasFee: number,
-    amount: number | number[] | null;
+    gasFeeFormat: number,
+    amounts: number[]
+    amountFormat: number;
     status: ExecutionStatusType | undefined,
     name: string,
     object: CoinObject | OtherObject,
-    type: TransactionType,
+    type: TransactionKindName,
     timestamp: number | null
 }
 
-enum TransactionType {
-    TransferSui,
-    PaySui,
-    Pay,
-    Call
-
-}
 
 export type CoinObject = {
     type: 'coin';
@@ -88,6 +88,7 @@ export class SuiClient {
      * @param address
      */
     public async getCoinByAddress(address: string) {
+
     }
 
 
@@ -111,6 +112,7 @@ export class SuiClient {
                 let transactionRecord = {
                     timestamp: effect.timestamp_ms,
                     gasFee: getTotalGasUsed(effect),
+                    gasFeeFormat: formatCurrency(getTotalGasUsed(effect)),
                     from: getTransactionSender(effect.certificate),
                     status: getExecutionStatusType(effect)
                 } as TransactionRecord;
@@ -119,18 +121,15 @@ export class SuiClient {
                 let paySuiTransaction = getPaySuiTransaction(tx);
                 const kind = getTransactionKindName(tx);
                 if (kind === 'TransferSui' && transferSuiTransaction) {
-                    console.log('TransferSui')
                     // console.log("getTransferSuiTransaction", JSON.stringify(tx))
                     transactionRecord.to = transferSuiTransaction.recipient;
-                    transactionRecord.amount = transferSuiTransaction.amount ? transferSuiTransaction.amount : 0
+                    transactionRecord.amounts = transferSuiTransaction.amount ? [transferSuiTransaction.amount] : [0]
                     transactionRecord.name = "SUI"
-                    transactionRecord.type = TransactionType.TransferSui
+                    transactionRecord.amountFormat = formatCurrencyArr(transactionRecord.amounts);
                 } else if (kind === 'PaySui' && paySuiTransaction) {
-                    console.log('PaySui')
-                    transactionRecord.to = paySuiTransaction.recipients
-                    transactionRecord.amount = paySuiTransaction.amounts
-                    console.log(JSON.stringify(paySuiTransaction))
-                    //TODO
+                    transactionRecord.to = paySuiTransaction.recipients;
+                    transactionRecord.amounts = paySuiTransaction.amounts;
+                    transactionRecord.amountFormat = formatCurrencyArr(transactionRecord.amounts);
                 } else if (payTransaction) {
                     // console.log("getPayTransaction", JSON.stringify(tx))
                     //TODO
@@ -173,16 +172,19 @@ export class SuiClient {
                 const coinObject = {
                     objectId: objectId,
                     balance: BigInt(balance),
+                    balanceFormat: formatCurrency(BigInt(balance)),
                     object: subMoveObject
                 }
                 if (group) {
-                    group.balance += BigInt(balance)
-                    group.coinObjects.push(coinObject)
+                    group.balance += BigInt(balance);
+                    group.balanceFormat += formatCurrency(BigInt(balance));
+                    group.coinObjects.push(coinObject);
                 } else {
                     groups.push({
                         coinTypeArg: coinTypeArg,
                         symbol: symbol,
                         balance: BigInt(balance),
+                        balanceFormat: formatCurrency(BigInt(balance)),
                         coinObjects: [
                             coinObject
                         ]
@@ -200,32 +202,45 @@ export class SuiClient {
         fromAccount: Account
     ) {
         const coins = await this.getCoinBalancesOwnedByAddress(fromAccount.getAddress(), coinTypeArg);
-        console.log('coins:', coins)
-        if (coins.length == 0) {
+        const suiCoins = await this.getCoinBalancesOwnedByAddress(fromAccount.getAddress(), SUI_TYPE_ARG);
+        //TODO calculate gasBudget
+        let gasBudget = BigInt(10000);
+
+        if (coins.length === 0) {
             throw new Error("Insufficient transfer amount");
         }
-        const objects = coins[0].coinObjects.map((item) => item.object);
+        if (suiCoins.length === 0 || suiCoins[0].balance < gasBudget) {
+            throw new Error("Insufficient gasBudget");
+        }
+        const coin = coins[0];
+        const objects = coin.coinObjects.map((item) => item.object);
         const calculateCoinAmount = Coin.selectCoinSetWithCombinedBalanceGreaterThanOrEqual(objects, amount);
         if (calculateCoinAmount.length == 0) {
             throw new Error("Insufficient transfer amount");
         }
-        const fromAddress = fromAccount.getAddress() as SuiAddress;
-        // get original data
-        console.log('fromAddress', fromAddress);
-        const payTx = {
-            kind: 'paySui',
-            data: {
-                inputCoins: calculateCoinAmount.map(Coin.getID),
-                recipients: [toAddress],
-                amounts: [Number(amount)],
-                //TODO calculate gasBudget
-                gasBudget: Number(10000)
-            } as PaySuiTransaction
-        } as UnserializedSignableTransaction;
-
+        let payTx;
+        let payTxData = {
+            inputCoins: calculateCoinAmount.map(Coin.getID),
+            recipients: [toAddress],
+            amounts: [Number(amount)],
+            gasBudget: Number(gasBudget)
+        }
+        if (coinTypeArg === SUI_TYPE_ARG) {
+            if (coin.balance < (amount + gasBudget)) {
+                throw new Error("Insufficient gasBudget");
+            }
+            payTx = {
+                kind: 'paySui',
+                data: payTxData as PayTransaction
+            } as UnserializedSignableTransaction;
+        } else {
+            payTx = {
+                kind: 'pay',
+                data: payTxData as PayTransaction
+            } as UnserializedSignableTransaction;
+        }
         const signer = new RawSigner(fromAccount.getKey(), this.provider, this.serializer);
-        const ret =  await signer.signAndExecuteTransaction(payTx);
-        console.log(ret)
+        return await signer.signAndExecuteTransaction(payTx);
     }
 
     public async transferObject() {

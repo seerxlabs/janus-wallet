@@ -9,6 +9,8 @@ import {wordlist as enWordlist} from '@scure/bip39/wordlists/english';
 import {json} from "stream/consumers";
 
 let mnemonic = "stuff steel bless hobby ordinary stem heavy where lottery unfold merge olympic"
+let toMnemonic = "kangaroo item horror use diesel degree dad spin wrong coffee address rent"
+let toAddress = "0x8b99c921ee5895ec5245410b52d99f76eef397b0"
 
 
 const suiClient = new SuiClient(Network.DEVNET)
@@ -17,7 +19,8 @@ const devnetAddress = "0x265f6d2c8e0177e59c357accaf17a3c0febc4b24";
 // const testnetAddress = "0x335aa6836ea339d98f9f52c9d59d401038f63491";
 
 
-jest.setTimeout(600000);
+jest.setTimeout(6000000);
+
 
 test('testGenerateMnemonic', async () => {
     let mnemonic = generateMnemonic()
@@ -41,9 +44,7 @@ test('testGetObjectsOwnedByAddress', async () => {
 });
 
 test('testGetCoinBalancesOwnedByAddress', async () => {
-    let suiClient = new SuiClient(Network.TESTNET)
-    let coinBalancesOwnedByAddress = await suiClient.getCoinBalancesOwnedByAddress("0x4c3d90914821c8ade5fd27ae113a1b1ccf2a86ba",
-        "0x61df0e8caaf7b241d137fdc97906e3ca6bd68cca::btc::BTC");
+    let coinBalancesOwnedByAddress = await suiClient.getCoinBalancesOwnedByAddress(devnetAddress);
     console.log(JSON.stringify(coinBalancesOwnedByAddress, (key, value) =>
         typeof value === 'bigint'
             ? value.toString()
@@ -75,5 +76,8 @@ test('testAccount', async () => {
  */
 test('testTransferCoin', async () => {
     const account = new Account(mnemonic)
-    await suiClient.transferCoin("0x2::sui::SUI", BigInt(20000), "0x61df0e8caaf7b241d137fdc97906e3ca6bd68cca",account)
+    // console.log(account.getAddress())
+    // 0x35582086620b6dc55f7b845a61aac00a164251d5::pool::TestBNB
+
+    await suiClient.transferCoin("0x2::sui::SUI", BigInt(1000), toAddress,account)
 });

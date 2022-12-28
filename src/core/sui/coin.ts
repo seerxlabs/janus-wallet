@@ -13,6 +13,7 @@ export type CoinTypeArg = string;
 export type CoinObject = {
     objectId: string;
     balance: bigint;
+    balanceFormat: number;
     object: SuiMoveObject;
 };
 
@@ -20,5 +21,6 @@ export type CoinBalance = {
     coinTypeArg: CoinTypeArg,
     symbol: string;
     balance: bigint;
+    balanceFormat: number;
     coinObjects: CoinObject[]
 }
