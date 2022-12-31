@@ -129,18 +129,23 @@ export class SuiClient {
                     transactionRecords.push(transactionRecord)
                 } else if (kind === 'PaySui' && paySuiTransaction) {
                     let recipients = paySuiTransaction.recipients;
+                    const totalGasUsed = convertToNumber(getTotalGasUsed(effect));
+                    const singleGasUsd = totalGasUsed / recipients.length;
+                    const singleGasUsdFormat = formatCurrency(singleGasUsd);
                     for (const i in recipients) {
                         transactionRecord.amount = paySuiTransaction.amounts[i];
                         transactionRecord.amountFormat = formatCurrency(paySuiTransaction.amounts[i]);
                         transactionRecord.to = recipients[i];
-                        transactionRecord.gasFee = convertToNumber(getTotalGasUsed(effect)) / recipients.length;
-                        transactionRecord.gasFeeFormat = formatCurrency(transactionRecord.gasFee);
+                        transactionRecord.gasFee = singleGasUsd;
+                        transactionRecord.gasFeeFormat = singleGasUsdFormat;
                         transactionRecord.name = "SUI";
                         transactionRecords.push(transactionRecord)
                     }
-                } else if (payTransaction) {
+                } else if (kind === 'Pay' && payTransaction) {
                     // console.log("getPayTransaction", JSON.stringify(tx))
                     //TODO
+
+
                 }
 
             }
