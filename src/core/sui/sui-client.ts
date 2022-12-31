@@ -27,6 +27,7 @@ import {Network, NETWORK_TO_API} from "./network";
 import {Coin, CoinBalance, CoinTypeArg} from "./coin";
 import {Account} from "./account";
 import {formatCurrency, formatCurrencyArr} from "../utils/format-currency";
+import {convertToNumber} from "../utils/utils";
 import {SuiExecuteTransactionResponse} from "@mysten/sui.js/src/types";
 import addReceiverActionListener = chrome.cast.addReceiverActionListener;
 
@@ -35,10 +36,10 @@ export const SUI_TYPE_ARG = '0x2::sui::SUI';
 
 export type TransactionRecord = {
     from: SuiAddress,
-    to: SuiAddress | SuiAddress[],
+    to: SuiAddress,
     gasFee: number,
     gasFeeFormat: number,
-    amounts: number[]
+    amount: number,
     amountFormat: number;
     status: ExecutionStatusType | undefined,
     name: string,
@@ -111,8 +112,6 @@ export class SuiClient {
             for (const tx of data.transactions) {
                 let transactionRecord = {
                     timestamp: effect.timestamp_ms,
-                    gasFee: getTotalGasUsed(effect),
-                    gasFeeFormat: formatCurrency(getTotalGasUsed(effect)),
                     from: getTransactionSender(effect.certificate),
                     status: getExecutionStatusType(effect)
                 } as TransactionRecord;
@@ -121,20 +120,29 @@ export class SuiClient {
                 let paySuiTransaction = getPaySuiTransaction(tx);
                 const kind = getTransactionKindName(tx);
                 if (kind === 'TransferSui' && transferSuiTransaction) {
-                    // console.log("getTransferSuiTransaction", JSON.stringify(tx))
+                    transactionRecord.gasFee = convertToNumber(getTotalGasUsed(effect));
+                    transactionRecord.gasFeeFormat = formatCurrency(getTotalGasUsed(effect));
                     transactionRecord.to = transferSuiTransaction.recipient;
-                    transactionRecord.amounts = transferSuiTransaction.amount ? [transferSuiTransaction.amount] : [0]
+                    transactionRecord.amount = transferSuiTransaction.amount ? transferSuiTransaction.amount : 0;
                     transactionRecord.name = "SUI"
-                    transactionRecord.amountFormat = formatCurrencyArr(transactionRecord.amounts);
+                    transactionRecord.amountFormat = formatCurrency(transactionRecord.amount);
+                    transactionRecords.push(transactionRecord)
                 } else if (kind === 'PaySui' && paySuiTransaction) {
-                    transactionRecord.to = paySuiTransaction.recipients;
-                    transactionRecord.amounts = paySuiTransaction.amounts;
-                    transactionRecord.amountFormat = formatCurrencyArr(transactionRecord.amounts);
+                    let recipients = paySuiTransaction.recipients;
+                    for (const i in recipients) {
+                        transactionRecord.amount = paySuiTransaction.amounts[i];
+                        transactionRecord.amountFormat = formatCurrency(paySuiTransaction.amounts[i]);
+                        transactionRecord.to = recipients[i];
+                        transactionRecord.gasFee = convertToNumber(getTotalGasUsed(effect)) / recipients.length;
+                        transactionRecord.gasFeeFormat = formatCurrency(transactionRecord.gasFee);
+                        transactionRecord.name = "SUI";
+                        transactionRecords.push(transactionRecord)
+                    }
                 } else if (payTransaction) {
                     // console.log("getPayTransaction", JSON.stringify(tx))
                     //TODO
                 }
-                transactionRecords.push(transactionRecord)
+
             }
         }
         return transactionRecords;
