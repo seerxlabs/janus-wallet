@@ -42,6 +42,9 @@ import OrderDetail from "@/pages/Swap/History/Detail";
 
 const routes: RouteConfig[] = [
     {path: '/', exact: true, component: Assets},
+    {path: '/dapp', exact: true, component: Dapp},
+    {path: '/login', exact: true, component: Login},
+    {path: '/welcome', exact: true, component: Welcome},
     {path: '/assets', exact: true, component: Assets},
     {path: '/assets/manageToken', exact: true, component: ManageToken},
     {path: '/assets/addToken', exact: true, component: AddToken},
@@ -54,8 +57,6 @@ const routes: RouteConfig[] = [
     {path: '/swap/order', exact: true, component: HistoryOrder},
     {path: '/swap/order/detail', exact: true, component: OrderDetail},
     {path: '/swap/success', exact: true, component: SwapSuccess},
-    {path: '/login', exact: true, component: Login},
-    {path: '/welcome', exact: true, component: Welcome},
     {path: '/wallet', exact: true, component: Wallet},
     {path: '/wallet/edit', exact: true, component: EditWallet},
     {path: '/wallet/create', exact: true, component: CreateWallet},
@@ -69,7 +70,6 @@ const routes: RouteConfig[] = [
     {path: '/nft/empty', exact: true, component: NFTEmpty},
     {path: '/nft/send', exact: true, component: NFTSend},
     {path: '/nft/send/success', exact: true, component: NFTSendSuccess},
-    {path: '/dapp', exact: true, component: Dapp},
     {path: '/settings', exact: true, component: Settings},
     {path: '/settings/unlock', exact: true, component: Unlock},
     {path: '/settings/network', exact: true, component: Network},

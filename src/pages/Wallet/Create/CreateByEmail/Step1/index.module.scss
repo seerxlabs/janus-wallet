@@ -102,9 +102,16 @@
 }
 .form-box form button{
   margin-top: auto;
+}
+.form-box form button.btn-disable{
   color: rgba(110,117,133,0.5);
   background: rgba(110, 117, 133, 0.2);
 }
+.form-box form button.btn-primary{
+  color: #ffffff;
+  background: #297AFF;
+}
+
 .form-box .tips{
   width: 50%;
   height: 20.5rem;

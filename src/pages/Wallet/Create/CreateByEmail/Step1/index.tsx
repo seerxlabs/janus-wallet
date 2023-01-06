@@ -2,8 +2,24 @@ import styles from "./index.module.scss";
 import IconStep1 from "@/assets/icons/step-1-on.svg"
 import IconStep2 from "@/assets/icons/step-2.svg"
 import WebBack from "@/components/WebBack";
-
+import axios from 'axios'
+import {useState} from "react";
 export default function Step1() {
+    const [email, setEmailValue] = useState('');
+    const [code, setCodeValue] = useState('');
+
+    function sendEmailCode () {
+        axios.post('https://api-janus-wallet.404root.com/v1/api/email-captcha', {
+            email: email
+        }).then(response => {
+            console.log(response);
+        })
+    }
+    function toNextStep () {
+        // this.setState({
+        //     walletCreateEmailStep:2
+        // });
+    }
     return (
         <div className={styles['step-main']}>
             <WebBack/>
@@ -16,13 +32,20 @@ export default function Step1() {
                 <div className={styles['form-box']}>
                     <form>
                         <div className={styles['input-box']}>
-                            <input type="text" placeholder={'Enter email'} />
+                            <input type="email" value={email} onChange={e=>setEmailValue(e.target.value)} placeholder={'Enter email'} />
                         </div>
                         <div className={styles['input-box']}>
-                            <input className={styles['short']} type="text" placeholder={'Verification code'} />
-                            <a>Get the code</a>
+                            <input className={styles['short']} type="text" maxLength={10} value={code} onChange={e=>setCodeValue(e.target.value)} placeholder={'Verification code'} />
+                            <a onClick={sendEmailCode}>Get the code</a>
                         </div>
-                        <button>Continue</button>
+                        {
+                            // warning todo: need verify email format
+                            // ...
+                            email.length > 0 && code.length == 10 ?
+                            <button type={"button"} className={styles['btn-primary']} onClick={toNextStep}>Continue</button>
+                            :
+                            <button type={"button"} className={styles['btn-disable']}>Continue</button>
+                        }
                     </form>
                     <div className={styles['tips']}>
                         <p>This is a wallet creating method recommended by Janus for new wallet users.</p>
